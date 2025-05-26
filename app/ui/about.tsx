@@ -1,7 +1,7 @@
 // import Globe from 'react-globe.gl';
 'use client';
 import Button from '@/app/components/button';
-import Image from 'next/image';
+
 import { useEffect, useState } from 'react';
 
 import { motion } from 'framer-motion';
@@ -11,7 +11,7 @@ import GlobeWithArcs from '../components/globe';
 import LogosContainer from '../components/logos-container';
 
 import BarsSeperator from '../components/animated-seperator';
-import { textVariant, cursorVariants } from '../utils/motion';
+import { textVariant } from '../utils/motion';
 
 import AboutMe from '../components/about-me';
 
@@ -88,14 +88,14 @@ const About = () => {
             />
 
             <div>
-              <BarsSeperator />
+              <BarsSeperator color="bg-red-ground" />
               <p className="grid-subtext">
                 Front to back, code to deployment—I own the entire process. Your
                 idea becomes a fast, scalable, and polished app with no gaps.
                 Let’s skip the fragmented workflows and build something that
                 truly delivers.
               </p>
-              <BarsSeperator />
+              <BarsSeperator color="bg-red-ground" />
               <p className="grid-subtext">
                 Your website should look flawless on any device—whether it’s a
                 4K monitor or a budget smartphone. I rigorously test across
@@ -113,6 +113,7 @@ const About = () => {
               GIMP to create pixel-perfect assets, intuitive UI elements.
             </p>
             <SquareLogosContainer
+              initialDelay={0}
               imgs={[
                 {
                   id: 1,
@@ -129,7 +130,7 @@ const About = () => {
             />
 
             <div>
-              <BarsSeperator />
+              <BarsSeperator color="bg-red-ground" />
               <p className="grid-subtext">
                 I specialize in configuring and maintaining Windows Server
                 environments for optimal enterprise performance. From Active

@@ -105,10 +105,10 @@ const Hero = () => {
             isSmall
               ? 'top-[180px] h-[350px]'
               : isMobile
-              ? 'top-[120px] h-[400px]'
-              : isTablet
-              ? 'top-[150px] h-[420px]'
-              : 'top-[200px] h-[440px]'
+                ? 'top-[120px] h-[400px]'
+                : isTablet
+                  ? 'top-[150px] h-[420px]'
+                  : 'top-[200px] h-[440px]'
           } inset-0 left-0 right-0`}
         >
           <Canvas>
@@ -173,10 +173,10 @@ const Hero = () => {
           isSmall
             ? 'bottom-4'
             : isMobile
-            ? 'bottom-8'
-            : isTablet
-            ? 'bottom-8'
-            : 'bottom-4'
+              ? 'bottom-8'
+              : isTablet
+                ? 'bottom-8'
+                : 'bottom-4'
         } left-0 right-0 a-10 c-space`}
       >
         <a href="#about" className="w-fit">

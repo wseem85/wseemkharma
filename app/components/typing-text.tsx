@@ -1,10 +1,22 @@
 import { motion } from 'framer-motion';
 import { useState, useEffect, useRef } from 'react';
-
-export function TypingAnimation({ text, start = false, onComplete }) {
+interface AnimationRef {
+  completed: boolean;
+  interval: NodeJS.Timeout | null;
+  currentIndex: number;
+}
+export function TypingAnimation({
+  text,
+  start = false,
+  onComplete,
+}: {
+  text: string;
+  start: boolean;
+  onComplete: () => void;
+}) {
   const [visibleText, setVisibleText] = useState('');
   const [showCursor, setShowCursor] = useState(false);
-  const animationRef = useRef({
+  const animationRef = useRef<AnimationRef>({
     completed: false,
     interval: null,
     currentIndex: 0,
@@ -29,7 +41,10 @@ export function TypingAnimation({ text, start = false, onComplete }) {
         setVisibleText(text.slice(0, animationRef.current.currentIndex));
         animationRef.current.currentIndex++;
       } else {
-        clearInterval(animationRef.current.interval);
+        if (animationRef.current?.interval) {
+          clearInterval(animationRef.current.interval);
+        }
+
         animationRef.current.completed = true;
         setShowCursor(false);
         onComplete?.();

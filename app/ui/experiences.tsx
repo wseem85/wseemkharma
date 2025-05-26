@@ -7,8 +7,22 @@ import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from 'react-vertical-timeline-component';
-const ExperienceCard = ({ experience }) => {
-  console.log(experience);
+interface Experience {
+  title: string;
+  company_name: string;
+  icon: {
+    src: string;
+  };
+  iconBg: string;
+  date: string;
+  points: string[];
+}
+
+interface ExperienceCardProps {
+  experience: Experience;
+}
+
+const ExperienceCard = ({ experience }: ExperienceCardProps) => {
   return (
     <VerticalTimelineElement
       className="vertical-timeline-element--work"

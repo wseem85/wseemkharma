@@ -11,15 +11,8 @@ const nextConfig: NextConfig = {
     'react-tilt',
     'leva',
   ],
-  // Add any other R3F-related packages here],
-  experimental: {
-    turbopack: {
-      // Add this to resolve font loading issues
-      loaders: {
-        '.woff2': 'file',
-      },
-    },
-  },
+  // Remove the turbopack configuration from experimental
+  // Turbopack is now enabled via CLI flag: --turbopack
 };
 
 export default nextConfig;

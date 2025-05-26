@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-const Logo = ({ id, src, name }) => {
+const Logo = ({ id, src, name }: { id: number; src: string; name: string }) => {
   return (
     <div
       className={`border w-14 h-14 border-white-500  rounded-full flex justify-center items-center bg-black-backtwo shadow-white-sm`}

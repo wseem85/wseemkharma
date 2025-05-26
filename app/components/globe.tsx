@@ -1,9 +1,15 @@
 'use client';
 import Globe from 'react-globe.gl';
 import { useState, useEffect } from 'react';
-
+interface ArcData {
+  startLat: number;
+  startLng: number;
+  endLat: number;
+  endLng: number;
+  color: string[];
+}
 const GlobeWithArcs = () => {
-  const [arcsData, setArcsData] = useState([]);
+  const [arcsData, setArcsData] = useState<ArcData[]>([]);
 
   useEffect(() => {
     // Generate random arc data

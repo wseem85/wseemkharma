@@ -2,7 +2,13 @@ import SquareLogo from './square-logo';
 import { motion, stagger, useAnimate } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 // import { useMediaQuery } from 'react-responsive';
-const SquareLogosContainer = ({ imgs, initialDelay = 4100 }) => {
+const SquareLogosContainer = ({
+  imgs,
+  initialDelay = 4100,
+}: {
+  imgs: { id: number; src: string; name: string }[];
+  initialDelay: number;
+}) => {
   const [scope, animate] = useAnimate();
   const animationRef = useRef(null);
 

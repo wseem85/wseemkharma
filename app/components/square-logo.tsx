@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useMediaQuery } from 'react-responsive';
-const SquareLogo = ({ src, name }) => {
+const SquareLogo = ({ src, name }: { src: string; name: string }) => {
   const isSmall = useMediaQuery({ maxWidth: 400 });
   const isMobile = useMediaQuery({ minWidth: 400, maxWidth: 768 });
 

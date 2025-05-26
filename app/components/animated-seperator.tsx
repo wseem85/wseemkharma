@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BarsSeperator = ({ color = 'bg-red-ground' }) => {
+const BarsSeperator = ({ color = 'bg-red-ground' }: { color: string }) => {
   return (
     <div className="flex items-center gap-2 mt-4 sm:mt-5 mb-4  xs:flex">
       {/* Main bars */}

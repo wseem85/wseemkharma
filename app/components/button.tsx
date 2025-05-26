@@ -1,4 +1,12 @@
-const Button = ({ name, isBeam = false, containerClass }) => {
+const Button = ({
+  name,
+  isBeam = false,
+  containerClass,
+}: {
+  name: string;
+  isBeam: boolean;
+  containerClass: string;
+}) => {
   return (
     <button className={`btn tracking-wider ${containerClass}`}>
       {isBeam && (

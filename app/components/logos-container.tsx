@@ -3,7 +3,11 @@ import { motion, stagger, useAnimate } from 'framer-motion';
 import { useEffect } from 'react';
 import Logo from './logo';
 
-const LogosContainer = ({ imgs }) => {
+const LogosContainer = ({
+  imgs,
+}: {
+  imgs: { id: number; src: string; name: string }[];
+}) => {
   const [scope, animate] = useAnimate();
 
   useEffect(() => {
@@ -43,7 +47,7 @@ const LogosContainer = ({ imgs }) => {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ type: 'spring', stiffness: 300 }}
         >
-          <Logo src={src} name={name} />
+          <Logo id={id} src={src} name={name} />
         </motion.div>
       ))}
     </motion.div>
