@@ -1,5 +1,13 @@
 'use client';
-import Globe from 'react-globe.gl';
+const Globe = dynamic(() => import('react-globe.gl'), {
+  ssr: false,
+  loading: () => (
+    <div className="flex items-center justify-center w-[326px] h-[326px]">
+      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
+    </div>
+  ),
+});
+import dynamic from 'next/dynamic';
 import { useState, useEffect } from 'react';
 interface ArcData {
   startLat: number;
