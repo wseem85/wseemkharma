@@ -1,147 +1,228 @@
 // This file contains placeholder data that you'll be replacing with real data in the Data Fetching chapter:
 // https://nextjs.org/learn/dashboard-app/fetching-data
-const users = [
+import freelancer from '@/public/assets/freelancer.png';
+import shipcoIcon from '@/public/assets/shipcoIcon.png';
+
+export const navLinks = [
   {
-    id: '410544b2-4001-4271-9855-fec4b6a6442a',
-    name: 'User',
-    email: 'user@nextmail.com',
-    password: '123456',
+    id: 1,
+    name: 'Home',
+    href: '/',
+  },
+
+  {
+    id: 2,
+    name: 'Projects',
+    href: '/projects',
+  },
+  {
+    id: 3,
+    name: 'Contacts',
+    href: '/contacts',
+  },
+];
+export const myProjects = [
+  {
+    title: 'NadaArt - Immersive Online Gallery & Marketplace',
+    desc: 'NadaArt is a responsive full-stack e-commerce platform showcasing artist work. Users can browse artworks by category/size/price, manage carts, and personalize profiles. Admins access a dedicated dashboard for inventory management (CRUD operations).',
+    subdesc:
+      'Built with React.js and React Router for dynamic SPA navigation, enhanced by React Spring for smooth animations. Supabase powers secure authentication and real-time database ops, while TanStack Query optimizes API data fetching..',
+    href: 'https://nadaart.vercel.app',
+    texture: '/textures/project/project1.mp4',
+
+    brandcolor: '#257180',
+    tags: [
+      {
+        id: 1,
+        name: 'React.js',
+        path: '/logos/react.svg',
+      },
+      {
+        id: 2,
+        name: 'React Query',
+        path: '/logos/react-query.png',
+      },
+      {
+        id: 3,
+        name: 'Javascript',
+        path: '/logos/javascript.svg',
+      },
+      {
+        id: 4,
+        name: 'Supabase',
+        path: '/logos/supabase.png',
+      },
+      {
+        id: 5,
+        name: 'Styled Components',
+        path: '/logos/styled.svg',
+      },
+    ],
+  },
+  {
+    title: 'My-MDB - Movies & Series App',
+    desc: 'Movie & TV Show Explorer lets you search, track, and rate films/series with multi-platform ratings (IMDb, TMDB, Rotten Tomatoes). Save to watchlists, discover trending picks, and get detailed info—all powered by TMDB & OMDB APIs. Perfect for casual viewers and film buffs alike!',
+    subdesc:
+      'Built with React.js and React Router for seamless navigation, this app uses Redux Toolkit for state management, Axios for API calls, and Tailwind CSS for sleek styling',
+    href: 'https://my-mdb-delta.vercel.app/',
+    texture: '/textures/project/project2.mp4',
+
+    brandcolor: '#3f51b5',
+    tags: [
+      {
+        id: 1,
+        name: 'React.js',
+        path: '/logos/react.svg',
+      },
+      {
+        id: 2,
+        name: 'TailwindCSS',
+        path: '/logos/tailwindcss.svg',
+      },
+      {
+        id: 3,
+        name: 'Javascript',
+        path: '/logos/javascript.svg',
+      },
+      {
+        id: 4,
+        name: 'Redux Toolkit',
+        path: '/logos/redux.png',
+      },
+    ],
+  },
+  {
+    title: 'TecTalk',
+    desc: 'TecTalk is a full-stack social platform where users can sign up via email, Google, or GitHub to join tech discussions. Users can create topics, publish posts, and engage with others by commenting on existing discussions. ',
+    subdesc:
+      'TecTalk is built with Next.js, leveraging its full-stack capabilities to handle server-side auth, API routes, and seamless frontend rendering. It features secure oAuth integration (Google/GitHub) via Next-Auth and credential login with bcrypt hashing, all backed by a Postgres database for reliable data storage.',
+    href: 'https://tectalk.vercel.app/',
+    texture: '/textures/project/project3.mp4',
+    logo: '/project-logo3.png',
+
+    brandcolor: '#7828c8',
+    tags: [
+      {
+        id: 1,
+        name: 'Next.js',
+        path: '/logos/nextjs.png',
+      },
+      {
+        id: 2,
+        name: 'PostgreSQL',
+        path: '/logos/postgresql.svg',
+      },
+      {
+        id: 3,
+        name: 'TypeScript',
+        path: '/logos/typescript.svg',
+      },
+      {
+        id: 4,
+        name: 'Tailwindcss',
+        path: '/logos/tailwindcss.svg',
+      },
+      {
+        id: 5,
+        name: 'NextAuth',
+        path: '/logos/nextauth.png',
+      },
+    ],
+  },
+  {
+    title: 'Shipco',
+    desc: 'Dynamic web app that showcases Shipco services, branches, and real-time pricing in one seamless platform. Clients can easily find contacts, and explore company network—all optimized for fast, mobile-friendly access.',
+    subdesc:
+      'This web app is built with React.js and React Router for a fast, dynamic experience. The UI is crafted using Material-UI components, icons, and charts for a polished look, while React Leaflet powers interactive branch maps. Modern, scalable, and user-friendly—all in one powerful platform.',
+    href: 'https://www.shipcosyria.com.sy/',
+    texture: '/textures/project/project4.mp4',
+
+    brandcolor: '#043741',
+    tags: [
+      {
+        id: 1,
+        name: 'React.js',
+        path: '/logos/react.svg',
+      },
+      {
+        id: 2,
+        name: 'Javascript',
+        path: '/logos/javascript.svg',
+      },
+      {
+        id: 3,
+        name: 'ReactRouter',
+        path: '/logos/react-router.svg',
+      },
+    ],
   },
 ];
 
-const customers = [
+export const experiences = [
   {
-    id: 'd6e15727-9fe1-4961-8c5b-ea44a9bd81aa',
-    name: 'Evil Rabbit',
-    email: 'evil@rabbit.com',
-    image_url: '/customers/evil-rabbit.png',
+    title: 'Freelance Web Developer',
+    company_name: 'Independent Work',
+    icon: freelancer, // You'll need to provide/import this
+    iconBg: '#ebebeb', // slate-800
+    date: 'May 2022 - Present',
+    points: [
+      'Build fullstack applications using Next.js (RSCs, Route Handlers, Server Actions) with PostgreSQL backends',
+      'Develop responsive SPAs with React, implementing advanced state management solutions',
+      'Create fullstack apps leveraging "Backend-as-a-Service" platforms like Supabase',
+      'Collaborate in team environments to build reusable components and optimize performance',
+      'Key Projects: TecTalk (Next.js forum), Shipco Website, Nadaart CMS, My-MDB movie app',
+    ],
   },
   {
-    id: '3958dc9e-712f-4377-85e9-fec4b6a6442a',
-    name: 'Delba de Oliveira',
-    email: 'delba@oliveira.com',
-    image_url: '/customers/delba-de-oliveira.png',
+    title: 'IT Assistant Manager',
+    company_name: 'Shipco Company',
+    icon: shipcoIcon,
+    iconBg: '#ebebeb', // sky-700
+    date: 'July 2024 - Present',
+    points: [
+      'Lead a team of 6 IT support staff, delegating tasks and providing technical guidance',
+      'Oversee maintenance of IT infrastructure including servers, networks, and workstations',
+      'Developed company website from scratch to modernize online presence',
+      'Implement security best practices across all company systems',
+    ],
   },
   {
-    id: '3958dc9e-742f-4377-85e9-fec4b6a6442a',
-    name: 'Lee Robinson',
-    email: 'lee@robinson.com',
-    image_url: '/customers/lee-robinson.png',
+    title: 'IT Support Engineer',
+    company_name: 'Shipco Company',
+    icon: shipcoIcon,
+    iconBg: '#ebebeb',
+    date: 'May 2016 - July 2024',
+    points: [
+      'Provided technical support for 50+ users across hardware, software and network systems',
+      'Configured and maintained servers, firewalls, and network devices',
+      'Monitored system performance and implemented efficiency improvements',
+      'Trained junior IT staff and end-users on new technologies',
+    ],
   },
   {
-    id: '76d65c26-f784-44a2-ac19-586678f7c2f2',
-    name: 'Michael Novotny',
-    email: 'michael@novotny.com',
-    image_url: '/customers/michael-novotny.png',
+    title: 'Windows Network Administrator',
+    company_name: 'Shipco Company',
+    icon: shipcoIcon,
+    iconBg: '#ebebeb',
+    date: 'April 2013 - May 2016',
+    points: [
+      'Managed Windows server environment and Active Directory infrastructure',
+      'Implemented backup and disaster recovery solutions',
+      'Resolved complex network connectivity issues',
+      'Maintained 100+ workstations across company locations',
+    ],
   },
   {
-    id: 'CC27C14A-0ACF-4F4A-A6C9-D45682C144B9',
-    name: 'Amy Burns',
-    email: 'amy@burns.com',
-    image_url: '/customers/amy-burns.png',
-  },
-  {
-    id: '13D07535-C59E-4157-A011-F8D2EF4E0CBB',
-    name: 'Balazs Orban',
-    email: 'balazs@orban.com',
-    image_url: '/customers/balazs-orban.png',
-  },
-];
-
-const invoices = [
-  {
-    customer_id: customers[0].id,
-    amount: 15795,
-    status: 'pending',
-    date: '2022-12-06',
-  },
-  {
-    customer_id: customers[1].id,
-    amount: 20348,
-    status: 'pending',
-    date: '2022-11-14',
-  },
-  {
-    customer_id: customers[4].id,
-    amount: 3040,
-    status: 'paid',
-    date: '2022-10-29',
-  },
-  {
-    customer_id: customers[3].id,
-    amount: 44800,
-    status: 'paid',
-    date: '2023-09-10',
-  },
-  {
-    customer_id: customers[5].id,
-    amount: 34577,
-    status: 'pending',
-    date: '2023-08-05',
-  },
-  {
-    customer_id: customers[2].id,
-    amount: 54246,
-    status: 'pending',
-    date: '2023-07-16',
-  },
-  {
-    customer_id: customers[0].id,
-    amount: 666,
-    status: 'pending',
-    date: '2023-06-27',
-  },
-  {
-    customer_id: customers[3].id,
-    amount: 32545,
-    status: 'paid',
-    date: '2023-06-09',
-  },
-  {
-    customer_id: customers[4].id,
-    amount: 1250,
-    status: 'paid',
-    date: '2023-06-17',
-  },
-  {
-    customer_id: customers[5].id,
-    amount: 8546,
-    status: 'paid',
-    date: '2023-06-07',
-  },
-  {
-    customer_id: customers[1].id,
-    amount: 500,
-    status: 'paid',
-    date: '2023-08-19',
-  },
-  {
-    customer_id: customers[5].id,
-    amount: 8945,
-    status: 'paid',
-    date: '2023-06-03',
-  },
-  {
-    customer_id: customers[2].id,
-    amount: 1000,
-    status: 'paid',
-    date: '2022-06-05',
+    title: 'Freelance Graphic Designer',
+    company_name: 'Independent Work',
+    icon: freelancer,
+    iconBg: '#ebebeb', // violet-600
+    date: 'June 2018 - August 2020',
+    points: [
+      'Designed logos and brand guidelines for 20+ clients (avg. 8.1/10 rating)',
+      'Created print/digital including business cards, brochures, and social media graphics',
+      'Produced large-scale advertisements like highway billboards',
+      'Developed comprehensive visual identities for diverse industries',
+    ],
   },
 ];
-
-const revenue = [
-  { month: 'Jan', revenue: 2000 },
-  { month: 'Feb', revenue: 1800 },
-  { month: 'Mar', revenue: 2200 },
-  { month: 'Apr', revenue: 2500 },
-  { month: 'May', revenue: 2300 },
-  { month: 'Jun', revenue: 3200 },
-  { month: 'Jul', revenue: 3500 },
-  { month: 'Aug', revenue: 3700 },
-  { month: 'Sep', revenue: 2500 },
-  { month: 'Oct', revenue: 2800 },
-  { month: 'Nov', revenue: 3000 },
-  { month: 'Dec', revenue: 4800 },
-];
-
-export { users, customers, invoices, revenue };

@@ -1,3 +1,7 @@
+import { inter, ubuntu } from '@/app/lib/fonts';
+import './ui/global.css';
+import Navbar from './ui/navbar';
+import Footer from './ui/footer';
 export default function RootLayout({
   children,
 }: {
@@ -5,7 +9,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${ubuntu.className} antialiased`}>
+        <>
+          <Navbar />
+          {children}
+          <Footer />
+        </>
+      </body>
     </html>
   );
 }
