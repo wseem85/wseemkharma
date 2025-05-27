@@ -14,7 +14,11 @@ import Button from '../components/button';
 const Hero = () => {
   const isSmall = useMediaQuery({ maxWidth: 440 });
   const isMobile = useMediaQuery({ maxWidth: 768 });
-  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1024 });
+  const isTablet = useMediaQuery({
+    minWidth: 768,
+    maxWidth: 1024,
+    orientation: 'landscape',
+  });
   // const controls = useControls('HackerRoom', {
   //   // Two separate arguments
   //   positionX: {
@@ -103,9 +107,9 @@ const Hero = () => {
         <div
           className={`absolute ${
             isSmall
-              ? 'top-[180px] h-[350px]'
+              ? 'top-[200px] h-[350px]'
               : isMobile
-                ? 'top-[120px] h-[400px]'
+                ? 'top-[160px] h-[400px]'
                 : isTablet
                   ? 'top-[150px] h-[420px]'
                   : 'top-[200px] h-[440px]'
@@ -171,9 +175,9 @@ const Hero = () => {
       <div
         className={`absolute w-full ${
           isSmall
-            ? 'bottom-4'
+            ? 'top-[700px]'
             : isMobile
-              ? 'bottom-8'
+              ? 'top-[717px]'
               : isTablet
                 ? 'bottom-8'
                 : 'bottom-4'
