@@ -4,6 +4,7 @@ import { myProjects } from '../lib/placeholder-data';
 
 import { VideoScreen3D } from '../components/video-screen3d';
 import LogoCubesContainer from '../components/logo-cube-container';
+import { hexToRgba } from '../utils/helpers';
 // import CanvasLoader from '../components/CanvasLoader';
 
 const projectsCount = myProjects.length;
@@ -31,7 +32,7 @@ const Projects = () => {
         <div
           className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 shadow-2xl shadow-black-200 "
           style={{
-            background: `linear-gradient(to bottom, ${selectedProject.brandcolor},transparent 5%, black)`,
+            background: `linear-gradient(to bottom,${hexToRgba(selectedProject.brandcolor, 0.4)},transparent 20%, black)`,
           }}
         >
           <div className="flex flex-col gap-5 text-white-600 my-5">
@@ -78,9 +79,9 @@ const Projects = () => {
           </div>
         </div>
         <div
-          className="border border-black-300  md:h-full"
+          className="border border-black-300  md:h-full flex items-center"
           style={{
-            background: `linear-gradient(to top, ${selectedProject.brandcolor},transparent 5%, black)`,
+            background: `linear-gradient(to top,${hexToRgba(selectedProject.brandcolor, 0.4)},transparent 20%, black)`,
           }}
         >
           <VideoScreen3D defaultVideo={currentVideo} />

@@ -8,11 +8,12 @@ import LogosContainer from '../components/logos-container';
 import BarsSeperator from '../components/animated-seperator';
 import { textVariant } from '../utils/motion';
 import AboutMe from '../components/about-me';
+import { useMediaQuery } from 'react-responsive';
 
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
   const [animationPhase, setAnimationPhase] = useState(0);
-
+  const isDesktop = useMediaQuery({ minWidth: 1024 });
   const handleCopy = () => {
     navigator.clipboard.writeText('engwseem2@gmail.com');
     setHasCopied(true);
@@ -33,7 +34,10 @@ const About = () => {
   }, []);
 
   return (
-    <section className="c-space my-12 sm:my-16 lg:my-20" id="about">
+    <section
+      className={`c-space my-12 sm:my-16 lg:my-20 relative top-[100px]`}
+      id="about"
+    >
       {/* Section header with improved responsive typography */}
       <motion.div
         className="mb-6 sm:mb-8 lg:mb-12"

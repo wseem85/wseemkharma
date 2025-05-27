@@ -15,16 +15,26 @@ import Button from '../components/button';
 const Hero = () => {
   const isSmall = useMediaQuery({ maxWidth: 440 });
   const isMobile = useMediaQuery({ maxWidth: 768 });
+  const isMobileandLandscape = useMediaQuery({
+    maxWidth: 768,
+    orientation: 'landscape',
+  });
   const isTablet = useMediaQuery({
     minWidth: 768,
     maxWidth: 1024,
-    orientation: 'landscape',
+  });
+  const isDesktop = useMediaQuery({
+    minWidth: 1024,
   });
 
   return (
-    <section className="min-h-screen w-full relative mx-auto overflow-hidden">
+    <section
+      className={`min-h-[550px]  ${isMobile ? 'min-h-400px' : ''} ${isMobileandLandscape ? 'min-h-[500px]' : ''}h-fit w-full relative top-[90px] mx-auto overflow-hidden bg-hero-pattern bg-cover bg-no-repeat bg-center`}
+    >
       {/* Main content container with improved responsive spacing */}
-      <div className="absolute inset-0 top-[110px]  lg:top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-3 sm:gap-5 lg:gap-12 px-3 sm:px-6 lg:px-8">
+      <div
+        className={`absolute ${isMobileandLandscape ? '' : ''} inset-0 pt-6  max-w-7xl mx-auto flex flex-row items-start gap-3 sm:gap-5 lg:gap-12 px-3 sm:px-6 lg:px-8`}
+      >
         {/* Decorative side bars - improved visibility */}
         <div className="gap-2 sm:gap-3 xl:gap-5 flex-col justify-center items-center mt-3 sm:mt-4 lg:mt-5 hidden xs:flex">
           <div className="w-4 sm:w-6 lg:w-7 h-[2px] sm:h-[3px] bg-red-ground opacity-90"></div>
@@ -75,12 +85,14 @@ const Hero = () => {
         <div
           className={`absolute ${
             isSmall
-              ? 'top-[180px] h-[300px] -right-10'
-              : isMobile
-                ? 'top-[140px] h-[380px] -right-16'
-                : isTablet
-                  ? 'top-[120px] h-[400px] -right-20'
-                  : 'top-[160px] h-[440px] -right-24'
+              ? 'top-[130px] h-[300px] -right-10'
+              : !isSmall && isMobile
+                ? 'top-[100px] h-[380px] -right-16'
+                : isMobile && isMobileandLandscape
+                  ? 'top-[-30px] h-[600px]'
+                  : isTablet
+                    ? 'top-[120px] h-[400px] -right-20'
+                    : 'top-[160px] h-[500px] -right-24'
           } inset-0 left-0 right-0 pointer-events-none`}
         >
           <Canvas>
@@ -90,43 +102,15 @@ const Hero = () => {
                 <directionalLight intensity={1} position={[40, 0, 6.4]} />
 
                 <ComputerModel
-                  position={[-3.5, -7.5, 4.2]}
+                  position={[-3.5, -6.5, 4.2]}
                   rotation={[3.4, -3.6, 3.1]}
-                  scale={
-                    isSmall ? 0.45 : isMobile ? 0.55 : isTablet ? 0.65 : 0.72
-                  }
+                  scale={isSmall ? 0.56 : isMobile ? 0.58 : 0.6}
                 />
               </HeroCamera>
             </Suspense>
           </Canvas>
         </div>
       </div>
-
-      {/* Call to action button with improved responsive positioning */}
-      <motion.div
-        className={`absolute w-full ${
-          isSmall
-            ? 'bottom-16 sm:bottom-20'
-            : isMobile
-              ? 'bottom-12 sm:bottom-16'
-              : isTablet
-                ? 'bottom-8'
-                : 'bottom-4'
-        } left-0 right-0 px-3 sm:px-6 lg:px-8`}
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 1.0 }}
-      >
-        <div className="max-w-7xl mx-auto flex justify-center md:justify-start">
-          <a href="#about" className="block w-fit">
-            <Button
-              name="More About Me"
-              isBeam
-              containerClass="w-full sm:w-fit sm:min-w-80 lg:min-w-96"
-            />
-          </a>
-        </div>
-      </motion.div>
     </section>
   );
 };

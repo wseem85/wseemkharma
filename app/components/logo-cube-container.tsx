@@ -22,8 +22,8 @@ const LogoCubesContainer: React.FC<LogoCubesContainerProps> = ({ tags }) => {
       {tags.map((tag, index) => (
         <div
           key={tag.id || index}
-          className=" !w-16 !h-16 "
-          style={{ width: '60px', height: '60px', minWidth: '60px' }}
+          className=" !w-12 !h-12 md:!w-14 md:!h-14 lg:!w-16 lg:!h-16 "
+          style={{ width: '50px', height: '50px', minWidth: '50px' }}
         >
           <Canvas camera={{ position: [0, 0, 5], fov: 40 }}>
             {/* Reduced ambient light so directional lighting is more noticeable */}

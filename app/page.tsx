@@ -7,9 +7,8 @@ import Hero from './ui/hero';
 export default function Page() {
   return (
     <div className="relative z-0">
-      <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-        <Hero />
-      </div>
+      <Hero />
+
       <About />
       <BrowseProjects />
       <Experiences />

@@ -18,7 +18,7 @@ const Footer = () => {
     tap: { scale: 0.95 },
   };
   return (
-    <section className="c-space my-20 bg-black-backtwo  text-white">
+    <section className="c-space my-20 bg-black-backtwo  text-white relative top-[100px]">
       <footer className="grid grid-cols-3  gap-6 place-items-center py-7 ">
         <div className="col-span-3 text-center">
           {' '}

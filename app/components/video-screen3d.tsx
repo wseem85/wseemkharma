@@ -14,7 +14,7 @@ const VideoScreen3D = ({ defaultVideo }: { defaultVideo: string }) => {
   }, [defaultVideo]);
 
   return (
-    <div className="w-full h-64 xs:h-72 sm:h-80 md:h-96 lg:h-full  flex justify-center items-center bg-transparent">
+    <div className="w-full h-64 xs:h-72 sm:h-80 md:h-96 lg:my-auto flex justify-center items-center bg-transparent">
       <video
         ref={videoRef}
         src={defaultVideo}

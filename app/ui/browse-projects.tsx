@@ -9,7 +9,7 @@ const BrowseProjects = () => {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="flex flex-col sm:flex-row gap-4 sm:gap-6 lg:gap-8 py-6 sm:py-8 lg:py-10 items-start sm:items-center justify-between px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-50 to-indigo-50 border border-gray-200 shadow-sm rounded-lg mx-4 sm:mx-6 lg:mx-8"
+      className="flex flex-col sm:flex-row gap-4 sm:gap-6 lg:gap-8 py-6 sm:py-8 lg:py-10 items-start sm:items-center justify-between px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-50 to-indigo-50 border border-gray-200 shadow-sm  mx-4 sm:mx-6 lg:mx-8 relative top-[100px]"
     >
       <div className="flex-1 space-y-2 sm:space-y-3">
         <p className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-800 leading-tight">

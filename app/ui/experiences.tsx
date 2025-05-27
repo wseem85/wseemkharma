@@ -26,7 +26,7 @@ interface ExperienceCardProps {
 const ExperienceCard = ({ experience }: ExperienceCardProps) => {
   return (
     <VerticalTimelineElement
-      className="vertical-timeline-element--work"
+      className="vertical-timeline-element--work "
       contentStyle={{
         backgroundColor: '#252526',
         color: '#c4c4c4',
@@ -85,7 +85,7 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
 
 const Experiences = () => {
   return (
-    <section className="c-space my-12 sm:my-16 lg:my-20 px-2 sm:px-4">
+    <section className="c-space my-12 sm:my-16 lg:my-20 px-2 sm:px-4 relative top-[100px]">
       {/* Improved responsive header */}
       <motion.div
         className="mb-6 sm:mb-8 lg:mb-12"
@@ -110,7 +110,7 @@ const Experiences = () => {
           <VerticalTimeline
             lineColor="#c4c4c4"
             layout="1-column"
-            className="vertical-timeline-custom-line"
+            className="vertical-timeline-custom-line space-y-4"
           >
             {experiences.map((experience, index) => (
               <motion.div
