@@ -12,8 +12,14 @@ const config: Config = {
         generalsans: ['General Sans', 'sans-serif'],
       },
       screens: {
-        xxs: '320px', // Extra small devices (phones)
-        xs: '480px',
+        xxs: '320px', // Extra small phones
+        xs: '480px', // Small phones
+        sm: '640px', // Large phones / small tablets
+        md: '768px', // Tablets
+        lg: '1024px', // Small laptops
+        xl: '1280px', // Laptops
+        '2xl': '1536px', // Large screens
+        '3xl': '1920px', // Extra large screens
       },
       colors: {
         black: {
@@ -47,6 +53,8 @@ const config: Config = {
       },
       animation: {
         ping: 'ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite',
+        'fade-in': 'fadeIn 0.6s ease-in-out',
+        'slide-up': 'slideUp 0.6s ease-out',
       },
       keyframes: {
         ping: {
@@ -54,6 +62,14 @@ const config: Config = {
             transform: 'scale(2)',
             opacity: '0',
           },
+        },
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideUp: {
+          '0%': { transform: 'translateY(50px)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
         },
       },
     },

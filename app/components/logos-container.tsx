@@ -25,7 +25,7 @@ const LogosContainer = ({
         );
 
         // Pause before restarting the sequence
-        await new Promise((resolve) => setTimeout(resolve, 1900));
+        await new Promise((resolve) => setTimeout(resolve, 2200));
       }
     };
 

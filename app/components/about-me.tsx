@@ -6,6 +6,8 @@ const overview =
   'A Computer Engineer, With 12 years of Experience, in Many IT related fields such as web development, graphic design, windows network administration, IT support, and many more.';
 const education =
   'B.A Computers & Automatic Control Engineering | Tishreen University | 2003 - 2008.';
+const address = 'Latakia , Syria ';
+const phone = '+963994875398';
 
 interface TypewriterTextProps {
   text: string;
@@ -99,6 +101,26 @@ const AboutMe = () => {
     {
       id: 'education',
       content: education,
+      type: 'typing',
+    },
+    {
+      id: 'addres-title',
+      content: 'Address',
+      type: 'heading',
+    },
+    {
+      id: 'address',
+      content: address,
+      type: 'typing',
+    },
+    {
+      id: 'phone-title',
+      content: 'Phone',
+      type: 'heading',
+    },
+    {
+      id: 'phone',
+      content: phone,
       type: 'typing',
     },
   ];

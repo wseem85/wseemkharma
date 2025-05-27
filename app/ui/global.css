@@ -2,35 +2,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 * {
   scroll-behavior: smooth;
 }
+
 body {
   background-color: #1e1e1e;
   color: #c4c4c4;
   font-family: 'General Sans', sans-serif;
   padding: 0;
   margin: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
-/* 1e1e1e bg1*/
-/* 252526 bg2 */
-/* c4c4c4 text */
-/* 5497ce blue */
-/* 85b9d5 blue2 */
-/* c6ab74 yellow */
-/* 22ce89 green important */
-/* 6a9955 green less important */
 
 @layer utilities {
   .c-space {
-    @apply sm:px-10 px-5;
+    @apply px-4 sm:px-6 lg:px-8 xl:px-10;
   }
 
   .head-text {
-    @apply sm:text-4xl text-3xl font-generalsans font-semibold text-gray_gradient;
+    @apply text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-generalsans font-semibold text-gray_gradient;
   }
+
   .head-sub_text {
-    @apply sm:text-2xl text-xl font-generalsans font-semibold text-gray_gradient;
+    @apply text-lg sm:text-xl lg:text-2xl xl:text-3xl font-generalsans font-semibold text-gray_gradient;
   }
 
   .nav-ul {
@@ -38,11 +34,11 @@ body {
   }
 
   .nav-li {
-    @apply text-neutral-400 hover:text-white font-generalsans  max-sm:hover:bg-black-500 max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5;
+    @apply text-neutral-400 hover:text-white font-generalsans max-sm:hover:bg-black-500 max-sm:w-full max-sm:rounded-md py-2 max-sm:px-5 transition-colors duration-200;
   }
 
   .nav-li_a {
-    @apply text-lg md:text-base hover:text-white transition-colors;
+    @apply text-base sm:text-lg md:text-base hover:text-white transition-colors;
   }
 
   .nav-sidebar {
@@ -53,116 +49,143 @@ body {
     @apply bg-gradient-to-r from-[#BEC1CF] from-60% via-[#D5D8EA] via-60% to-[#D5D8EA] to-100% bg-clip-text text-transparent;
   }
 
-  /* button component */
+  /* Enhanced button component */
   .btn {
-    @apply flex gap-4 items-center justify-center cursor-pointer p-3 rounded-md bg-black-backtwo  transition-all active:scale-95 text-white mx-auto;
+    @apply flex gap-3 sm:gap-4 items-center justify-center cursor-pointer p-3 sm:p-4 rounded-md bg-black-backtwo transition-all active:scale-95 hover:bg-black-300 text-white mx-auto min-h-[44px] touch-manipulation;
   }
 
   .btn-ping {
-    @apply animate-ping  absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75;
+    @apply animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75;
   }
 
   .btn-ping_dot {
     @apply relative inline-flex rounded-full h-3 w-3 bg-green-500;
   }
 
-  /* hero section */
+  /* Enhanced hero section */
   .hero_tag {
-    @apply xl:text-6xl md:text-5xl font-generalsans sm:text-4xl text-3xl  font-black !leading-normal;
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-generalsans font-black !leading-tight;
   }
+
   .hero_sub_tag {
-    @apply xl:text-3xl md:text-xl font-generalsans sm:text-xl text-lg  font-semibold !leading-normal;
+    @apply text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-generalsans font-semibold !leading-relaxed;
   }
-  /* about section */
+
+  /* Enhanced about section */
+  /* Enhanced about section */
   .grid-container {
-    @apply w-full h-full border border-black-300 bg-black-200 rounded-lg sm:p-7 p-4 flex flex-col gap-5;
+    @apply w-full h-full border border-black-300 bg-black-200 rounded-lg p-4 sm:p-6 lg:p-7 flex flex-col gap-4 sm:gap-5 transition-all hover:border-black-500;
   }
 
   .grid-headtext {
-    @apply text-xl font-semibold mb-2 text-white;
+    @apply text-lg sm:text-xl lg:text-2xl font-semibold mb-2 text-white leading-tight;
   }
 
   .grid-subtext {
-    @apply text-[#afb0b6] text-base;
+    @apply text-[#afb0b6] text-sm sm:text-base lg:text-lg leading-relaxed;
   }
 
   .copy-container {
-    @apply cursor-pointer flex justify-center items-center gap-2;
+    @apply cursor-pointer flex justify-center items-center gap-2 sm:gap-3 hover:bg-opacity-80 transition-all rounded-lg;
   }
 
-  /* projects section  */
+  /* Enhanced projects section */
   .arrow-btn {
-    @apply w-10 h-10 p-3 cursor-pointer active:scale-95 transition-all rounded-full arrow-gradient;
+    @apply w-10 h-10 sm:w-12 sm:h-12 p-2 sm:p-3 cursor-pointer active:scale-95 transition-all rounded-full arrow-gradient hover:scale-105 touch-manipulation;
   }
 
   .tech-logo {
-    @apply w-10 h-10 rounded-md p-2 bg-neutral-100 bg-opacity-10 backdrop-filter backdrop-blur-lg flex justify-center items-center;
+    @apply w-8 h-8 sm:w-10 sm:h-10 rounded-md p-1.5 sm:p-2 bg-neutral-100 bg-opacity-10 backdrop-filter backdrop-blur-lg flex justify-center items-center transition-transform hover:scale-110;
   }
 
-  /* clients section */
+  /* Enhanced clients section */
   .client-container {
-    @apply grid md:grid-cols-2 grid-cols-1 gap-5 mt-12;
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-5 lg:gap-6 mt-8 sm:mt-10 lg:mt-12;
   }
 
   .client-review {
-    @apply rounded-lg md:p-10 p-5 col-span-1 bg-black-300 bg-opacity-50;
+    @apply rounded-lg p-4 sm:p-6 lg:p-8 xl:p-10 col-span-1 bg-black-300 bg-opacity-50 border border-black-200 hover:border-black-500 transition-all;
   }
 
   .client-content {
-    @apply flex lg:flex-row flex-col justify-between lg:items-center items-start gap-5 mt-7;
+    @apply flex flex-col lg:flex-row justify-between lg:items-center items-start gap-4 sm:gap-5 lg:gap-6 mt-6 sm:mt-7;
   }
 
-  /*  work experience section */
+  /* Enhanced work experience section */
+  /* Enhanced work experience section */
   .work-container {
-    @apply grid lg:grid-cols-3 grid-cols-1 gap-5 mt-12;
+    @apply grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6 mt-8 sm:mt-10 lg:mt-12;
   }
 
   .work-canvas {
-    @apply col-span-1 rounded-lg bg-black-200 border border-black-300;
+    @apply col-span-1 rounded-lg bg-black-200 border border-black-300 hover:border-black-500 transition-all;
   }
 
   .work-content {
-    @apply col-span-2 rounded-lg bg-black-200 border border-black-300;
+    @apply col-span-1 lg:col-span-2 rounded-lg bg-black-200 border border-black-300 hover:border-black-500 transition-all;
   }
 
   .work-content_container {
-    @apply grid grid-cols-[auto_1fr] items-start gap-5  transition-all ease-in-out duration-500 cursor-pointer hover:bg-black-300 rounded-lg sm:px-5 px-2.5;
+    @apply grid grid-cols-[auto_1fr] items-start gap-4 sm:gap-5 transition-all ease-in-out duration-500 cursor-pointer hover:bg-black-300 rounded-lg px-3 sm:px-4 lg:px-5 py-3 sm:py-4;
   }
 
   .work-content_logo {
-    @apply rounded-3xl w-16 h-16 p-2 bg-black-600;
+    @apply rounded-3xl w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 p-2 bg-black-600;
   }
 
   .work-content_bar {
     @apply flex-1 w-0.5 mt-4 h-full bg-black-300 group-hover:bg-black-500 group-last:hidden;
   }
 
-  /* contact section */
+  /* Enhanced contact section */
   .contact-container {
-    @apply max-w-xl relative z-10 sm:px-10 px-5 mt-12;
+    @apply max-w-xl relative z-10 px-4 sm:px-6 lg:px-8 xl:px-10 mt-8 sm:mt-10 lg:mt-12;
   }
 
   .field-label {
-    @apply text-lg text-white-600;
+    @apply text-base sm:text-lg text-white-600;
   }
 
   .field-input {
-    @apply w-full bg-black-300 px-5 py-2 min-h-14 rounded-lg placeholder:text-white-500 text-lg text-white-800 shadow-black-200 shadow-2xl focus:outline-none;
+    @apply w-full bg-black-300 px-4 sm:px-5 py-3 sm:py-4 min-h-[44px] sm:min-h-[48px] lg:min-h-[52px] rounded-lg placeholder:text-white-500 text-base sm:text-lg text-white-800 shadow-black-200 shadow-2xl focus:outline-none focus:ring-2 focus:ring-red-ground transition-all;
   }
 
   .field-btn {
-    @apply bg-black-500 px-5 py-2 min-h-12 rounded-lg shadow-black-200 shadow-2xl flex justify-center items-center text-lg text-white gap-3;
+    @apply bg-black-500 px-4 sm:px-5 py-3 sm:py-4 min-h-[44px] sm:min-h-[48px] rounded-lg shadow-black-200 shadow-2xl flex justify-center items-center text-base sm:text-lg text-white gap-3 hover:bg-black-600 transition-all active:scale-95 touch-manipulation;
   }
 
   .field-btn_arrow {
     @apply w-2.5 h-2.5 object-contain invert brightness-0;
   }
 
-  /*  footer */
+  /* Enhanced footer */
   .social-icon {
-    @apply w-12 h-12 rounded-full flex justify-center items-center bg-black-300 border border-black-200;
+    @apply w-10 h-10 sm:w-12 sm:h-12 rounded-full flex justify-center items-center bg-black-300 border border-black-200 hover:border-black-500 hover:bg-black-500 transition-all touch-manipulation;
+  }
+
+  /* Responsive utilities */
+  .responsive-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 lg:gap-6;
+  }
+
+  .responsive-flex {
+    @apply flex flex-col sm:flex-row gap-4 sm:gap-6 lg:gap-8;
+  }
+
+  .responsive-text {
+    @apply text-sm sm:text-base lg:text-lg;
+  }
+
+  .responsive-padding {
+    @apply p-4 sm:p-6 lg:p-8;
+  }
+
+  .responsive-margin {
+    @apply m-4 sm:m-6 lg:m-8;
   }
 }
+
+/* Enhanced animations and effects */
 .waving-hand {
   animation-name: wave-animation;
   animation-duration: 2.5s;
@@ -208,19 +231,81 @@ body {
   }
 }
 
+/* Enhanced timeline styles */
+/* Enhanced timeline styles */
 .vertical-timeline-element-icon {
-  border: 2px solid #252526 !important; /* White border */
-  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5) !important; /* Optional glow */
-  border-radius: 50% !important; /* Perfect circle */
+  border: 2px solid #252526 !important;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5) !important;
+  border-radius: 50% !important;
 }
+
 .vertical-timeline::before {
   background: #c4c4c4 !important;
   width: 4px !important;
-  /* left: 50% !important; */
   margin-left: -2px !important;
 }
 
 .vertical-timeline {
   opacity: 1 !important;
   visibility: visible !important;
+}
+
+/* Mobile-specific timeline improvements */
+@media (max-width: 768px) {
+  .vertical-timeline-element-content {
+    margin-left: 60px !important;
+  }
+
+  .vertical-timeline-element-icon {
+    width: 40px !important;
+    height: 40px !important;
+    left: 20px !important; /* Center the icon properly */
+  }
+
+  .vertical-timeline::before {
+    left: 40px !important; /* Position line to go through center of icons */
+    margin-left: 0 !important;
+  }
+
+  .vertical-timeline-element-content::before {
+    left: -15px !important;
+    border-right: 7px solid #232631 !important;
+    border-left: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .vertical-timeline-element-content {
+    margin-left: 50px !important;
+  }
+
+  .vertical-timeline-element-icon {
+    width: 35px !important;
+    height: 35px !important;
+    left: 17px !important;
+  }
+
+  .vertical-timeline::before {
+    left: 35px !important;
+  }
+}
+
+/* Touch device improvements */
+@media (hover: none) and (pointer: coarse) {
+  .hover\:scale-110:hover {
+    transform: none;
+  }
+
+  .hover\:bg-black-300:hover {
+    background-color: inherit;
+  }
+
+  /* Ensure touch targets are at least 44px */
+  button,
+  .btn,
+  .copy-container,
+  .social-icon {
+    min-height: 44px;
+    min-width: 44px;
+  }
 }

@@ -11,6 +11,7 @@ import { orbitron } from '@/app/lib/fonts';
 import { Suspense } from 'react';
 import CanvasLoader from '../components/canvas/canvas-loader';
 import Button from '../components/button';
+
 const Hero = () => {
   const isSmall = useMediaQuery({ maxWidth: 440 });
   const isMobile = useMediaQuery({ maxWidth: 768 });
@@ -19,178 +20,113 @@ const Hero = () => {
     maxWidth: 1024,
     orientation: 'landscape',
   });
-  // const controls = useControls('HackerRoom', {
-  //   // Two separate arguments
-  //   positionX: {
-  //     value: -3.5,
-  //     min: -10,
-  //     max: 40,
-  //   },
-  //   positionY: {
-  //     value: -7.5,
-  //     min: -7.5,
-  //     max: 40,
-  //   },
-  //   positionZ: {
-  //     value: 4.2,
-  //     min: 0,
-  //     max: 20,
-  //   },
-  //   scale: {
-  //     value: 0.7,
-  //     min: 0.01,
-  //     max: 10,
-  //   },
-
-  //   rotationX: {
-  //     value: 3.4,
-  //     min: -10,
-  //     max: 10,
-  //   },
-  //   rotationY: {
-  //     value: -3.6,
-  //     min: -10,
-  //     max: 10,
-  //   },
-  //   rotationZ: {
-  //     value: 3.1,
-  //     min: -10,
-  //     max: 10,
-  //   },
-  //   intensity: {
-  //     value: 0.5,
-  //     min: 0,
-  //     max: 1,
-  //   },
-
-  //   angle: {
-  //     value: 0.5,
-  //     min: 0,
-  //     max: 1,
-  //   },
-
-  //   penumbra: {
-  //     value: 0.5,
-  //     min: 0,
-  //     max: 1,
-  //   },
-  // });
 
   return (
-    <section className="h-screen w-full relative mx-auto">
-      <div className="absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5 lg:gap-12 px-6">
-        <div className=" gap-3 xl:gap-5 flex-col justify-center items-center mt-4 sm:mt-5  hidden xs:flex">
-          <div className="w-7 h-[3px] bg-red-ground opacity-90 "></div>
-          <div className="w-6 h-[3px] bg-red-ground opacity-80 "></div>
-          <div className="w-5 h-[3px] bg-red-ground opacity-70"></div>
-          <div className="w-4 h-[3px] bg-red-ground opacity-60"></div>
-          <div className="w-3 h-[3px] bg-red-ground opacity-50"></div>
-          <div className="w-2 h-[3px] bg-red-ground opacity-40"></div>
-          <div className="w-1 h-[3px] bg-red-ground opacity-40"></div>
-          <div className="w-[3px] h-[3px] bg-red-ground opacity-30 lg:hidden xl:block"></div>
-          <div className="w-[2px] h-[3px] bg-red-ground opacity-20 lg:hidden xl:block"></div>
-          <div className="w-[1px] h-[3px] bg-red-ground opacity-10 lg:hidden xl:block"></div>
+    <section className="min-h-screen w-full relative mx-auto overflow-hidden">
+      {/* Main content container with improved responsive spacing */}
+      <div className="absolute inset-0 top-[110px]  lg:top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-3 sm:gap-5 lg:gap-12 px-3 sm:px-6 lg:px-8">
+        {/* Decorative side bars - improved visibility */}
+        <div className="gap-2 sm:gap-3 xl:gap-5 flex-col justify-center items-center mt-3 sm:mt-4 lg:mt-5 hidden xs:flex">
+          <div className="w-4 sm:w-6 lg:w-7 h-[2px] sm:h-[3px] bg-red-ground opacity-90"></div>
+          <div className="w-3 sm:w-5 lg:w-6 h-[2px] sm:h-[3px] bg-red-ground opacity-80"></div>
+          <div className="w-3 sm:w-4 lg:w-5 h-[2px] sm:h-[3px] bg-red-ground opacity-70"></div>
+          <div className="w-2 sm:w-3 lg:w-4 h-[2px] sm:h-[3px] bg-red-ground opacity-60"></div>
+          <div className="w-2 sm:w-3 lg:w-3 h-[2px] sm:h-[3px] bg-red-ground opacity-50"></div>
+          <div className="w-1 sm:w-2 lg:w-2 h-[2px] sm:h-[3px] bg-red-ground opacity-40"></div>
+          <div className="w-1 sm:w-1 lg:w-1 h-[2px] sm:h-[3px] bg-red-ground opacity-40"></div>
+          <div className="w-[2px] sm:w-[3px] h-[2px] sm:h-[3px] bg-red-ground opacity-30 lg:hidden xl:block"></div>
+          <div className="w-[1px] sm:w-[2px] h-[2px] sm:h-[3px] bg-red-ground opacity-20 lg:hidden xl:block"></div>
+          <div className="w-[1px] h-[2px] sm:h-[3px] bg-red-ground opacity-10 lg:hidden xl:block"></div>
         </div>
-        <div className="space-y-2">
-          <h1 className="hero_tag">
-            Hi, I'm <span className="text-gray-300">Wseem </span>
-          </h1>
-          <p className={`${orbitron.className} antialiased tracking-wide`}>
+
+        {/* Hero text content with better responsive typography */}
+        <div className="space-y-2 sm:space-y-3 lg:space-y-4 flex-1 max-w-2xl">
+          <motion.h1
+            className="hero_tag"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            Hi, I'm <span className="text-gray-300">Wseem</span>
+          </motion.h1>
+
+          <motion.p
+            className={`${orbitron.className} antialiased tracking-wide text-sm sm:text-base lg:text-lg xl:text-xl text-white-600`}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
             A Computer Engineer | Full Stack Developer
-          </p>
-          <p className="hero_sub_tag tracking-wide">
+          </motion.p>
+
+          <motion.p
+            className="hero_sub_tag tracking-wide leading-relaxed"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
             I build <span className="text-red-ground">fast, scalable,</span> and{' '}
             <span className="text-red-ground">user-friendly</span> web
             applications with clean code and modern tech.
-          </p>
+          </motion.p>
         </div>
+
+        {/* 3D Canvas with improved responsive positioning */}
         <div
           className={`absolute ${
             isSmall
-              ? 'top-[200px] h-[350px]'
+              ? 'top-[180px] h-[300px] -right-10'
               : isMobile
-                ? 'top-[160px] h-[400px]'
+                ? 'top-[140px] h-[380px] -right-16'
                 : isTablet
-                  ? 'top-[150px] h-[420px]'
-                  : 'top-[200px] h-[440px]'
-          } inset-0 left-0 right-0`}
+                  ? 'top-[120px] h-[400px] -right-20'
+                  : 'top-[160px] h-[440px] -right-24'
+          } inset-0 left-0 right-0 pointer-events-none`}
         >
           <Canvas>
             <Suspense fallback={<CanvasLoader />}>
               <HeroCamera isMobile={isMobile}>
-                {/* <PerspectiveCamera
-                makeDefault
-                position={[0, 15, 50]} // Higher Y position
-                fov={60} // Wider field of view
-                near={1} // Closer near plane
-                far={1000} // Distant far plane
-                rotation={[-0.2, 0, 0]}
-              /> */}
                 <ambientLight intensity={1} color={0xffffff} />
-                <directionalLight
-                  intensity={1}
-                  // position={[
-                  //   controls.positionX,
-                  //   controls.positionY,
-                  //   controls.positionZ,
-                  // ]}
-                  position={[40, 0, 6.4]}
-                />
+                <directionalLight intensity={1} position={[40, 0, 6.4]} />
 
                 <ComputerModel
                   position={[-3.5, -7.5, 4.2]}
                   rotation={[3.4, -3.6, 3.1]}
-                  scale={isSmall ? 0.5 : isMobile ? 0.6 : isTablet ? 0.7 : 0.72}
-                  // position={[
-                  //   controls.positionX,
-                  //   controls.positionY,
-                  //   controls.positionZ,
-                  // ]}
-                  // rotation={[
-                  //   controls.rotationX,
-                  //   controls.rotationY,
-                  //   controls.rotationZ,
-                  // ]}
-                  // scale={controls.scale}
+                  scale={
+                    isSmall ? 0.45 : isMobile ? 0.55 : isTablet ? 0.65 : 0.72
+                  }
                 />
-
-                {/* Controls for user interaction */}
-                {/* <OrbitControls
-                // enableZoom={true}
-                enablePan={true}
-                enableRotate={true}
-                target={[0, 10, 0]}
-                minDistance={10}
-                maxDistance={50}
-                minPolarAngle={0} // 30 degrees minimum (can't look straight down)
-                maxPolarAngle={Math.PI / 2}
-                minAzimuthAngle={-Math.PI / 4} // -45 degrees (left limit)
-                maxAzimuthAngle={Math.PI / 4}
-              /> */}
               </HeroCamera>
             </Suspense>
           </Canvas>
         </div>
       </div>
-      <div
+
+      {/* Call to action button with improved responsive positioning */}
+      <motion.div
         className={`absolute w-full ${
           isSmall
-            ? 'top-[700px]'
+            ? 'bottom-16 sm:bottom-20'
             : isMobile
-              ? 'top-[717px]'
+              ? 'bottom-12 sm:bottom-16'
               : isTablet
                 ? 'bottom-8'
                 : 'bottom-4'
-        } left-0 right-0 a-10 c-space`}
+        } left-0 right-0 px-3 sm:px-6 lg:px-8`}
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 1.0 }}
       >
-        <a href="#about" className="w-fit">
-          <Button
-            name="More About Me"
-            isBeam
-            containerClass="sm:w-fit w-full sm:min-w-96"
-          />
-        </a>
-      </div>
+        <div className="max-w-7xl mx-auto flex justify-center md:justify-start">
+          <a href="#about" className="block w-fit">
+            <Button
+              name="More About Me"
+              isBeam
+              containerClass="w-full sm:w-fit sm:min-w-80 lg:min-w-96"
+            />
+          </a>
+        </div>
+      </motion.div>
     </section>
   );
 };
