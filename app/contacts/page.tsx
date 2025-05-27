@@ -249,7 +249,7 @@ export default function ContactPage() {
                     alt="copy"
                     className="w-5 h-5"
                   />
-                  <p className="text-white">+1 (555) 123-4567</p>
+                  <p className="text-white">+963 (994) 875398</p>
                 </div>
               </div>
 
@@ -269,7 +269,7 @@ export default function ContactPage() {
                   Availability
                 </h3>
                 <p className="grid-subtext">
-                  ⏰ Monday - Friday: 9:00 AM - 6:00 PM (Damascus Time)
+                  ⏰ Monday - Friday: 9:00 AM - 6:00 PM (Your Timezone)
                 </p>
                 <p className="grid-subtext">
                   📧 Email responses within 24 hours
@@ -285,50 +285,50 @@ export default function ContactPage() {
                 </h3>
                 <div className="grid grid-cols-2 gap-3">
                   <a
-                    href="https://linkedin.com/in/yourprofile"
+                    href="https://www.linkedin.com/in/wseem-kharma-b82373265"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="social-icon group"
                   >
                     <img
-                      src="/logos/linkedin.svg"
+                      src="/linkedin-white.png"
                       alt="LinkedIn"
                       className="w-6 h-6 group-hover:scale-110 transition-transform"
                     />
                   </a>
                   <a
-                    href="https://github.com/yourusername"
+                    href="https://github.com/wseem85"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="social-icon group"
                   >
                     <img
-                      src="/logos/github-mark-white.png"
+                      src="/github.svg"
                       alt="GitHub"
                       className="w-6 h-6 group-hover:scale-110 transition-transform"
                     />
                   </a>
                   <a
-                    href="https://twitter.com/yourusername"
+                    href="https://wa.me/963994875398"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="social-icon group"
                   >
                     <img
-                      src="/logos/twitter.svg"
-                      alt="Twitter"
+                      src="/whatsapp-white.png"
+                      alt="whatsapp"
                       className="w-6 h-6 group-hover:scale-110 transition-transform"
                     />
                   </a>
                   <a
-                    href="https://instagram.com/yourusername"
+                    href="https://t.me/Eng_WSEEM_KHARMA"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="social-icon group"
                   >
                     <img
-                      src="/logos/instagram.svg"
-                      alt="Instagram"
+                      src="/telegram-white.png"
+                      alt="whatsapp"
                       className="w-6 h-6 group-hover:scale-110 transition-transform"
                     />
                   </a>
@@ -340,7 +340,7 @@ export default function ContactPage() {
       </div>
 
       {/* Call to Action Section */}
-      <motion.div
+      {/* <motion.div
         className="mt-12 sm:mt-16 lg:mt-20"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -367,7 +367,7 @@ export default function ContactPage() {
             />
           </div>
         </div>
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 }
