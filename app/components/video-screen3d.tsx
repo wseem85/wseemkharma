@@ -1,6 +1,6 @@
 // components/VideoScreen3D.tsx
 'use client';
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect } from 'react';
 
 const VideoScreen3D = ({ defaultVideo }: { defaultVideo: string }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
