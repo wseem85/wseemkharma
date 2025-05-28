@@ -5,20 +5,14 @@ import { myProjects } from '../lib/placeholder-data';
 import { VideoScreen3D } from '../components/video-screen3d';
 import LogoCubesContainer from '../components/logo-cube-container';
 import { hexToRgba } from '../utils/helpers';
-// import CanvasLoader from '../components/CanvasLoader';
 
-// import { Metadata } from 'next';
-
-// export const metadata: Metadata = {
-//   title: 'Projects | Wseem Kharma',
-// };
 const projectsCount = myProjects.length;
 const Projects = () => {
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
-  const [currentVideo, setCurrentVideo] = useState('');
+  const [currentVideo, setCurrentVideo] = useState(null);
   const selectedProject = myProjects[selectedProjectIndex];
   useEffect(() => {
-    setCurrentVideo(selectedProject.texture);
+    setCurrentVideo(selectedProject?.texture);
   }, [selectedProjectIndex, selectedProject.texture]);
   const handleNavigation = (direction: string) => {
     setSelectedProjectIndex((prevIndex) => {
