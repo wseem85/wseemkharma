@@ -9,6 +9,7 @@ import BarsSeperator from '../components/animated-seperator';
 import { textVariant } from '../utils/motion';
 import AboutMe from '../components/about-me';
 import { useMediaQuery } from 'react-responsive';
+import Link from 'next/link';
 
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
@@ -193,11 +194,13 @@ const About = () => {
                 Your timezone is my workzone - offering seamless remote
                 collaboration to anywhere.
               </p>
-              <Button
-                name="Contact Me"
-                isBeam
-                containerClass="w-full mt-4 sm:mt-6 lg:mt-8"
-              />
+              <Link href="/contact">
+                <Button
+                  name="Contact Me"
+                  isBeam
+                  containerClass="w-full mt-4 sm:mt-6 lg:mt-8"
+                />
+              </Link>
             </div>
           </div>
         </motion.div>
