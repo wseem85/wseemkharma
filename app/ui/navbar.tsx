@@ -16,7 +16,7 @@ const NavItems = ({ setIsOpen }: NavItemsProps) => {
         <li key={id} className="nav-li">
           <Link
             href={href}
-            className="nav-li_a"
+            className="nav-li_a w-full inline-block"
             onClick={() => setIsOpen(false)}
           >
             {name}
@@ -42,7 +42,6 @@ const Navbar = () => {
             className="text-white opacity-85 hover:opacity-100 transition-opacity font-bold text-lg hover:text-white transition-colors flex  items-center"
           >
             <Image src="/logo.png" alt="logo" width={50} height={50} />
-            Wseem
           </Link>
           <button
             onClick={() => setIsOpen((open) => !open)}

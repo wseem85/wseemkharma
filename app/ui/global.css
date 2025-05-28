@@ -237,6 +237,14 @@ body {
   border: 2px solid #252526 !important;
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5) !important;
   border-radius: 50% !important;
+  box-shadow: 0 0 0 4px #1d1836 !important;
+  border: 2px solid white !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 40px !important;
+  height: 40px !important;
 }
 
 .vertical-timeline::before {
@@ -276,16 +284,19 @@ body {
 
 @media (max-width: 480px) {
   .vertical-timeline-element-content {
-    margin-left: 50px !important;
+    margin-left: 20px !important;
+    padding-left: 10px !important;
   }
 
   .vertical-timeline-element-icon {
-    width: 35px !important;
-    height: 35px !important;
+    display: none !important;
+    width: 25px !important;
+    height: 25px !important;
     left: 17px !important;
   }
 
   .vertical-timeline::before {
+    display: none !important;
     left: 35px !important;
   }
 }

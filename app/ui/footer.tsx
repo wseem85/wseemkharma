@@ -20,9 +20,9 @@ const Footer = () => {
   return (
     <section className="c-space my-20 bg-black-backtwo  text-white relative top-[100px]">
       <footer className="grid grid-cols-3  gap-6 place-items-center py-7 ">
-        <div className="col-span-3 text-center">
-          {' '}
-          Wseem Kharma &copy; {new Date().getFullYear()}
+        <div className="col-span-3 text-center flex items-center">
+          <Image src="/logo.png" alt="logo" width={50} height={50} />
+          &copy; {new Date().getFullYear()}
         </div>
 
         <a

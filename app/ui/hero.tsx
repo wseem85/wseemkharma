@@ -1,7 +1,7 @@
 'use client';
 // import { comouterCanvas } from '@/app/components/canvas';
 import ComputerModel from '@/public//canvas/computer_and_laptop/ComputerModel';
-import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
+
 import { Canvas } from '@react-three/fiber';
 import { motion } from 'framer-motion';
 import HeroCamera from '../components/HeroCamera';

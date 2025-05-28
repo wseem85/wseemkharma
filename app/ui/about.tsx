@@ -47,7 +47,7 @@ const About = () => {
       >
         <h1 className="head-text text-center mb-2 sm:mb-4">About Me</h1>
         <h3 className="head-sub_text text-center px-4">
-          12+ years IT veteran - I've seen it all!
+          Full-Stack Engineer & IT Solutions Architect
         </h3>
       </motion.div>
 
@@ -147,7 +147,7 @@ const About = () => {
                   { id: 3, src: '/logos/photoshop1.png', name: 'photoshop' },
                   { id: 4, src: '/logos/illustrator.png', name: 'illustrator' },
                   { id: 5, src: '/logos/gimp.svg', name: 'gimp' },
-                  { id: 7, src: '/logos/it-support.png', name: 'it support' },
+                  { id: 8, src: '/logos/it-support.png', name: 'it support' },
                   { id: 6, src: '/logos/linux1.png', name: 'linux' },
                   { id: 7, src: '/logos/windows.png', name: 'server' },
                 ]}

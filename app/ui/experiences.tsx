@@ -39,14 +39,6 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
       date={experience.date}
       iconStyle={{
         background: experience.iconBg,
-        boxShadow: '0 0 0 4px #1d1836',
-        border: '2px solid white',
-        borderRadius: '50%',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        width: '40px',
-        height: '40px',
       }}
       icon={
         <div className="flex justify-center items-center w-full h-full">

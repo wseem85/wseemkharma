@@ -144,7 +144,7 @@ const AboutMe = () => {
         }}
       >
         <Image
-          src="/myavatar.png"
+          src="/myavatar600.png"
           alt="avatar"
           width={150}
           height={150}
