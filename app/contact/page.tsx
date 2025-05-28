@@ -4,7 +4,12 @@ import { motion } from 'framer-motion';
 import Button from '@/app/components/button';
 import { textVariant } from '@/app/utils/motion';
 import BarsSeperator from '@/app/components/animated-seperator';
+import { useEffect } from 'react';
+// import { Metadata } from 'next';
 
+// export const metadata: Metadata = {
+//   title: 'Contact | Wseem Kharma',
+// };
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -18,7 +23,19 @@ export default function ContactPage() {
   );
   const [hasCopiedEmail, setHasCopiedEmail] = useState(false);
   const [hasCopiedPhone, setHasCopiedPhone] = useState(false);
+  useEffect(() => {
+    // Update title
+    document.title = 'Contact | Wseem Kharma';
 
+    // Update meta description
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute(
+        'content',
+        'Send Messages to developer and show contacts.'
+      );
+    }
+  }, []);
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -69,7 +86,7 @@ export default function ContactPage() {
   };
 
   const handleCopyPhone = () => {
-    navigator.clipboard.writeText('+1 (555) 123-4567');
+    navigator.clipboard.writeText('+963994875398');
     setHasCopiedPhone(true);
     setTimeout(() => setHasCopiedPhone(false), 2000);
   };

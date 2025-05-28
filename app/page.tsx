@@ -2,7 +2,6 @@ import LazyHero from './components/lazy-hero';
 import About from './ui/about';
 import BrowseProjects from './ui/browse-projects';
 import Experiences from './ui/experiences';
-import Hero from './ui/hero';
 
 // import Navbar from './ui/navbar';
 

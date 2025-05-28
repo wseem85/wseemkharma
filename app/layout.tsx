@@ -1,7 +1,13 @@
-import { inter, ubuntu } from '@/app/lib/fonts';
+import { ubuntu } from '@/app/lib/fonts';
 import './ui/global.css';
 import Navbar from './ui/navbar';
 import Footer from './ui/footer';
+import { Metadata } from 'next';
+export const metadata: Metadata = {
+  title: 'Wseem Kharma',
+  description: 'A Portfolio Web App for Engineer Wseem Kharma.',
+  metadataBase: new URL('https://wseemkharma.vercel.app'),
+};
 export default function RootLayout({
   children,
 }: {

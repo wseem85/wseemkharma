@@ -44,8 +44,8 @@ const GlobeWithArcs = () => {
       width={326}
       height={326}
       backgroundColor="rgba(0,0,0,0)"
-      globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
-      bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.jpg"
+      globeImageUrl="/globe/earth-night.jpg"
+      // bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.jpg"
       // Arc layer properties
       arcsData={arcsData}
       arcColor={'color'} // uses the color property

@@ -7,6 +7,11 @@ import LogoCubesContainer from '../components/logo-cube-container';
 import { hexToRgba } from '../utils/helpers';
 // import CanvasLoader from '../components/CanvasLoader';
 
+// import { Metadata } from 'next';
+
+// export const metadata: Metadata = {
+//   title: 'Projects | Wseem Kharma',
+// };
 const projectsCount = myProjects.length;
 const Projects = () => {
   const [selectedProjectIndex, setSelectedProjectIndex] = useState(0);
@@ -24,7 +29,16 @@ const Projects = () => {
       }
     });
   };
+  useEffect(() => {
+    // Update title
+    document.title = 'Projects | Wseem Kharma';
 
+    // Update meta description
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute('content', 'Show projects made by the develope.');
+    }
+  }, []);
   return (
     <section className="c-space my-20 relative top-[100px]">
       <p className="head-text">My Work</p>
