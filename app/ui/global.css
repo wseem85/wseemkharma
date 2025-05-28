@@ -94,25 +94,6 @@ body {
     @apply w-10 h-10 sm:w-12 sm:h-12 p-2 sm:p-3 cursor-pointer active:scale-95 transition-all rounded-full arrow-gradient hover:scale-105 touch-manipulation;
   }
 
-  .tech-logo {
-    @apply w-8 h-8 sm:w-10 sm:h-10 rounded-md p-1.5 sm:p-2 bg-neutral-100 bg-opacity-10 backdrop-filter backdrop-blur-lg flex justify-center items-center transition-transform hover:scale-110;
-  }
-
-  /* Enhanced clients section */
-  .client-container {
-    @apply grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-5 lg:gap-6 mt-8 sm:mt-10 lg:mt-12;
-  }
-
-  .client-review {
-    @apply rounded-lg p-4 sm:p-6 lg:p-8 xl:p-10 col-span-1 bg-black-300 bg-opacity-50 border border-black-200 hover:border-black-500 transition-all;
-  }
-
-  .client-content {
-    @apply flex flex-col lg:flex-row justify-between lg:items-center items-start gap-4 sm:gap-5 lg:gap-6 mt-6 sm:mt-7;
-  }
-
-  /* Enhanced work experience section */
-  /* Enhanced work experience section */
   .work-container {
     @apply grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6 mt-8 sm:mt-10 lg:mt-12;
   }
@@ -121,26 +102,7 @@ body {
     @apply col-span-1 rounded-lg bg-black-200 border border-black-300 hover:border-black-500 transition-all;
   }
 
-  .work-content {
-    @apply col-span-1 lg:col-span-2 rounded-lg bg-black-200 border border-black-300 hover:border-black-500 transition-all;
-  }
-
-  .work-content_container {
-    @apply grid grid-cols-[auto_1fr] items-start gap-4 sm:gap-5 transition-all ease-in-out duration-500 cursor-pointer hover:bg-black-300 rounded-lg px-3 sm:px-4 lg:px-5 py-3 sm:py-4;
-  }
-
-  .work-content_logo {
-    @apply rounded-3xl w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 p-2 bg-black-600;
-  }
-
-  .work-content_bar {
-    @apply flex-1 w-0.5 mt-4 h-full bg-black-300 group-hover:bg-black-500 group-last:hidden;
-  }
-
   /* Enhanced contact section */
-  .contact-container {
-    @apply max-w-xl relative z-10 px-4 sm:px-6 lg:px-8 xl:px-10 mt-8 sm:mt-10 lg:mt-12;
-  }
 
   .field-label {
     @apply text-base sm:text-lg text-white-600;
@@ -162,37 +124,9 @@ body {
   .social-icon {
     @apply w-10 h-10 sm:w-12 sm:h-12 rounded-full flex justify-center items-center bg-black-300 border border-black-200 hover:border-black-500 hover:bg-black-500 transition-all touch-manipulation;
   }
-
-  /* Responsive utilities */
-  .responsive-grid {
-    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 lg:gap-6;
-  }
-
-  .responsive-flex {
-    @apply flex flex-col sm:flex-row gap-4 sm:gap-6 lg:gap-8;
-  }
-
-  .responsive-text {
-    @apply text-sm sm:text-base lg:text-lg;
-  }
-
-  .responsive-padding {
-    @apply p-4 sm:p-6 lg:p-8;
-  }
-
-  .responsive-margin {
-    @apply m-4 sm:m-6 lg:m-8;
-  }
 }
 
 /* Enhanced animations and effects */
-.waving-hand {
-  animation-name: wave-animation;
-  animation-duration: 2.5s;
-  animation-iteration-count: infinite;
-  transform-origin: 70% 70%;
-  display: inline-block;
-}
 
 .arrow-gradient {
   background-image: linear-gradient(
