@@ -65,6 +65,17 @@ const Projects = () => {
               <p>Check Live Site</p>
               <img src="/arrow-up.png" className="w-3 h-3" alt="arrow" />
             </a>
+            {selectedProject.hrefAdmin ? (
+              <a
+                className="flex  ml-auto items-center gap-2 cursor-pointer text-white-600"
+                href={selectedProject.hrefAdmin}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <p>Check Admin Dashboard</p>
+                <img src="/arrow-up.png" className="w-3 h-3" alt="arrow" />
+              </a>
+            ) : null}
           </div>
           <div className="flex justify-between items-center mt-7">
             <button

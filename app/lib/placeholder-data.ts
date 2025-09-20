@@ -23,11 +23,13 @@ export const navLinks = [
 ];
 export const myProjects = [
   {
-    title: 'NadaArt - Immersive Online Gallery & Marketplace',
-    desc: 'NadaArt is a responsive full-stack e-commerce platform showcasing artist work. Users can browse artworks by category/size/price, manage carts, and personalize profiles. Admins access a dedicated dashboard for inventory management (CRUD operations).',
+    title:
+      'NadaArt App & Adnin Dashboard - Immersive Online Gallery & Marketplace',
+    desc: "NadaArt is a comprehensive, full-stack e-commerce ecosystem designed to showcase and sell artwork. It features two distinct, dedicated applications: a customer-facing storefront and an administrative control dashboard. The main application allows users to seamlessly browse the artist's portfolio with advanced filtering by availability, size, and price. Customers can create accounts to manage personalized profiles, build and save shopping carts, and contribute to the community by rating and reviewing purchased artworks.",
     subdesc:
-      'Built with React.js and React Router for dynamic SPA navigation, enhanced by React Spring for smooth animations. Supabase powers secure authentication and real-time database ops, while TanStack Query optimizes API data fetching..',
-    href: 'https://nadaart.vercel.app',
+      'This modern platform is engineered with a powerful MERN (MongoDB, Express.js, React.js, Node.js) stack architecture. The frontend, built as a dynamic Single Page Application with React.js and React Router, is enhanced with sleek animations via Framer Motion. A separate, secure admin dashboard empowers the artist with full inventory control through intuitive CRUD operations. The backend, powered by Node.js and Express, provides robust RESTful APIs, handles secure JWT authentication, and ensures efficient, real-time database interactions with MongoDB.',
+    href: 'https://nadaart.onrender.com',
+    hrefAdmin: 'https://nadaart-admin.onrender.com',
     texture: '/textures/project/project1.mp4',
 
     brandcolor: '#257180',
@@ -39,23 +41,23 @@ export const myProjects = [
       },
       {
         id: 2,
-        name: 'React Query',
-        path: '/logos/react-query.png',
-      },
-      {
-        id: 3,
         name: 'Javascript',
         path: '/logos/javascript.svg',
       },
       {
+        id: 3,
+        name: 'Express',
+        path: '/logos/express.png',
+      },
+      {
         id: 4,
-        name: 'Supabase',
-        path: '/logos/supabase.png',
+        name: 'Mongodb',
+        path: '/logos/mongodb.png',
       },
       {
         id: 5,
-        name: 'Styled Components',
-        path: '/logos/styled.svg',
+        name: 'Tailwindcss',
+        path: '/logos/tailwindcss.svg',
       },
     ],
   },

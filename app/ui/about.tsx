@@ -90,7 +90,7 @@ const About = () => {
                   { id: 8, src: '/logos/postgresql.svg', name: 'postgresql' },
                   { id: 4, src: '/logos/typescript.svg', name: 'typescript' },
                   { id: 5, src: '/logos/javascript.svg', name: 'javascript' },
-                  { id: 6, src: '/logos/threejs.svg', name: 'threejs' },
+                  { id: 6, src: '/logos/mongodb.png', name: 'mongodb' },
                   { id: 7, src: '/logos/nodejs.svg', name: 'nodejs' },
                 ]}
               />
