@@ -23,8 +23,59 @@ export const navLinks = [
 ];
 export const myProjects = [
   {
+    title: 'Helio AI - Comprehensive AI-Powered Web Application',
+    desc: 'Helio AI is a comprehensive AI-powered web application that offers multiple intelligent tools including content generation, image processing, and career assistance in a sleek, modern interface. The platform provides a suite of AI tools including articles generation, idea simplification, AI image creation, background removal, resume reviewing, and content transformation capabilities.',
+    subdesc:
+      'Built with a modern full-stack architecture featuring React with React Router on the frontend and Express.js on the backend. The application uses Tanstack Query for efficient data fetching, Clerk for secure authentication, and PostgreSQL with Neon for reliable database management. Styled with Tailwind CSS and deployed on Vercel, with comprehensive AI integration through OpenAI and other AI services for advanced content generation and image processing.',
+    href: 'https://helio-ai-nu.vercel.app/',
+    texture: '/textures/project/project5.mp4',
+    brandcolor: '#366fff',
+    tags: [
+      {
+        id: 1,
+        name: 'React.js',
+        path: '/logos/react.svg',
+      },
+      {
+        id: 2,
+        name: 'JavaScript',
+        path: '/logos/javascript.svg',
+      },
+      {
+        id: 3,
+        name: 'Express.js',
+        path: '/logos/express.png',
+      },
+      {
+        id: 4,
+        name: 'PostgreSQL',
+        path: '/logos/postgresql.svg',
+      },
+      {
+        id: 5,
+        name: 'OpenAI',
+        path: '/logos/openai1.png',
+      },
+      {
+        id: 6,
+        name: 'TailwindCSS',
+        path: '/logos/tailwindcss.svg',
+      },
+      {
+        id: 7,
+        name: 'Tanstack Query',
+        path: '/logos/tanstack.png',
+      },
+      {
+        id: 8,
+        name: 'Clerk',
+        path: '/logos/clerk.png',
+      },
+    ],
+  },
+  {
     title:
-      'NadaArt App & Adnin Dashboard - Immersive Online Gallery & Marketplace',
+      'NadaArt App & Admin Dashboard - Immersive Online Gallery & Marketplace',
     desc: "NadaArt is a comprehensive, full-stack e-commerce ecosystem designed to showcase and sell artwork. It features two distinct, dedicated applications: a customer-facing storefront and an administrative control dashboard. The main application allows users to seamlessly browse the artist's portfolio with advanced filtering by availability, size, and price. Customers can create accounts to manage personalized profiles, build and save shopping carts, and contribute to the community by rating and reviewing purchased artworks.",
     subdesc:
       'This modern platform is engineered with a powerful MERN (MongoDB, Express.js, React.js, Node.js) stack architecture. The frontend, built as a dynamic Single Page Application with React.js and React Router, is enhanced with sleek animations via Framer Motion. A separate, secure admin dashboard empowers the artist with full inventory control through intuitive CRUD operations. The backend, powered by Node.js and Express, provides robust RESTful APIs, handles secure JWT authentication, and ensures efficient, real-time database interactions with MongoDB.',
