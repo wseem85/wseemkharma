@@ -23,7 +23,7 @@ export const navLinks = [
 ];
 export const myProjects = [
   {
-    title: 'Helio AI - Comprehensive AI-Powered Web Application',
+    title: 'Helio AI - AI-Powered, Multi-language Web Application',
     desc: 'Helio AI is a comprehensive AI-powered web application that offers multiple intelligent tools including content generation, image processing, and career assistance in a sleek, modern interface. The platform provides a suite of AI tools including articles generation, idea simplification, AI image creation, background removal, resume reviewing, and content transformation capabilities.',
     subdesc:
       'Built with a modern full-stack architecture featuring React with React Router on the frontend and Express.js on the backend. The application uses Tanstack Query for efficient data fetching, Clerk for secure authentication, and PostgreSQL with Neon for reliable database management. Styled with Tailwind CSS and deployed on Vercel, with comprehensive AI integration through OpenAI and other AI services for advanced content generation and image processing.',
@@ -219,11 +219,11 @@ export const experiences = [
     iconBg: '#ebebeb', // slate-800
     date: 'May 2022 - Present',
     points: [
-      'Build fullstack applications using Next.js (RSCs, Route Handlers, Server Actions) with PostgreSQL backends',
+      'Create backend apps Using Node.js, Express, MongoDB or PostgreSQL, with RESTful APIs and JWT authentication',
       'Develop responsive SPAs with React, implementing advanced state management solutions',
-      'Create fullstack apps leveraging "Backend-as-a-Service" platforms like Supabase',
+      'Build fullstack applications using Next.js (RSCs, Route Handlers, Server Actions) with PostgreSQL backends',
       'Collaborate in team environments to build reusable components and optimize performance',
-      'Key Projects: TecTalk (Next.js forum), Shipco Website, Nadaart CMS, My-MDB movie app',
+      'Key Projects: Helio.ai, TecTalk (Next.js forum), Shipco Website, Nadaart , My-MDB movie app',
     ],
   },
   {
