@@ -1,4 +1,6 @@
-export const textVariant = (delay: number) => {
+import { Variants, Transition } from 'framer-motion';
+
+export const textVariant = (delay: number): Variants => {
   return {
     hidden: {
       y: -50,
@@ -11,11 +13,12 @@ export const textVariant = (delay: number) => {
         type: 'spring',
         duration: 1.25,
         delay: delay,
-      },
+      } as Transition,
     },
   };
 };
-export const cursorVariants = () => {
+
+export const cursorVariants = (): Variants => {
   return {
     blinking: {
       opacity: [0, 0, 1, 1],
@@ -25,12 +28,12 @@ export const cursorVariants = () => {
         repeatDelay: 0,
         ease: 'linear',
         times: [0, 0.5, 0.5, 1],
-      },
+      } as Transition,
     },
   };
 };
 
-export const sectionVariant = () => {
+export const sectionVariant = (): Variants => {
   return {
     hidden: {
       x: -50,
@@ -42,18 +45,20 @@ export const sectionVariant = () => {
       transition: {
         type: 'spring',
         duration: 1.25,
-      },
+      } as Transition,
     },
   };
 };
+
 type Direction = 'left' | 'right' | 'up' | 'down';
 type TransitionType = 'spring' | 'tween' | 'inertia' | 'just';
+
 export const fadeIn = (
   direction: Direction,
   type: TransitionType,
   delay: number,
   duration: number
-) => {
+): Variants => {
   return {
     hidden: {
       x: direction === 'left' ? 100 : direction === 'right' ? -100 : 0,
@@ -69,12 +74,12 @@ export const fadeIn = (
         delay: delay,
         duration: duration,
         ease: 'easeOut',
-      },
+      } as Transition,
     },
   };
 };
 
-export const zoomIn = (delay: number, duration: number) => {
+export const zoomIn = (delay: number, duration: number): Variants => {
   return {
     hidden: {
       scale: 0,
@@ -88,7 +93,7 @@ export const zoomIn = (delay: number, duration: number) => {
         delay: delay,
         duration: duration,
         ease: 'easeOut',
-      },
+      } as Transition,
     },
   };
 };
@@ -98,7 +103,7 @@ export const slideIn = (
   type: TransitionType,
   delay: number,
   duration: number
-) => {
+): Variants => {
   return {
     hidden: {
       x: direction === 'left' ? '-100%' : direction === 'right' ? '100%' : 0,
@@ -112,7 +117,7 @@ export const slideIn = (
         delay: delay,
         duration: duration,
         ease: 'easeOut',
-      },
+      } as Transition,
     },
   };
 };
@@ -120,14 +125,14 @@ export const slideIn = (
 export const staggerContainer = (
   staggerChildren: number,
   delayChildren: number = 0
-) => {
+): Variants => {
   return {
     hidden: {},
     show: {
       transition: {
         staggerChildren: staggerChildren,
         delayChildren: delayChildren || 0,
-      },
+      } as Transition,
     },
   };
 };
