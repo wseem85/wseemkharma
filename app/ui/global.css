@@ -91,7 +91,7 @@ body {
 
   /* Enhanced projects section */
   .arrow-btn {
-    @apply w-10 h-10 sm:w-12 sm:h-12 p-2 sm:p-3 cursor-pointer active:scale-95 transition-all rounded-full arrow-gradient hover:scale-105 touch-manipulation;
+    @apply flex items-center gap-1.5 font-bold p-2 sm:p-3 cursor-pointer active:scale-95 transition-all rounded-xl arrow-gradient hover:scale-105 touch-manipulation;
   }
 
   .work-container {
@@ -109,7 +109,7 @@ body {
   }
 
   .field-input {
-    @apply w-full bg-black-300 px-4 sm:px-5 py-3 sm:py-4 min-h-[44px] sm:min-h-[48px] lg:min-h-[52px] rounded-lg placeholder:text-white-500 text-base sm:text-lg text-white-800 shadow-black-200 shadow-2xl focus:outline-none focus:ring-2 focus:ring-red-ground transition-all;
+    @apply w-full bg-black-300 px-4 sm:px-5 py-3 sm:py-4 min-h-[44px] sm:min-h-[48px] lg:min-h-[52px] rounded-lg placeholder:text-white-500 text-base sm:text-lg text-white-800 shadow-black-200 shadow-2xl focus:outline-none focus:ring-1 focus:ring-gray-500 transition-all;
   }
 
   .field-btn {

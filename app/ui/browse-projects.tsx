@@ -25,7 +25,16 @@ const BrowseProjects = () => {
           <Button
             isBeam
             name="Browse Projects"
-            containerClass="w-full sm:w-auto sm:min-w-[200px] lg:min-w-[240px] py-3 sm:py-4"
+            containerClass="px-5 py-2.5 sm:px-6 sm:py-3
+                  bg-gradient-to-r from-purple-600 to-purple-800
+                  text-white font-medium
+                  rounded-lg
+                  transition-all duration-300
+                  hover:from-purple-500 hover:to-purple-700
+                  hover:shadow-lg hover:shadow-purple-500/30
+                  active:scale-[0.98]
+                  inline-flex items-center gap-2
+                  w-full sm:w-auto justify-center sm:justify-start"
           />
         </Link>
       </div>

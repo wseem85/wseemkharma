@@ -19,7 +19,7 @@ export default function ContactPage() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | null>(
-    null
+    null,
   );
   const [hasCopiedEmail, setHasCopiedEmail] = useState(false);
   const [hasCopiedPhone, setHasCopiedPhone] = useState(false);
@@ -32,12 +32,12 @@ export default function ContactPage() {
     if (metaDesc) {
       metaDesc.setAttribute(
         'content',
-        'Send Messages to developer and show contacts.'
+        'Send Messages to developer and show contacts.',
       );
     }
   }, []);
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -93,7 +93,7 @@ export default function ContactPage() {
 
   return (
     <section
-      className="c-space my-12 sm:my-16 lg:my-20 relative top-[100px]"
+      className="c-space my-12 sm:my-16 lg:my-20 relative top-[100px] max-w-7xl mx-auto"
       id="contact"
     >
       {/* Header Section */}
@@ -207,9 +207,18 @@ export default function ContactPage() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`btn tracking-wider w-full ${
-                  isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
-                }`}
+                className={`px-5 py-2.5 sm:px-6 sm:py-3
+                  bg-gradient-to-r from-purple-600 to-purple-800
+                  text-white font-medium
+                  rounded-lg text-center
+                  transition-all duration-300
+                  hover:from-purple-500 hover:to-purple-700
+                  hover:shadow-lg hover:shadow-purple-500/30
+                  active:scale-[0.98]
+                  inline-flex items-center gap-2
+                  min-w-full sm:w-auto justify-center  ${
+                    isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
+                  }`}
               >
                 {isSubmitting && (
                   <span className="relative flex h-3 w-3">

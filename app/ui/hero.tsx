@@ -50,7 +50,7 @@ const Hero = () => {
         </div>
 
         {/* Hero text content with better responsive typography */}
-        <div className="space-y-2 sm:space-y-3 lg:space-y-4 flex-1 max-w-2xl">
+        <div className="space-y-2 sm:space-y-3 lg:space-y-4 flex-1">
           <motion.h1
             className="hero_tag"
             initial={{ opacity: 0, y: 50 }}
@@ -66,19 +66,20 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            A Computer Engineer | Full Stack Developer
+            A Full Stack Developer | Computer Engineer
           </motion.p>
 
           <motion.p
-            className="hero_sub_tag tracking-wide leading-relaxed"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            I build <span className="text-red-ground">fast, scalable,</span> and{' '}
-            <span className="text-red-ground">user-friendly</span> web
-            applications with clean code and modern tech.
-          </motion.p>
+  className="hero_sub_tag tracking-wide leading-relaxed"
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, delay: 0.6 }}
+>
+  I transform <span className="px-2 py-1 text-white/95 bg-blue-800/50">your vision</span> into a powerful <span className="px-2 py-1 text-white/95 bg-blue-800/50">digital presence</span> that{' '}
+  <br/>
+	<span className="px-2 py-1 text-white/95 border-b-2 border-red-ground">engages users</span> and{' '}
+  <span className="px-2 py-1 leading-5 text-white/95 border-b-2 border-red-ground">drives business growth</span>.
+</motion.p>
         </div>
 
         {/* 3D Canvas with improved responsive positioning */}

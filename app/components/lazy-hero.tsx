@@ -46,12 +46,12 @@ const LazyHero = () => {
 
     // Fallback timer - load after 2 seconds if intersection doesn't work
     const fallbackTimer = setTimeout(() => {
-      console.log('Fallback timer triggered');
+    
       setShouldLoad(true);
     }, 2000);
 
     if (ref.current) {
-      console.log('Starting to observe element');
+    
       observer.observe(ref.current);
     }
 
@@ -61,10 +61,7 @@ const LazyHero = () => {
     };
   }, []);
 
-  // Debug: Log state changes
-  useEffect(() => {
-    console.log('shouldLoad:', shouldLoad, 'isVisible:', isVisible);
-  }, [shouldLoad, isVisible]);
+
 
   return (
     <div ref={ref} className="min-h-[550px]">

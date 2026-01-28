@@ -36,7 +36,7 @@ const About = () => {
 
   return (
     <section
-      className={`c-space my-12 sm:my-16 lg:my-20 relative top-[100px]`}
+      className={`c-space my-12 sm:my-16 lg:my-20 relative top-[100px] max-w-7xl mx-auto`}
       id="about"
     >
       {/* Section header with improved responsive typography */}
@@ -198,7 +198,16 @@ const About = () => {
                 <Button
                   name="Contact Me"
                   isBeam
-                  containerClass="w-full mt-4 sm:mt-6 lg:mt-8"
+                  containerClass="px-5 py-2.5 sm:px-6 sm:py-3
+                  bg-gradient-to-r from-purple-600 to-purple-800
+                  text-white font-medium
+                  rounded-lg
+                  transition-all duration-300
+                  hover:from-purple-500 hover:to-purple-700
+                  hover:shadow-lg hover:shadow-purple-500/30
+                  active:scale-[0.98]
+                  inline-flex items-center gap-2
+                  w-full sm:w-auto justify-center sm:justify-start"
                 />
               </Link>
             </div>
