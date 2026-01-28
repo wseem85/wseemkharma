@@ -1,13 +1,13 @@
 'use client';
 // import { comouterCanvas } from '@/app/components/canvas';
-import ComputerModel from '@/public//canvas/computer_and_laptop/ComputerModel';
+import ComputerModel from '../../public/canvas/computer_and_laptop/ComputerModel';
 
 import { Canvas } from '@react-three/fiber';
 import { motion } from 'framer-motion';
 import HeroCamera from '../components/HeroCamera';
 import { Leva, useControls } from 'leva';
 import { useMediaQuery } from 'react-responsive';
-import { orbitron } from '@/app/lib/fonts';
+import { orbitron } from '../lib/fonts';
 import { Suspense } from 'react';
 import CanvasLoader from '../components/canvas/canvas-loader';
 import Button from '../components/button';

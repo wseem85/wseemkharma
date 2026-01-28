@@ -1,9 +1,9 @@
 'use client';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import Button from '@/app/components/button';
-import { textVariant } from '@/app/utils/motion';
-import BarsSeperator from '@/app/components/animated-seperator';
+import Button from '../components/button';
+import { textVariant } from '../utils/motion';
+import BarsSeperator from '../components/animated-seperator';
 import { useEffect } from 'react';
 // import { Metadata } from 'next';
 

@@ -1,5 +1,5 @@
 'use client';
-import Button from '@/app/components/button';
+import Button from '../components/button';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import SquareLogosContainer from '../components/squar-logos-container';
