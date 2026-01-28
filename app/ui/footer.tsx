@@ -13,7 +13,7 @@ const Footer = () => {
     hover: {
       scale: 1.05,
       color: '#3B82F6',
-      transition: { type: 'spring', stiffness: 400 },
+      transition: { type: 'spring' as const, stiffness: 400 },
     },
     tap: { scale: 0.95 },
   };
