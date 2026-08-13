@@ -12,7 +12,7 @@ export const navLinks = [
 
   {
     id: 2,
-    name: 'Projects',
+    name: 'Selected Work',
     href: '/projects',
   },
   {
@@ -35,25 +35,23 @@ export const myProjects = [
       { id: 3, name: 'Express.js', path: '/logos/express.png' },
       { id: 4, name: 'PostgreSQL', path: '/logos/postgresql.svg' },
       { id: 5, name: 'OpenAI', path: '/logos/openai1.png' },
-      { id: 6, name: 'TailwindCSS', path: '/logos/tailwindcss.svg' },
       { id: 7, name: 'Tanstack Query', path: '/logos/tanstack.png' },
       { id: 8, name: 'Clerk', path: '/logos/clerk.png' },
     ],
   },
   {
-    title: 'NadaArt - Immersive Online Gallery & Marketplace',
-    desc: 'A full-stack e-commerce ecosystem for artists to showcase and sell artwork. Features advanced filtering by availability, size, and price, personalized user profiles, shopping carts, and community reviews. Includes a separate admin dashboard for inventory management and CRUD operations.',
-    href: 'https://nadaart.onrender.com',
-    hrefAdmin: 'https://nadaart-admin.onrender.com',
-    github: 'https://github.com/wseem85/nadaart-website',
+    title: 'Art Store - Immersive Online Gallery & Art Store',
+    desc: 'A full-stack art e-commerce platform that gives an artist a complete online presence to showcase and sell original artwork, prints, and custom commissions. Includes secure Stripe payments, personalized user accounts, automated email responses, and an admin dashboard for managing inventory and orders.',
+    href: 'https://nadakharma.com',
+
+    github: '',
     texture: '/textures/project/project1.mp4',
     brandcolor: '#257180',
     tags: [
-      { id: 1, name: 'React.js', path: '/logos/react.svg' },
-      { id: 2, name: 'JavaScript', path: '/logos/javascript.svg' },
+      { id: 1, name: 'Next.js', path: '/logos/nextjs.png' },
+      { id: 2, name: 'Typescript', path: '/logos/typescript.svg' },
       { id: 3, name: 'Express', path: '/logos/express.png' },
-      { id: 4, name: 'MongoDB', path: '/logos/mongodb.png' },
-      { id: 5, name: 'TailwindCSS', path: '/logos/tailwindcss.svg' },
+      { id: 4, name: 'PostgreSQL', path: '/logos/postgresql.svg' },
       { id: 6, name: 'Framer Motion', path: '/logos/framer.png' },
     ],
   },
@@ -66,7 +64,6 @@ export const myProjects = [
     brandcolor: '#3f51b5',
     tags: [
       { id: 1, name: 'React.js', path: '/logos/react.svg' },
-      { id: 2, name: 'TailwindCSS', path: '/logos/tailwindcss.svg' },
       { id: 3, name: 'JavaScript', path: '/logos/javascript.svg' },
       { id: 4, name: 'Redux Toolkit', path: '/logos/redux.png' },
     ],
@@ -82,7 +79,6 @@ export const myProjects = [
       { id: 1, name: 'Next.js', path: '/logos/nextjs.png' },
       { id: 2, name: 'PostgreSQL', path: '/logos/postgresql.svg' },
       { id: 3, name: 'TypeScript', path: '/logos/typescript.svg' },
-      { id: 4, name: 'TailwindCSS', path: '/logos/tailwindcss.svg' },
       { id: 5, name: 'NextAuth', path: '/logos/nextauth.png' },
     ],
   },
@@ -110,11 +106,12 @@ export const experiences = [
     iconBg: '#ebebeb', // slate-800
     date: 'May 2022 - Present',
     points: [
-      'Create backend apps Using Node.js, Express, MongoDB or PostgreSQL, with RESTful APIs and JWT authentication',
-      'Develop responsive SPAs with React, implementing advanced state management solutions',
-      'Build fullstack applications using Next.js (RSCs, Route Handlers, Server Actions) with PostgreSQL backends',
-      'Collaborate in team environments to build reusable components and optimize performance',
-      'Key Projects: Helio.ai, TecTalk (Next.js forum), Shipco Website, Nadaart , My-MDB movie app',
+      'Designed and deployed production-ready SaaS applications using React, Next.js, Node.js, PostgreSQL, and cloud services',
+      'Implemented authentication, authorization, subscription management, and recurring payment workflows.',
+      'Built scalable REST APIs and backend services supporting file processing, AI integrations, and user-generated content.',
+      'Improved application performance through caching strategies, lazy loading, and database query optimization.',
+      'Built CI/CD pipelines and containerized deployments using Docker and GitHub Actions.',
+      'Designed secure APIs following OWASP security best practices and conducted API security testing using Burp Suite and OWASP ZAP.',
     ],
   },
   {

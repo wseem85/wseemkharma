@@ -10,19 +10,28 @@ interface NavItemsProps {
 }
 
 const NavItems = ({ setIsOpen }: NavItemsProps) => {
+  const pathname = usePathname();
+
   return (
     <ul className="nav-ul">
-      {navLinks.map(({ id, name, href }) => (
-        <li key={id} className="nav-li">
-          <Link
-            href={href}
-            className="nav-li_a w-full inline-block"
-            onClick={() => setIsOpen(false)}
-          >
-            {name}
-          </Link>
-        </li>
-      ))}
+      {navLinks.map(({ id, name, href }) => {
+        const isActive = pathname === href;
+
+        return (
+          <li key={id} className="nav-li">
+            <Link
+              href={href}
+              className={`nav-li_a w-full inline-block ${
+                isActive ? 'text-white font-semibold' : ''
+              }`}
+              onClick={() => setIsOpen(false)}
+              aria-current={isActive ? 'page' : undefined}
+            >
+              {name}
+            </Link>
+          </li>
+        );
+      })}
     </ul>
   );
 };

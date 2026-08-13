@@ -5,8 +5,10 @@ import Logo from './logo';
 
 const LogosContainer = ({
   imgs,
+  compact = false,
 }: {
   imgs: { id: number; src: string; name: string }[];
+  compact?: boolean;
 }) => {
   const [scope, animate] = useAnimate();
 
@@ -47,7 +49,7 @@ const LogosContainer = ({
           animate={{ scale: 1, opacity: 1 }}
           transition={{ type: 'spring', stiffness: 300 }}
         >
-          <Logo id={id} src={src} name={name} />
+          <Logo id={id} src={src} name={name} compact={compact} />
         </motion.div>
       ))}
     </motion.div>

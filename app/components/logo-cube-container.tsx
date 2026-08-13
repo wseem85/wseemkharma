@@ -3,7 +3,6 @@ import React, { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import LogoCube from './canvas/logo-cube';
-
 import SmallCanvasLoader from './canvas/small-canvas-loader';
 
 interface LogoTag {
@@ -26,17 +25,12 @@ const LogoCubesContainer: React.FC<LogoCubesContainerProps> = ({ tags }) => {
           style={{ width: '50px', height: '50px', minWidth: '50px' }}
         >
           <Canvas camera={{ position: [0, 0, 5], fov: 40 }}>
-            {/* Reduced ambient light so directional lighting is more noticeable */}
             <ambientLight intensity={0.7} />
-
-            {/* Main front light - directly from camera/user position */}
             <directionalLight
               position={[0, 0, 3]}
               intensity={1.0}
               color="#ffffff"
             />
-
-            {/* Subtle top light for dimension */}
             <directionalLight
               position={[0, 3, 0]}
               intensity={0.4}

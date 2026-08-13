@@ -2,9 +2,7 @@
 import Button from '../components/button';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import SquareLogosContainer from '../components/squar-logos-container';
 import GlobeWithArcs from '../components/globe';
-import LogosContainer from '../components/logos-container';
 import BarsSeperator from '../components/animated-seperator';
 import { textVariant } from '../utils/motion';
 import AboutMe from '../components/about-me';
@@ -47,9 +45,7 @@ const About = () => {
         whileInView="show"
       >
         <h1 className="head-text text-center mb-2 sm:mb-4">About Me</h1>
-        <h3 className="head-sub_text text-center px-4">
-          Full-Stack Engineer & IT Solutions Architect
-        </h3>
+        <h3 className="head-sub_text text-center px-4">Full-Stack Engineer</h3>
       </motion.div>
 
       {/* Improved responsive grid layout */}
@@ -67,57 +63,94 @@ const About = () => {
           </div>
         </motion.div>
 
-        {/* Tech Stack Card - Responsive column spanning */}
+        {/* Tech Stack Card */}
         <motion.div
           className="lg:col-span-1 xl:col-span-2 "
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <div className="grid-container h-full">
+          <div className="grid-container">
             <p className="grid-headtext text-lg sm:text-xl">Tech Stack</p>
-            <p className="grid-subtext text-sm sm:text-base">
-              I specialized in Web development, with a focus on React, Next.js,
-              Node.js, Mongo, Postgres
-            </p>
-
-            <div className="flex-1">
-              <LogosContainer
-                imgs={[
-                  { id: 1, src: '/logos/nextjs.png', name: 'nextjs' },
-                  { id: 2, src: '/logos/tailwindcss.svg', name: 'Tailwindcss' },
-                  { id: 3, src: '/logos/react.svg', name: 'react' },
-                  { id: 8, src: '/logos/postgresql.svg', name: 'postgresql' },
-                  { id: 4, src: '/logos/typescript.svg', name: 'typescript' },
-                  { id: 5, src: '/logos/javascript.svg', name: 'javascript' },
-                  { id: 6, src: '/logos/mongodb.png', name: 'mongodb' },
-                  { id: 7, src: '/logos/nodejs.svg', name: 'nodejs' },
-                ]}
-              />
+            <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
+              {[
+                ['Frontend', 'React', 'Next.js', 'TypeScript', 'JavaScript'],
+                ['Backend', 'Node.js', 'REST APIs'],
+                ['Database', 'PostgreSQL', 'MongoDB'],
+                ['Infrastructure', 'Docker', 'GitHub Actions'],
+                [
+                  'Integrations & APIs',
+                  'Stripe',
+                  'PayPal',
+                  'OpenAI',
+                  'Gemini',
+                  'Grok',
+                  'REST/Webhook integrations',
+                ],
+              ].map(([category, ...technologies]) => (
+                <div
+                  key={category}
+                  className="rounded-lg border border-black-300 bg-black-200/50 p-3"
+                >
+                  <p className="mb-2 text-sm font-semibold text-red-groundlight">
+                    {category}
+                  </p>
+                  <ul className="space-y-1 text-sm text-gray-300">
+                    {technologies.map((technology) => (
+                      <li key={technology} className="flex items-center gap-2">
+                        <span className="h-1.5 w-1.5 rounded-full bg-red-ground" />
+                        {technology}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
+          </div>
+        </motion.div>
 
-            <div className="space-y-4">
-              <BarsSeperator color="bg-red-ground" />
-              <p className="grid-subtext text-sm sm:text-base leading-relaxed">
-                Front to back, code to deployment—I own the entire process. Your
-                idea becomes a fast, scalable, and polished app with no gaps.
-                Let's skip the fragmented workflows and build something that
-                truly delivers.
+        {/* Security and Deployment Column */}
+        <motion.div
+          className="lg:col-span-1 xl:col-span-2"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          <div className="grid-container h-full space-y-8">
+            <section>
+              <p className="grid-headtext text-lg sm:text-xl">
+                Security &amp; Best Practices
               </p>
-              <BarsSeperator color="bg-red-ground" />
-              <p className="grid-subtext text-sm sm:text-base leading-relaxed">
-                Your website should look flawless on any device—whether it's a
-                4K monitor or a budget smartphone. I rigorously test across
-                browsers and screen sizes so your audience gets a consistent,
-                frustration-free experience everywhere.
+              <p className="grid-subtext mt-4 text-sm leading-relaxed sm:text-base">
+                I build with security as a first-class concern, not an
+                afterthought. My work follows OWASP Top 10 principles across the
+                stack — secure authentication and session handling (JWT
+                lifecycle and revocation), CSRF protection, secure HTTP headers,
+                strict input validation and file-upload hardening, and careful
+                secrets management. I use tools like Burp Suite to test for
+                vulnerabilities before they ship, not after.
               </p>
-            </div>
+            </section>
+
+            <section>
+              <p className="grid-headtext text-lg sm:text-xl">
+                Deployment &amp; DevOps
+              </p>
+              <p className="grid-subtext mt-4 text-sm leading-relaxed sm:text-base">
+                I don&apos;t hand off a project at &apos;it works on my
+                machine.&apos; I containerize applications with Docker, automate
+                testing and deployment through GitHub Actions CI/CD pipelines,
+                and deploy to production cloud infrastructure. Once it&apos;s
+                live, the work isn&apos;t done — I monitor, maintain, and
+                iterate, so the systems I build stay reliable long after launch.
+              </p>
+            </section>
           </div>
         </motion.div>
 
         {/* Creative Toolkit Card */}
         <motion.div
-          className="lg:col-span-1 xl:col-span-2 "
+          className="lg:col-span-1 xl:col-span-3 "
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
@@ -130,30 +163,6 @@ const About = () => {
               I bridge development and design using Photoshop, Illustrator and
               GIMP to create pixel-perfect assets, intuitive UI elements.
             </p>
-
-            <div className="">
-              <SquareLogosContainer
-                initialDelay={4100}
-                imgs={[
-                  {
-                    id: 1,
-                    src: '/logos/git-icon-logo-svgrepo-com.svg',
-                    name: 'git',
-                  },
-                  {
-                    id: 2,
-                    src: '/logos/github-mark-white.png',
-                    name: 'github',
-                  },
-                  { id: 3, src: '/logos/photoshop1.png', name: 'photoshop' },
-                  { id: 4, src: '/logos/illustrator.png', name: 'illustrator' },
-                  { id: 5, src: '/logos/gimp.svg', name: 'gimp' },
-                  { id: 8, src: '/logos/it-support.png', name: 'it support' },
-                  { id: 6, src: '/logos/linux1.png', name: 'linux' },
-                  { id: 7, src: '/logos/windows.png', name: 'server' },
-                ]}
-              />
-            </div>
 
             <div className="space-y-4">
               <BarsSeperator color="bg-red-ground" />
@@ -176,7 +185,7 @@ const About = () => {
 
         {/* Globe/Location Card - Responsive positioning */}
         <motion.div
-          className=" xl:col-span-3 xl:row-span-2"
+          className="xl:col-span-3"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
@@ -199,12 +208,12 @@ const About = () => {
                   name="Contact Me"
                   isBeam
                   containerClass="px-5 py-2.5 sm:px-6 sm:py-3
-                  bg-gradient-to-r from-purple-600 to-purple-800
+                  bg-gradient-to-r from-red-ground to-red-groundlight
                   text-white font-medium
                   rounded-lg
                   transition-all duration-300
-                  hover:from-purple-500 hover:to-purple-700
-                  hover:shadow-lg hover:shadow-purple-500/30
+                  hover:from-red-groundlight hover:to-red-ground
+                  hover:shadow-lg hover:shadow-red-ground/30
                   active:scale-[0.98]
                   inline-flex items-center gap-2
                   w-full sm:w-auto justify-center sm:justify-start"
@@ -215,8 +224,8 @@ const About = () => {
         </motion.div>
 
         {/* Email Contact Card */}
-        <motion.div
-          className="lg:col-span-2 xl:col-span-3 xl:row-span-2"
+        {/* <motion.div
+          className="lg:col-span-2 xl:col-span-3"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
@@ -246,7 +255,7 @@ const About = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

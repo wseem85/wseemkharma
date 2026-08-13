@@ -86,7 +86,7 @@ export default function ProjectsLoading() {
         <div className="flex justify-center mt-8">
           <div className="flex items-center space-x-2 text-gray-400">
             <div className="w-4 h-4 border-2 border-gray-500 border-t-transparent rounded-full animate-spin"></div>
-            <span className="text-sm">Loading projects...</span>
+            <span className="text-sm">Loading selected work...</span>
           </div>
         </div>
       </div>

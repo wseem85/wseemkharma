@@ -1,4 +1,4 @@
-import LazyHero from './components/lazy-hero';
+import Hero from './ui/hero';
 import About from './ui/about';
 import BrowseProjects from './ui/browse-projects';
 import Experiences from './ui/experiences';
@@ -8,8 +8,7 @@ import Experiences from './ui/experiences';
 export default function Page() {
   return (
     <div className="relative z-0">
-      {/* <Hero /> */}
-      <LazyHero />
+      <Hero />
       <About />
       <BrowseProjects />
       <Experiences />

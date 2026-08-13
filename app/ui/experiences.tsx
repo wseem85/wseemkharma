@@ -1,122 +1,111 @@
 'use client';
-import { experiences } from '../lib/placeholder-data';
-import 'react-vertical-timeline-component/style.min.css';
+
 import { motion } from 'framer-motion';
-import { fadeIn, sectionVariant, textVariant } from '../utils/motion';
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from 'react-vertical-timeline-component';
+import { experiences } from '../lib/placeholder-data';
+import { textVariant } from '../utils/motion';
 
 interface Experience {
   title: string;
   company_name: string;
-  icon: {
-    src: string;
-  };
-  iconBg: string;
   date: string;
   points: string[];
 }
 
-interface ExperienceCardProps {
+const ExperienceCard = ({
+  experience,
+  index,
+}: {
   experience: Experience;
-}
+  index: number;
+}) => (
+  <motion.article
+    className="group relative pl-12 sm:pl-20"
+    initial={{ opacity: 0, y: 28 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, amount: 0.2 }}
+    transition={{ duration: 0.55, delay: index * 0.08, ease: 'easeOut' }}
+  >
+    <div
+      className="absolute left-[13px] top-5 h-4 w-4 rounded-full border-4 border-[#1e1e1e] bg-red-ground shadow-[0_0_0_4px_rgba(220,38,38,0.15)] transition-transform duration-300 group-hover:scale-125 sm:left-[17px]"
+      aria-hidden="true"
+    />
 
-const ExperienceCard = ({ experience }: ExperienceCardProps) => {
-  return (
-    <VerticalTimelineElement
-      className="vertical-timeline-element--work "
-      contentStyle={{
-        backgroundColor: '#252526',
-        color: '#c4c4c4',
-        borderRadius: '12px',
-        padding: '1.5rem',
-        boxShadow:
-          '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-      }}
-      contentArrowStyle={{ borderRight: '7px solid #232631' }}
-      date={experience.date}
-      iconStyle={{
-        background: experience.iconBg,
-      }}
-      icon={
-        <div className="flex justify-center items-center w-full h-full">
-          <img
-            src={experience.icon.src}
-            alt={experience.company_name}
-            className="w-[70%] h-[70%] object-contain"
-          />
-        </div>
-      }
-    >
-      <div className="space-y-4">
-        <div>
-          <h3 className="text-white font-bold text-xl sm:text-2xl lg:text-3xl leading-tight">
-            {experience.title}
-          </h3>
-          <p className="text-gray-300 text-base sm:text-lg font-medium mt-1">
-            {experience.company_name}
-          </p>
-        </div>
-
-        <ul className="list-disc ml-5 space-y-2 sm:space-y-3">
-          {experience.points.map((point, index) => (
-            <li
-              key={`experience-point-${index}`}
-              className="text-sm sm:text-base lg:text-lg text-gray-200 pl-1 tracking-wide leading-relaxed"
-            >
-              {point}
-            </li>
-          ))}
-        </ul>
+    <div className="rounded-2xl border border-white/10 bg-[#252526] p-5 shadow-lg shadow-black/10 transition-all duration-300 group-hover:-translate-y-1 group-hover:border-red-ground/50 group-hover:shadow-red-ground/10 sm:p-7">
+      <div className="mb-5 text-center">
+        <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-red-groundlight">
+          {experience.company_name}
+        </p>
+        <h3 className="text-xl font-bold leading-tight text-white sm:text-2xl">
+          {experience.title}
+        </h3>
+        <motion.time
+          className="mt-3 block text-sm font-medium tracking-wide text-gray-400 sm:text-base"
+          initial={{ opacity: 0, y: 8 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 0.6,
+            delay: index * 0.08 + 0.2,
+            ease: 'easeOut',
+          }}
+        >
+          {experience.date}
+        </motion.time>
       </div>
-    </VerticalTimelineElement>
-  );
-};
+
+      <ul className="grid gap-3 sm:grid-cols-2">
+        {experience.points.map((point, pointIndex) => (
+          <li
+            key={`experience-point-${pointIndex}`}
+            className="flex gap-3 text-sm leading-relaxed text-gray-300 sm:text-base"
+          >
+            <span
+              className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-red-ground"
+              aria-hidden="true"
+            />
+            <span>{point}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </motion.article>
+);
 
 const Experiences = () => {
   return (
-    <section className="c-space my-12 sm:my-16 lg:my-20 px-2 sm:px-4 relative top-[100px]">
-      {/* Improved responsive header */}
+    <section
+      className="relative top-[100px] mx-auto my-12 max-w-7xl px-4 sm:my-16 sm:px-6 lg:my-20 lg:px-8"
+      id="experience"
+    >
       <motion.div
-        className="mb-6 sm:mb-8 lg:mb-12"
+        className="mb-10 flex flex-col gap-5 sm:mb-14 lg:flex-row lg:items-end lg:justify-between"
         variants={textVariant(0.2)}
         initial="hidden"
         whileInView="show"
+        viewport={{ once: true }}
       >
-        <h1 className="head-text text-center mb-2 sm:mb-4">Work Experience</h1>
-        <h3 className="head-sub_text text-center px-4">
-          12+ years IT veteran - I've seen it all!
-        </h3>
-      </motion.div>
-
-      {/* Timeline with improved responsive design */}
-      <motion.div
-        className="flex flex-col"
-        variants={sectionVariant()}
-        initial="hidden"
-        whileInView="show"
-      >
-        <div className="relative">
-          <VerticalTimeline
-            lineColor="#c4c4c4"
-            layout="1-column"
-            className="vertical-timeline-custom-line space-y-4"
-          >
-            {experiences.map((experience, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
-                <ExperienceCard experience={experience} />
-              </motion.div>
-            ))}
-          </VerticalTimeline>
+        <div className="mx-auto text-center">
+          <h2 className="head-text">Work Experience</h2>
+          <p className="mx-auto mt-3 max-w-2xl text-base leading-relaxed text-gray-400 sm:text-lg">
+            15+ years of building reliable systems, supporting teams, and
+            turning complex technical problems into practical solutions.
+          </p>
         </div>
       </motion.div>
+
+      <div className="relative space-y-6 sm:space-y-8">
+        <div
+          className="absolute bottom-6 left-5 top-6 w-px bg-gradient-to-b from-red-ground via-white/20 to-transparent sm:left-6"
+          aria-hidden="true"
+        />
+        {experiences.map((experience, index) => (
+          <ExperienceCard
+            key={`${experience.company_name}-${experience.title}`}
+            experience={experience}
+            index={index}
+          />
+        ))}
+      </div>
     </section>
   );
 };
