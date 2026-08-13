@@ -35,8 +35,6 @@ export const myProjects = [
       { id: 3, name: 'Express.js', path: '/logos/express.png' },
       { id: 4, name: 'PostgreSQL', path: '/logos/postgresql.svg' },
       { id: 5, name: 'OpenAI', path: '/logos/openai1.png' },
-      { id: 7, name: 'Tanstack Query', path: '/logos/tanstack.png' },
-      { id: 8, name: 'Clerk', path: '/logos/clerk.png' },
     ],
   },
   {
@@ -52,22 +50,9 @@ export const myProjects = [
       { id: 2, name: 'Typescript', path: '/logos/typescript.svg' },
       { id: 3, name: 'Express', path: '/logos/express.png' },
       { id: 4, name: 'PostgreSQL', path: '/logos/postgresql.svg' },
-      { id: 6, name: 'Framer Motion', path: '/logos/framer.png' },
     ],
   },
-  {
-    title: 'My-MDB - Movies & Series Explorer',
-    desc: "A movie and TV show discovery app that aggregates ratings from IMDb, TMDB, and Rotten Tomatoes. Users can search, save to watchlists, track what they've watched, and discover trending content—all powered by TMDB & OMDB APIs.",
-    href: 'https://my-mdb-delta.vercel.app/',
-    github: 'https://github.com/wseem85/my-mdb',
-    texture: '/textures/project/project2.mp4',
-    brandcolor: '#3f51b5',
-    tags: [
-      { id: 1, name: 'React.js', path: '/logos/react.svg' },
-      { id: 3, name: 'JavaScript', path: '/logos/javascript.svg' },
-      { id: 4, name: 'Redux Toolkit', path: '/logos/redux.png' },
-    ],
-  },
+
   {
     title: 'TecTalk - Tech Community Platform',
     desc: 'A social platform for tech enthusiasts to discuss topics, share knowledge, and connect. Users can sign up via email, Google, or GitHub, create discussion topics, publish posts, and engage through comments—all with secure authentication and real-time interactions.',
@@ -91,10 +76,8 @@ export const myProjects = [
     brandcolor: '#043741',
     tags: [
       { id: 1, name: 'React.js', path: '/logos/react.svg' },
-      { id: 2, name: 'JavaScript', path: '/logos/javascript.svg' },
       { id: 3, name: 'React Router', path: '/logos/react-router.svg' },
       { id: 4, name: 'Material-UI', path: '/logos/materialui.png' },
-      { id: 5, name: 'React Leaflet', path: '/logos/leaflet.png' },
     ],
   },
 ];
