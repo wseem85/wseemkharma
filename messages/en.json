@@ -120,6 +120,7 @@
     "send": "Send Project Brief",
     "sending": "Sending…",
     "review": "Ready to send?",
+    "reviewText": "Please review your project brief. I’ll manually review the details and send a tailored estimate—no automatic price will be shown.",
     "successTitle": "Project brief received 🎉",
     "successText": "Thanks for taking the time to tell me about your project. I'll review the requirements and get back to you with tailored next steps.",
     "backToPortfolio": "Back to portfolio",
@@ -147,6 +148,55 @@
       "contact": "Contact",
       "review": "Review"
     },
+    "projectTypeTitle": "What are you looking to build?",
+    "projectDetailsTitle": "Tell me about your project",
+    "featuresTitle": "What should it be able to do?",
+    "pagesTitle": "How much content will it have?",
+    "languagesTitle": "Will it support multiple languages?",
+    "designTitle": "How would you like it to look?",
+    "technicalTitle": "What are the technical needs?",
+    "timelineTitle": "Timeline & Budget",
+    "contactTitle": "Let’s talk about your project",
+    "projectTypes": {
+      "business": "Business Website",
+      "ecommerce": "E-commerce",
+      "saas": "SaaS / Web Application",
+      "portfolio": "Portfolio / Personal Website",
+      "corporate": "Corporate Website",
+      "redesign": "Redesign / Existing Website",
+      "custom": "Custom Web Application",
+      "notSure": "Not Sure"
+    },
+    "featureGroups": {
+      "basic": "Basic",
+      "business": "Business",
+      "ecommerce": "E-commerce",
+      "advanced": "Advanced"
+    },
+    "features": {
+      "contactForm": "Contact form", "newsletter": "Newsletter subscription", "blog": "Blog / Articles", "imageGallery": "Image gallery", "testimonials": "Testimonials", "faq": "FAQ", "maps": "Google Maps / Location",
+      "userAccounts": "User accounts / Login", "adminDashboard": "Admin dashboard", "booking": "Appointment / Booking system", "search": "Search", "advancedForms": "Advanced forms", "customerDashboard": "Customer dashboard", "multipleLocations": "Multiple locations",
+      "productCatalog": "Product catalog", "shoppingCart": "Shopping cart", "payments": "Online payments", "orders": "Orders", "customerAccounts": "Customer accounts", "discounts": "Discounts / Coupons", "inventory": "Inventory management", "shipping": "Shipping integration",
+      "saas": "SaaS subscription system", "apiIntegrations": "API integrations", "thirdParty": "Third-party services", "aiFeatures": "AI features", "realtime": "Real-time functionality", "customDatabase": "Custom database", "customAdmin": "Custom admin panel", "automatedWorkflows": "Automated workflows"
+    },
+    "contentOptions": {
+      "everything": "I have everything",
+      "someContent": "I have some content",
+      "needContentHelp": "I need help creating content",
+      "notSureYet": "I don't know yet"
+    },
+    "languageOptions": {
+      "english": "English", "arabic": "Arabic", "french": "French", "german": "German", "spanish": "Spanish", "turkish": "Turkish", "other": "Other"
+    },
+    "translationOptions": {
+      "provide": "I provide translations", "needHelp": "I need help", "later": "Add translations later"
+    },
+    "designOptions": {
+      "existing": "I already have a design", "references": "I have references", "idea": "I have an idea", "youDesign": "You design it"
+    },
+    "brandOptions": {
+      "complete": "Complete brand identity", "logoOnly": "Logo only", "partial": "Partial branding", "none": "No branding yet"
+    },
     "fields": {
       "goal": "What is the main goal?",
       "audience": "Who is the target audience?",
@@ -171,7 +221,9 @@
       "company": "Company",
       "email": "Email",
       "phone": "Phone / WhatsApp",
-      "notes": "Anything else?"
+      "notes": "Anything else?",
+      "brand": "Brand identity",
+      "preferredContact": "Preferred contact method"
     },
     "placeholders": {
       "goal": "Tell me what you want to achieve...",
@@ -207,7 +259,19 @@
       "email": "Email",
       "whatsapp": "WhatsApp",
       "phone": "Phone",
-      "videoCall": "Video call"
+      "videoCall": "Video call",
+      "newProject": "No, this is a new project",
+      "redesign": "Yes, I want to redesign it",
+      "rebuild": "Yes, I want to rebuild it completely",
+      "improvements": "Yes, I only need improvements",
+      "pages1to3": "1–3",
+      "pages4to7": "4–7",
+      "pages8to15": "8–15",
+      "pages16plus": "16+",
+      "oneLanguage": "One language",
+      "twoLanguages": "Two languages",
+      "threeLanguages": "Three languages",
+      "moreLanguages": "More than three languages"
     },
     "validation": {
       "projectType": "Please choose the type of project you want to build.",
