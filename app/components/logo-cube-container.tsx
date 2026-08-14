@@ -16,44 +16,54 @@ interface LogoCubesContainerProps {
 }
 
 const LogoCubesContainer: React.FC<LogoCubesContainerProps> = ({ tags }) => {
-  return (
-    <div className="flex items-center gap-3 flex-wrap">
-      {tags.map((tag, index) => (
-        <div
-          key={tag.id || index}
-          className=" !w-12 !h-12 md:!w-14 md:!h-14 lg:!w-16 lg:!h-16 "
-          style={{ width: '50px', height: '50px', minWidth: '50px' }}
-        >
-          <Canvas camera={{ position: [0, 0, 5], fov: 40 }}>
-            <ambientLight intensity={0.7} />
-            <directionalLight
-              position={[0, 0, 3]}
-              intensity={1.0}
-              color="#ffffff"
-            />
-            <directionalLight
-              position={[0, 3, 0]}
-              intensity={0.4}
-              color="#f0f0ff"
-            />
+  const spacing = 2.2;
 
-            <Suspense fallback={<SmallCanvasLoader />}>
-              <LogoCube
-                logoPath={tag.path}
-                logoName={tag.name}
-                position={[0, 0, 0]}
-                scale={1.2}
-              />
-              <OrbitControls
-                enableZoom={false}
-                enablePan={false}
-                minPolarAngle={Math.PI / 4}
-                maxPolarAngle={Math.PI / 1.5}
-              />
-            </Suspense>
-          </Canvas>
-        </div>
-      ))}
+  return (
+    <div className="flex h-16 w-full min-w-0 justify-start sm:h-[4.5rem]">
+      <div
+        className="h-16 shrink-0 sm:h-[4.5rem]"
+        style={{ width: `${Math.max(tags.length * 48, 48)}px` }}
+      >
+        <Canvas
+          camera={{ position: [0, 0, 7], fov: 28 }}
+          dpr={[1, 1.5]}
+          gl={{ antialias: true, powerPreference: 'low-power' }}
+        >
+        <ambientLight intensity={0.7} />
+        <directionalLight
+          position={[0, 0, 3]}
+          intensity={1.0}
+          color="#ffffff"
+        />
+        <directionalLight
+          position={[0, 3, 0]}
+          intensity={0.4}
+          color="#f0f0ff"
+        />
+
+        <Suspense fallback={<SmallCanvasLoader />}>
+          {tags.map((tag, index) => (
+            <LogoCube
+              key={`${tag.id}-${tag.name}`}
+              logoPath={tag.path}
+              logoName={tag.name}
+              position={[
+                (index - (tags.length - 1) / 2) * spacing,
+                0,
+                0,
+              ]}
+              scale={1.2}
+            />
+          ))}
+          <OrbitControls
+            enableZoom={false}
+            enablePan={false}
+            minPolarAngle={Math.PI / 4}
+            maxPolarAngle={Math.PI / 1.5}
+          />
+        </Suspense>
+        </Canvas>
+      </div>
     </div>
   );
 };

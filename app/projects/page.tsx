@@ -103,11 +103,13 @@ const Projects = () => {
                 {projectT(`${project.id}.description`)}
               </p>
 
-              <div className="mt-6 border-t border-white/10 pt-5">
-                <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-gray-500">
+              <div className="mt-6 flex min-w-0 items-center gap-3 border-t border-white/10 pt-5 sm:gap-5">
+                <p className="shrink-0 text-[10px] font-semibold uppercase tracking-[0.2em] text-gray-500">
                   {labelsT('builtWith')}
                 </p>
-                <LogoCubesContainer tags={project.tags} />
+                <div className="min-w-0 flex-1">
+                  <LogoCubesContainer tags={project.tags} />
+                </div>
               </div>
 
               <div className="mt-7 flex flex-col gap-2 sm:flex-row">
@@ -115,9 +117,9 @@ const Projects = () => {
                   href={project.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex min-h-11 flex-1 items-center justify-center rounded-lg bg-red-ground px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-red-groundlight hover:shadow-lg hover:shadow-red-ground/20 active:scale-95"
+                  className="inline-flex min-h-11 flex-1 items-center justify-center gap-2 rounded-lg bg-red-ground px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-red-groundlight hover:shadow-lg hover:shadow-red-ground/20 active:scale-95"
                 >
-                  {labelsT('viewLive')} →
+                  {labelsT('viewLive')} <span aria-hidden="true">{labelsT('arrow')}</span>
                 </a>
                 {adminHref && (
                   <a

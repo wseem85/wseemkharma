@@ -89,8 +89,9 @@
     "discovery": "Project discovery",
     "discoveryTitle": "Let's discuss the work, not just the brief.",
     "discoveryText": "A short guided questionnaire helps me understand your goals, features, timeline, budget, and technical needs before we talk. There is no automatic price—your project is reviewed personally.",
-    "startBrief": "Start your project brief",
-    "duration": "Usually takes 3–5 minutes.",
+    "startBrief": "Tell Me About Your Project",
+    "arrow": "→",
+    "duration": "Usually takes 3–5 minutes, with no cost or commitment.",
     "information": "Contact information",
     "informationText": "Prefer a direct conversation? Reach me through any of these channels.",
     "email": "Email",
@@ -252,6 +253,7 @@
     "viewLive": "View live site",
     "adminPanel": "Admin panel",
     "githubRepo": "GitHub repo",
+    "arrow": "→",
     "privateCode": "The Art Store source code is private because the client did not approve sharing it."
   },
   "experience": {

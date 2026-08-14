@@ -1,6 +1,5 @@
-import { Html, useProgress } from '@react-three/drei';
+import { Html } from '@react-three/drei';
 const SmallCanvasLoader = () => {
-  const { progress } = useProgress();
   return (
     <Html
       as="div"
@@ -21,7 +20,7 @@ const SmallCanvasLoader = () => {
           //   marginTop: 40,
         }}
       >
-        {progress !== 0 ? `${progress.toFixed(2)}%` : '...'}
+        ...
       </p>
     </Html>
   );

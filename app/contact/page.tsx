@@ -91,7 +91,7 @@ export default function ContactPage() {
               onClick={() => setIsWizardOpen(true)}
               className="mt-8 inline-flex min-h-12 items-center justify-center rounded-lg bg-red-ground px-7 py-3 font-semibold tracking-wide text-white transition hover:scale-[1.02] hover:bg-red-groundlight active:scale-95"
             >
-              {contactT('startBrief')} <span className="ml-3">→</span>
+              {contactT('startBrief')} <span className="ms-3">{contactT('arrow')}</span>
             </button>
             <p className="mt-4 text-xs text-gray-500">{contactT('duration')}</p>
           </div>
