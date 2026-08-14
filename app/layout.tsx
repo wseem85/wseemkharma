@@ -1,6 +1,8 @@
 import { ubuntu } from '../app/lib/fonts';
 import './ui/global.css';
 import { Metadata } from 'next';
+import { NextIntlClientProvider } from 'next-intl';
+import enMessages from '../messages/en.json';
 export const metadata: Metadata = {
   title: 'Wseem Kharma',
   description: 'A Portfolio Web App for Engineer Wseem Kharma.',
@@ -28,7 +30,11 @@ export default function RootLayout({
           href="/favicon.ico?v=2" // Change version number when updating
         />
       </head>
-      <body className={`${ubuntu.className} antialiased`}>{children}</body>
+      <body className={`${ubuntu.className} antialiased`}>
+        <NextIntlClientProvider locale="en" messages={enMessages}>
+          {children}
+        </NextIntlClientProvider>
+      </body>
     </html>
   );
 }
