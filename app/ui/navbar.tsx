@@ -55,36 +55,38 @@ const Navbar = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-black-backtwo">
       <div className="max-w-8xl mx-auto">
         <div className="flex justify-between items-center py-5 mx-auto c-space ">
-          <Link
-            href="/"
-            className="text-white opacity-85 hover:opacity-100 transition-opacity font-bold text-lg hover:text-white transition-colors flex  items-center"
-          >
-            <Image src="/logo.png" alt="logo" width={50} height={50} />
-          </Link>
           <button
             onClick={() => setIsOpen((open) => !open)}
-            className="text-neutral-400 hover:text-white focus:outline-none sm:hidden flex"
+            className="order-1 text-neutral-400 hover:text-white focus:outline-none sm:hidden flex"
             aria-label="Toggle Menu"
           >
             <Image
               src={isOpen ? '/close.svg' : '/menu.svg'}
               alt="Toggle"
-              // className="w-6 h-6"
               width={20}
               height={20}
             />
           </button>
-          <nav className="sm:flex hidden bg-black-backtwo">
-            <NavItems setIsOpen={setIsOpen} />
-          </nav>
+
+          <div className="order-2 flex items-center gap-3 sm:contents">
+          <Link
+            href="/"
+            className="text-white opacity-85 hover:opacity-100 transition-opacity font-bold text-lg hover:text-white transition-colors flex items-center sm:order-1"
+          >
+            <Image src="/logo.png" alt="logo" width={50} height={50} />
+          </Link>
           <button
             type="button"
             onClick={() => router.replace(pathname, {locale: locale === 'ar' ? 'en' : 'ar'})}
-            className="ml-4 rounded-md border border-white/15 px-3 py-2 text-xs font-semibold text-gray-300 transition hover:border-red-ground hover:text-white"
+            className="rounded-md border border-white/15 px-3 py-2 text-xs font-semibold text-gray-300 transition hover:border-red-ground hover:text-white sm:order-3"
             aria-label={`Switch language to ${t('switchTo')}`}
           >
             {t('switchTo')}
           </button>
+          </div>
+          <nav className="order-3 hidden bg-black-backtwo sm:order-2 sm:flex">
+            <NavItems setIsOpen={setIsOpen} />
+          </nav>
         </div>
       </div>
       <div className={`nav-sidebar ${isOpen ? 'max-h-screen' : 'max-h-0'}`}>
