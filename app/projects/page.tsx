@@ -24,7 +24,7 @@ const Projects = () => {
 
   const handleGithubClick = (projectId: string, github: string) => {
     if (projectId === 'artStore') {
-      setNotice('The Art Store source code is private because the client did not approve sharing it.');
+      setNotice(labelsT('privateCode'));
       window.setTimeout(() => setNotice(''), 5000);
       return;
     }
@@ -36,9 +36,10 @@ const Projects = () => {
       {notice && (
         <motion.div
           role="status"
+          aria-live="polite"
           initial={{ opacity: 0, y: -12 }}
           animate={{ opacity: 1, y: 0 }}
-          className="fixed left-1/2 top-24 z-50 w-[calc(100%-2rem)] max-w-lg -translate-x-1/2 rounded-xl border border-red-ground/40 bg-[#252526] px-5 py-4 text-center text-sm text-gray-200 shadow-2xl shadow-black/40"
+          className="fixed left-3 right-3 top-20 z-50 mx-auto w-auto max-w-lg rounded-xl border border-red-ground/40 bg-[#252526] px-4 py-3 text-center text-xs leading-relaxed break-words text-gray-200 shadow-2xl shadow-black/40 sm:top-24 sm:px-5 sm:py-4 sm:text-sm"
         >
           {notice}
         </motion.div>

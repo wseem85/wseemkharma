@@ -251,7 +251,8 @@
     "builtWith": "Built with",
     "viewLive": "View live site",
     "adminPanel": "Admin panel",
-    "githubRepo": "GitHub repo"
+    "githubRepo": "GitHub repo",
+    "privateCode": "The Art Store source code is private because the client did not approve sharing it."
   },
   "experience": {
     "items": {
