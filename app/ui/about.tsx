@@ -7,9 +7,12 @@ import BarsSeperator from '../components/animated-seperator';
 import { textVariant } from '../utils/motion';
 import AboutMe from '../components/about-me';
 import { useMediaQuery } from 'react-responsive';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
+import { useTranslations } from 'next-intl';
 
 const About = () => {
+  const t = useTranslations('pages');
+  const aboutT = useTranslations('about');
   const [hasCopied, setHasCopied] = useState(false);
   const [animationPhase, setAnimationPhase] = useState(0);
   const isDesktop = useMediaQuery({ minWidth: 1024 });
@@ -44,8 +47,8 @@ const About = () => {
         initial="hidden"
         whileInView="show"
       >
-        <h1 className="head-text text-center mb-2 sm:mb-4">About Me</h1>
-        <h3 className="head-sub_text text-center px-4">Full-Stack Engineer</h3>
+        <h1 className="head-text text-center mb-2 sm:mb-4">{t('about')}</h1>
+        <h3 className="head-sub_text text-center px-4">{t('engineer')}</h3>
       </motion.div>
 
       {/* Improved responsive grid layout */}
@@ -71,35 +74,45 @@ const About = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <div className="grid-container">
-            <p className="grid-headtext text-lg sm:text-xl">Tech Stack</p>
+            <p className="grid-headtext text-lg sm:text-xl">
+              {aboutT('techStack')}
+            </p>
             <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
               {[
-                ['Frontend', 'React', 'Next.js', 'TypeScript', 'JavaScript'],
-                ['Backend', 'Node.js', 'REST APIs'],
-                ['Database', 'PostgreSQL', 'MongoDB'],
-                ['Infrastructure', 'Docker', 'GitHub Actions'],
-                [
-                  'Integrations & APIs',
-                  'Stripe',
-                  'PayPal',
-                  'OpenAI',
-                  'Gemini',
-                  'Grok',
-                  'REST/Webhook integrations',
-                ],
-              ].map(([category, ...technologies]) => (
+                {
+                  key: 'frontend',
+                  technologies: ['react', 'nextjs', 'typescript', 'javascript'],
+                },
+                { key: 'backend', technologies: ['nodejs', 'restApis'] },
+                { key: 'database', technologies: ['postgresql', 'mongodb'] },
+                {
+                  key: 'infrastructure',
+                  technologies: ['docker', 'githubActions'],
+                },
+                {
+                  key: 'integrations',
+                  technologies: [
+                    'stripe',
+                    'paypal',
+                    'openai',
+                    'gemini',
+                    'grok',
+                    'restWebhooks',
+                  ],
+                },
+              ].map(({ key, technologies }) => (
                 <div
-                  key={category}
+                  key={key}
                   className="rounded-lg border border-black-300 bg-black-200/50 p-3"
                 >
                   <p className="mb-2 text-sm font-semibold text-red-groundlight">
-                    {category}
+                    {aboutT(`techCategories.${key}`)}
                   </p>
                   <ul className="space-y-1 text-sm text-gray-300">
                     {technologies.map((technology) => (
                       <li key={technology} className="flex items-center gap-2">
                         <span className="h-1.5 w-1.5 rounded-full bg-red-ground" />
-                        {technology}
+                        {aboutT(`technologies.${technology}`)}
                       </li>
                     ))}
                   </ul>
@@ -119,30 +132,19 @@ const About = () => {
           <div className="grid-container h-full space-y-8">
             <section>
               <p className="grid-headtext text-lg sm:text-xl">
-                Security &amp; Best Practices
+                {aboutT('security')}
               </p>
               <p className="grid-subtext mt-4 text-sm leading-relaxed sm:text-base">
-                I build with security as a first-class concern, not an
-                afterthought. My work follows OWASP Top 10 principles across the
-                stack — secure authentication and session handling (JWT
-                lifecycle and revocation), CSRF protection, secure HTTP headers,
-                strict input validation and file-upload hardening, and careful
-                secrets management. I use tools like Burp Suite to test for
-                vulnerabilities before they ship, not after.
+                {aboutT('securityText')}
               </p>
             </section>
 
             <section>
               <p className="grid-headtext text-lg sm:text-xl">
-                Deployment &amp; DevOps
+                {aboutT('deployment')}
               </p>
               <p className="grid-subtext mt-4 text-sm leading-relaxed sm:text-base">
-                I don&apos;t hand off a project at &apos;it works on my
-                machine.&apos; I containerize applications with Docker, automate
-                testing and deployment through GitHub Actions CI/CD pipelines,
-                and deploy to production cloud infrastructure. Once it&apos;s
-                live, the work isn&apos;t done — I monitor, maintain, and
-                iterate, so the systems I build stay reliable long after launch.
+                {aboutT('deploymentText')}
               </p>
             </section>
           </div>
@@ -157,27 +159,20 @@ const About = () => {
         >
           <div className="grid-container h-full">
             <p className="grid-headtext text-lg sm:text-xl">
-              Creative & Technical Toolkit
+              {aboutT('creativeToolkit')}
             </p>
             <p className="grid-subtext text-sm sm:text-base">
-              I bridge development and design using Photoshop, Illustrator and
-              GIMP to create pixel-perfect assets, intuitive UI elements.
+              {aboutT('creativeText')}
             </p>
 
             <div className="space-y-4">
               <BarsSeperator color="bg-red-ground" />
               <p className="grid-subtext text-sm sm:text-base leading-relaxed">
-                I specialize in configuring and maintaining Windows Server
-                environments for optimal enterprise performance. From Active
-                Directory management to Group Policy implementation, I ensure
-                secure user access controls and seamless network operations.
+                {aboutT('windowsServerText')}
               </p>
               <BarsSeperator color="bg-red-ground" />
               <p className="grid-subtext text-sm sm:text-base leading-relaxed">
-                Experienced in troubleshooting hardware, software, and network
-                issues with strong knowledge of Windows, macOS, and Linux
-                systems. Skilled in remote support, ticketing systems, and
-                providing efficient technical solutions to end-users.
+                {aboutT('supportText')}
               </p>
             </div>
           </div>
@@ -196,18 +191,16 @@ const About = () => {
             </div>
             <div className="space-y-3 sm:space-y-4">
               <p className="grid-headtext text-base sm:text-lg leading-relaxed">
-                ☀️🌙 My workday spans sunrise to sunset across continents. Based
-                in Syria, available worldwide.
+                {aboutT('locationHeadline')}
               </p>
               <p className="grid-subtext text-sm sm:text-base">
-                Your timezone is my workzone - offering seamless remote
-                collaboration to anywhere.
+                {aboutT('locationDescription')}
               </p>
               <Link href="/contact">
                 <Button
-                  name="Contact Me"
+                  name={aboutT('contactButton')}
                   isBeam
-                  containerClass="px-5 py-2.5 sm:px-6 sm:py-3
+                  containerClass="px-5 py-2.5 sm:px-6 sm:py-3 inine-block mt-6
                   bg-gradient-to-r from-red-ground to-red-groundlight
                   text-white font-medium
                   rounded-lg

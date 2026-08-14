@@ -1,13 +1,19 @@
 'use client';
 import Image from 'next/image';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import {useLocale, useTranslations} from 'next-intl';
+import {Link, usePathname, useRouter} from '@/i18n/navigation';
 
 const Footer = () => {
   const [whatsappIcon, setWhatsappIcon] = useState('/whatsapp-white.png');
   const [linkedinIcon, setLinkedinIcon] = useState('/linkedin-white.png');
   const [telegramIcon, setTelegramIcon] = useState('/telegram-white.png');
+  const t = useTranslations('footer');
+  const navigation = useTranslations('navigation');
+  const locale = useLocale();
+  const pathname = usePathname();
+  const router = useRouter();
   const itemVariants = {
     initial: { scale: 1, color: '#FFFFFF' },
     hover: {
@@ -19,17 +25,45 @@ const Footer = () => {
   };
   return (
     <section className="c-space my-20 bg-black-backtwo  text-white relative top-[100px]">
-      <footer className="grid grid-cols-3  gap-6 place-items-center py-7 ">
-        <div className="col-span-3 text-center flex items-center">
-          <Image src="/logo.png" alt="logo" width={50} height={50} />
-          &copy; {new Date().getFullYear()}
+      <footer className="grid grid-cols-1 gap-10 border-b border-white/10 py-10 md:grid-cols-3 md:gap-10">
+        <div className="text-center md:text-start">
+          <div className="flex items-center justify-center md:justify-start">
+            <Image src="/logo.png" alt="logo" width={50} height={50} />
+          </div>
+          <p className="mx-auto mt-4 max-w-xs text-sm leading-relaxed text-gray-400 md:mx-0">
+            {t('about')}
+          </p>
         </div>
 
+        <nav aria-label={t('quickLinks')} className="text-center md:text-start">
+          <h2 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
+            {t('quickLinks')}
+          </h2>
+          <div className="flex flex-col items-center gap-3 text-sm text-gray-400 md:items-start">
+            <Link href="/" className="transition hover:text-white">{navigation('home')}</Link>
+            <Link href="/projects" className="transition hover:text-white">{navigation('work')}</Link>
+            <Link href="/contact" className="transition hover:text-white">{navigation('contact')}</Link>
+          </div>
+        </nav>
+
+        <div className="text-center md:text-start">
+          <h2 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
+            {t('getInTouch')}
+          </h2>
+          <div className="mb-5 space-y-2 text-sm text-gray-400">
+            <a href="mailto:engwseem2@gmail.com" className="block transition hover:text-white">
+              {t('email')}
+            </a>
+            <a href="tel:+963994875398" className="block transition hover:text-white">
+              {t('phone')}
+            </a>
+          </div>
+          <div className="flex flex-wrap justify-center gap-5 md:justify-start">
         <a
           href="https://wa.me/963994875398"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 hover:text-blue-400 transition-colors col-span-3 xs:col-span-1 "
+          className="flex items-center gap-2 transition-colors hover:text-blue-400"
           onMouseEnter={() => setWhatsappIcon('/whatsapp-blue.png')}
           onMouseLeave={() => setWhatsappIcon('/whatsapp-white.png')}
         >
@@ -48,7 +82,7 @@ const Footer = () => {
               className=""
             />
             <motion.span className="hover:text-blue-400 transition-colors">
-              whatsapp
+            {t('whatsapp')}
             </motion.span>
           </motion.div>
         </a>
@@ -58,7 +92,7 @@ const Footer = () => {
           href="https://www.linkedin.com/in/wseem-kharma-b82373265"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 hover:text-blue-400 transition-colors col-span-3 xs:col-span-1"
+          className="flex items-center gap-2 transition-colors hover:text-blue-400"
           onMouseEnter={() => setLinkedinIcon('/linkedin-blue.png')}
           onMouseLeave={() => setLinkedinIcon('/linkedin-white.png')}
         >
@@ -77,7 +111,7 @@ const Footer = () => {
               className=""
             />
             <span className="hover:text-blue-400 transition-colors">
-              LinkedIn
+              {t('linkedin')}
             </span>
           </motion.div>
         </a>
@@ -87,7 +121,7 @@ const Footer = () => {
           href="https://t.me/Eng_WSEEM_KHARMA"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 hover:text-blue-400 transition-colors col-span-3 xs:col-span-1"
+          className="flex items-center gap-2 transition-colors hover:text-blue-400"
           onMouseEnter={() => setTelegramIcon('/telegram-blue.png')}
           onMouseLeave={() => setTelegramIcon('/telegram-white.png')}
         >
@@ -106,11 +140,23 @@ const Footer = () => {
               className=""
             />
             <span className="hover:text-blue-400 transition-colors">
-              Telegram
+              {t('telegram')}
             </span>
           </motion.div>
         </a>
+          </div>
+        </div>
       </footer>
+      <div className="flex items-center justify-center gap-4 pb-6 text-xs text-gray-500">
+        <span>© {new Date().getFullYear()} Wseem Kharma</span>
+        <button
+          type="button"
+          onClick={() => router.replace(pathname, {locale: locale === 'ar' ? 'en' : 'ar'})}
+          className="text-red-groundlight transition hover:text-white"
+        >
+          {navigation('switchTo')}
+        </button>
+      </div>
     </section>
   );
 };

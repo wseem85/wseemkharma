@@ -1,14 +1,14 @@
 'use client';
 
-import Link from 'next/link';
 import Image from 'next/image';
 import { motion, useReducedMotion } from 'framer-motion';
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
 import { orbitron } from '../lib/fonts';
 import ProjectDiscoveryWizard from '../components/project-discovery-wizard';
+import {useLocale, useTranslations} from 'next-intl';
+import {Link} from '@/i18n/navigation';
 
-const headingWords = ['Design.', 'Build.', 'Ship.'];
 const heroIcons = [
   { src: '/logos/react.svg', name: 'React' },
   { src: '/logos/nextjs.png', name: 'Next.js' },
@@ -29,6 +29,10 @@ const heroIcons = [
 const Hero = () => {
   const shouldReduceMotion = useReducedMotion();
   const [isWizardOpen, setIsWizardOpen] = useState(false);
+  const locale = useLocale();
+  const isArabic = locale === 'ar';
+  const t = useTranslations('hero');
+  const headingWords = [t('design'), t('build'), t('ship')];
 
   return (
     <section className="relative top-[80px] flex min-h-[550px] w-full items-center overflow-hidden bg-[#101114]">
@@ -74,20 +78,24 @@ const Hero = () => {
           </div>
 
           <p
-            className={`${orbitron.className} text-sm uppercase tracking-[0.28em] text-gray-300 sm:text-base`}
+            className={`${!isArabic ? orbitron.className : ''} text-sm uppercase tracking-[0.18em] text-gray-300 sm:text-base`}
           >
-            Full Stack Engineer
+            {t('role')}
           </p>
 
           <motion.h1
-            className="max-w-4xl text-5xl font-black leading-[0.95] tracking-tight text-white sm:text-7xl lg:text-8xl"
+            className={`max-w-4xl font-black tracking-tight text-white ${
+              isArabic
+                ? 'text-4xl leading-[1.2] sm:text-6xl lg:text-7xl'
+                : 'text-5xl leading-[0.95] sm:text-7xl lg:text-8xl'
+            }`}
             initial="hidden"
             animate="show"
             variants={{
               hidden: {},
               show: { transition: { staggerChildren: 0.16 } },
             }}
-            aria-label="Build. Ship. Inspire."
+            aria-label={`${t('design')} ${t('build')} ${t('ship')}`}
           >
             {headingWords.map((word) => (
               <motion.span
@@ -108,10 +116,7 @@ const Hero = () => {
             ))}
           </motion.h1>
 
-          <p className="max-w-2xl text-base leading-relaxed text-gray-300 sm:text-xl">
-            From system architecture to the pixels people click — I build it,
-            ship it, and make it work.{' '}
-          </p>
+          <p className="max-w-2xl text-base leading-relaxed text-gray-300 sm:text-xl">{t('description')}</p>
 
           <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:gap-4">
             <button
@@ -119,13 +124,13 @@ const Hero = () => {
               onClick={() => setIsWizardOpen(true)}
               className="inline-flex min-h-12 items-center justify-center rounded-md bg-red-ground px-7 py-3 font-semibold tracking-wide text-white transition-transform duration-200 hover:scale-105 hover:bg-red-groundlight active:scale-95"
             >
-              Let&apos;s work together
+              {t('workTogether')}
             </button>
             <Link
               href="/projects"
               className="inline-flex min-h-12 items-center justify-center rounded-md border border-white/30 bg-black/20 px-7 py-3 font-semibold tracking-wide text-white backdrop-blur-sm transition-colors duration-200 hover:border-white hover:bg-white/10 active:scale-95"
             >
-              See my work
+              {t('seeWork')}
             </Link>
           </div>
 

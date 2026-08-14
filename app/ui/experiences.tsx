@@ -3,12 +3,10 @@
 import { motion } from 'framer-motion';
 import { experiences } from '../lib/placeholder-data';
 import { textVariant } from '../utils/motion';
+import {useTranslations} from 'next-intl';
 
 interface Experience {
-  title: string;
-  company_name: string;
-  date: string;
-  points: string[];
+  id: string;
 }
 
 const ExperienceCard = ({
@@ -17,7 +15,11 @@ const ExperienceCard = ({
 }: {
   experience: Experience;
   index: number;
-}) => (
+}) => {
+  const t = useTranslations('experience.items');
+  const points = t.raw(`${experience.id}.points`) as string[];
+
+  return (
   <motion.article
     className="group relative pl-12 sm:pl-20"
     initial={{ opacity: 0, y: 28 }}
@@ -33,10 +35,10 @@ const ExperienceCard = ({
     <div className="rounded-2xl border border-white/10 bg-[#252526] p-5 shadow-lg shadow-black/10 transition-all duration-300 group-hover:-translate-y-1 group-hover:border-red-ground/50 group-hover:shadow-red-ground/10 sm:p-7">
       <div className="mb-5 text-center">
         <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-red-groundlight">
-          {experience.company_name}
+          {t(`${experience.id}.company`)}
         </p>
         <h3 className="text-xl font-bold leading-tight text-white sm:text-2xl">
-          {experience.title}
+          {t(`${experience.id}.title`)}
         </h3>
         <motion.time
           className="mt-3 block text-sm font-medium tracking-wide text-gray-400 sm:text-base"
@@ -49,12 +51,12 @@ const ExperienceCard = ({
             ease: 'easeOut',
           }}
         >
-          {experience.date}
+          {t(`${experience.id}.date`)}
         </motion.time>
       </div>
 
       <ul className="grid gap-3 sm:grid-cols-2">
-        {experience.points.map((point, pointIndex) => (
+        {points.map((point, pointIndex) => (
           <li
             key={`experience-point-${pointIndex}`}
             className="flex gap-3 text-sm leading-relaxed text-gray-300 sm:text-base"
@@ -69,9 +71,11 @@ const ExperienceCard = ({
       </ul>
     </div>
   </motion.article>
-);
+  );
+};
 
 const Experiences = () => {
+  const t = useTranslations('pages');
   return (
     <section
       className="relative top-[100px] mx-auto my-12 max-w-7xl px-4 sm:my-16 sm:px-6 lg:my-20 lg:px-8"
@@ -85,10 +89,9 @@ const Experiences = () => {
         viewport={{ once: true }}
       >
         <div className="mx-auto text-center">
-          <h2 className="head-text">Work Experience</h2>
+          <h2 className="head-text">{t('experience')}</h2>
           <p className="mx-auto mt-3 max-w-2xl text-base leading-relaxed text-gray-400 sm:text-lg">
-            15+ years of building reliable systems, supporting teams, and
-            turning complex technical problems into practical solutions.
+            {t('experienceIntro')}
           </p>
         </div>
       </motion.div>
@@ -100,7 +103,7 @@ const Experiences = () => {
         />
         {experiences.map((experience, index) => (
           <ExperienceCard
-            key={`${experience.company_name}-${experience.title}`}
+            key={experience.id}
             experience={experience}
             index={index}
           />

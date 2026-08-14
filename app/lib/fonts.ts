@@ -2,7 +2,7 @@
 
 // Define the General Sans font with all weights/styles
 
-import { Inter, Orbitron, Ubuntu } from 'next/font/google';
+import { Cairo, Inter, Orbitron, Ubuntu } from 'next/font/google';
 export const inter = Inter({ subsets: ['latin'] });
 export const orbitron = Orbitron({
   weight: '400', // This is the only available weight
@@ -15,4 +15,9 @@ export const ubuntu = Ubuntu({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-codystar',
+});
+export const cairo = Cairo({
+  weight: ['400', '500', '600', '700'],
+  subsets: ['arabic', 'latin'],
+  display: 'swap',
 });

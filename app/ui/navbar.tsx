@@ -1,9 +1,9 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { navLinks } from '@/app/lib/placeholder-data';
+import {useLocale, useTranslations} from 'next-intl';
+import {Link, usePathname, useRouter} from '@/i18n/navigation';
 import Image from 'next/image';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 
 interface NavItemsProps {
   setIsOpen: (isOpen: boolean) => void;
@@ -11,11 +11,17 @@ interface NavItemsProps {
 
 const NavItems = ({ setIsOpen }: NavItemsProps) => {
   const pathname = usePathname();
+  const t = useTranslations('navigation');
+  const labels: Record<string, string> = {
+    Home: t('home'),
+    'Selected Work': t('work'),
+    Contact: t('contact'),
+  };
 
   return (
     <ul className="nav-ul">
       {navLinks.map(({ id, name, href }) => {
-        const isActive = pathname === href;
+        const isActive = pathname === href || (href === '/' && pathname === '/');
 
         return (
           <li key={id} className="nav-li">
@@ -27,7 +33,7 @@ const NavItems = ({ setIsOpen }: NavItemsProps) => {
               onClick={() => setIsOpen(false)}
               aria-current={isActive ? 'page' : undefined}
             >
-              {name}
+              {labels[name] ?? name}
             </Link>
           </li>
         );
@@ -38,6 +44,9 @@ const NavItems = ({ setIsOpen }: NavItemsProps) => {
 
 const Navbar = () => {
   const pathname = usePathname();
+  const locale = useLocale();
+  const t = useTranslations('navigation');
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   useEffect(() => {
     setIsOpen(false);
@@ -68,6 +77,14 @@ const Navbar = () => {
           <nav className="sm:flex hidden bg-black-backtwo">
             <NavItems setIsOpen={setIsOpen} />
           </nav>
+          <button
+            type="button"
+            onClick={() => router.replace(pathname, {locale: locale === 'ar' ? 'en' : 'ar'})}
+            className="ml-4 rounded-md border border-white/15 px-3 py-2 text-xs font-semibold text-gray-300 transition hover:border-red-ground hover:text-white"
+            aria-label={`Switch language to ${t('switchTo')}`}
+          >
+            {t('switchTo')}
+          </button>
         </div>
       </div>
       <div className={`nav-sidebar ${isOpen ? 'max-h-screen' : 'max-h-0'}`}>

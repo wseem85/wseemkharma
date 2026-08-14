@@ -1,11 +1,7 @@
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
-
-const overview =
-  'Full-Stack Engineer focused on building production-grade web applications using React, Next.js, Node.js, PostgreSQL, and modern cloud tooling. I specialize in designing secure and scalable backend systems, authentication workflows, subscription-based platforms, and performant web applications with strong attention to architecture, reliability, and user experience.';
-const education =
-  'B.Sc. Computers & Automatic Control Engineering | Tishreen University | 2003 - 2008.';
+import { useTranslations } from 'next-intl';
 
 interface TypewriterTextProps {
   text: string;
@@ -79,26 +75,27 @@ const TypewriterText = ({
 
 const AboutMe = () => {
   const [activeSection, setActiveSection] = useState(0);
+  const t = useTranslations('aboutMe');
 
   const sections = [
     {
       id: 'name',
-      content: 'I am Wseem Kharma',
+      content: t('name'),
       type: 'heading',
     },
     {
       id: 'overview',
-      content: overview,
+      content: t('overview'),
       type: 'typing',
     },
     {
       id: 'education-title',
-      content: 'Education',
+      content: t('educationTitle'),
       type: 'heading',
     },
     {
       id: 'education',
-      content: education,
+      content: t('education'),
       type: 'typing',
     },
   ];

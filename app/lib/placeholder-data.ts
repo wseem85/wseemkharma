@@ -23,8 +23,7 @@ export const navLinks = [
 ];
 export const myProjects = [
   {
-    title: 'Helio AI - AI-Powered, Multi-language Web Application',
-    desc: 'A comprehensive AI platform offering content generation, image processing, and career assistance tools. Users can generate articles, simplify complex ideas, create AI images, remove backgrounds, review resumes, and transform content—all in one sleek interface.',
+    id: 'helioAi',
     href: 'https://helio-ai-nu.vercel.app/',
     github: 'https://github.com/wseem85/helio.ai',
     texture: '/textures/project/project5.mp4',
@@ -38,8 +37,7 @@ export const myProjects = [
     ],
   },
   {
-    title: 'Art Store - Immersive Online Gallery & Art Store',
-    desc: 'A full-stack art e-commerce platform that gives an artist a complete online presence to showcase and sell original artwork, prints, and custom commissions. Includes secure Stripe payments, personalized user accounts, automated email responses, and an admin dashboard for managing inventory and orders.',
+    id: 'artStore',
     href: 'https://nadakharma.com',
 
     github: '',
@@ -54,8 +52,7 @@ export const myProjects = [
   },
 
   {
-    title: 'TecTalk - Tech Community Platform',
-    desc: 'A social platform for tech enthusiasts to discuss topics, share knowledge, and connect. Users can sign up via email, Google, or GitHub, create discussion topics, publish posts, and engage through comments—all with secure authentication and real-time interactions.',
+    id: 'tecTalk',
     href: 'https://tectalk.vercel.app/',
     github: 'https://github.com/wseem85/tectalk',
     texture: '/textures/project/project3.mp4',
@@ -68,8 +65,7 @@ export const myProjects = [
     ],
   },
   {
-    title: 'Shipco - Logistics Services Platform',
-    desc: "A dynamic web application showcasing Shipco's logistics services, branch locations, and real-time pricing. Clients can explore the company network, find contact information, and access service details—all optimized for fast, mobile-friendly access with interactive maps.",
+    id: 'shipco',
     href: 'https://www.shipcosyria.com.sy/',
     github: 'https://github.com/wseem85/shipco-webapp',
     texture: '/textures/project/project4.mp4',
@@ -83,70 +79,28 @@ export const myProjects = [
 ];
 export const experiences = [
   {
-    title: 'Freelance Web Developer',
-    company_name: 'Independent Work',
+    id: 'freelanceWebDeveloper',
     icon: freelancer, // You'll need to provide/import this
     iconBg: '#ebebeb', // slate-800
-    date: 'May 2022 - Present',
-    points: [
-      'Designed and deployed production-ready SaaS applications using React, Next.js, Node.js, PostgreSQL, and cloud services',
-      'Implemented authentication, authorization, subscription management, and recurring payment workflows.',
-      'Built scalable REST APIs and backend services supporting file processing, AI integrations, and user-generated content.',
-      'Improved application performance through caching strategies, lazy loading, and database query optimization.',
-      'Built CI/CD pipelines and containerized deployments using Docker and GitHub Actions.',
-      'Designed secure APIs following OWASP security best practices and conducted API security testing using Burp Suite and OWASP ZAP.',
-    ],
   },
   {
-    title: 'IT Assistant Manager',
-    company_name: 'Shipco Company',
+    id: 'itAssistantManager',
     icon: shipcoIcon,
     iconBg: '#ebebeb', // sky-700
-    date: 'July 2024 - December 2025',
-    points: [
-      'Lead a team of 6 IT support staff, delegating tasks and providing technical guidance',
-      'Oversee maintenance of IT infrastructure including servers, networks, and workstations',
-      'Developed company website from scratch to modernize online presence',
-      'Implement security best practices across all company systems',
-    ],
   },
   {
-    title: 'IT Support Engineer',
-    company_name: 'Shipco Company',
+    id: 'itSupportEngineer',
     icon: shipcoIcon,
     iconBg: '#ebebeb',
-    date: 'May 2016 - July 2024',
-    points: [
-      'Provided technical support for 50+ users across hardware, software and network systems',
-      'Configured and maintained servers, firewalls, and network devices',
-      'Monitored system performance and implemented efficiency improvements',
-      'Trained junior IT staff and end-users on new technologies',
-    ],
   },
   {
-    title: 'Windows Network Administrator',
-    company_name: 'Shipco Company',
+    id: 'windowsNetworkAdministrator',
     icon: shipcoIcon,
     iconBg: '#ebebeb',
-    date: 'April 2013 - May 2016',
-    points: [
-      'Managed Windows server environment and Active Directory infrastructure',
-      'Implemented backup and disaster recovery solutions',
-      'Resolved complex network connectivity issues',
-      'Maintained 100+ workstations across company locations',
-    ],
   },
   {
-    title: 'Freelance Graphic Designer',
-    company_name: 'Independent Work',
+    id: 'freelanceGraphicDesigner',
     icon: freelancer,
     iconBg: '#ebebeb', // violet-600
-    date: 'June 2018 - August 2020',
-    points: [
-      'Designed logos and brand guidelines for 20+ clients (avg. 8.1/10 rating)',
-      'Created print/digital including business cards, brochures, and social media graphics',
-      'Produced large-scale advertisements like highway billboards',
-      'Developed comprehensive visual identities for diverse industries',
-    ],
   },
 ];

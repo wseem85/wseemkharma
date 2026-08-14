@@ -1,0 +1,317 @@
+{
+  "navigation": {
+    "home": "Home",
+    "work": "Selected Work",
+    "contact": "Let's Work Together",
+    "switchTo": "العربية"
+  },
+  "footer": {
+    "whatsapp": "WhatsApp",
+    "linkedin": "LinkedIn",
+    "telegram": "Telegram",
+    "copyright": "All rights reserved.",
+    "about": "Full-Stack Web Engineer building secure, reliable, and thoughtful digital experiences from idea to production.",
+    "quickLinks": "Quick links",
+    "connect": "Connect",
+    "getInTouch": "Get in touch",
+    "email": "engwseem2@gmail.com",
+    "phone": "+963 (994) 875398"
+  },
+  "hero": {
+    "role": "Full Stack Web Engineer",
+    "design": "Design.",
+    "build": "Build.",
+    "ship": "Ship.",
+    "description": "From system architecture to the pixels people click — I build it, ship it, and make it work.",
+    "workTogether": "Let's work together",
+    "seeWork": "See my work"
+  },
+  "pages": {
+    "selectedWork": "Selected Work",
+    "contact": "Let's Work Together",
+    "workIntro": "Projects that do the work.",
+    "browseTitle": "Tired of talk? Let's show you the work.",
+    "browseDescription": "Actions speak louder than words.",
+    "about": "About Me",
+    "engineer": "Full-Stack Engineer",
+    "experience": "Work Experience",
+    "experienceIntro": "12+ years of building reliable systems, supporting teams, and turning complex technical problems into practical solutions."
+  },
+  "aboutMe": {
+    "name": "I am Wseem Kharma",
+    "overview": "Full-Stack Web Engineer focused on building production-grade web applications using React, Next.js, Node.js, PostgreSQL, and modern cloud tooling. I specialize in designing secure and scalable backend systems, authentication workflows, subscription-based platforms, and performant web applications with strong attention to architecture, reliability, and user experience.",
+    "educationTitle": "Education",
+    "education": "B.Sc. Computers & Automatic Control Engineering | Tishreen University | 2003 - 2008."
+  },
+  "about": {
+    "techStack": "Tech Stack",
+    "techCategories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Database",
+      "infrastructure": "Infrastructure",
+      "integrations": "Integrations & APIs"
+    },
+    "technologies": {
+      "react": "React",
+      "nextjs": "Next.js",
+      "typescript": "TypeScript",
+      "javascript": "JavaScript",
+      "nodejs": "Node.js",
+      "restApis": "REST APIs",
+      "postgresql": "PostgreSQL",
+      "mongodb": "MongoDB",
+      "docker": "Docker",
+      "githubActions": "GitHub Actions",
+      "stripe": "Stripe",
+      "paypal": "PayPal",
+      "openai": "OpenAI",
+      "gemini": "Gemini",
+      "grok": "Grok",
+      "restWebhooks": "REST/Webhook integrations"
+    },
+    "security": "Security & Best Practices",
+    "securityText": "I build with security as a first-class concern, not an afterthought. My work follows OWASP Top 10 principles across the stack — secure authentication and session handling (JWT lifecycle and revocation), CSRF protection, secure HTTP headers, strict input validation and file-upload hardening, and careful secrets management. I use tools like Burp Suite to test for vulnerabilities before they ship, not after.",
+    "deployment": "Deployment & DevOps",
+    "deploymentText": "I don't hand off a project at 'it works on my machine.' I containerize applications with Docker, automate testing and deployment through GitHub Actions CI/CD pipelines, and deploy to production cloud infrastructure. Once it's live, the work isn't done — I monitor, maintain, and iterate, so the systems I build stay reliable long after launch.",
+    "creativeToolkit": "Creative & Technical Toolkit",
+    "creativeText": "I bridge development and design using Photoshop, Illustrator and GIMP to create pixel-perfect assets and intuitive UI elements.",
+    "windowsServerText": "I specialize in configuring and maintaining Windows Server environments for optimal enterprise performance. From Active Directory management to Group Policy implementation, I ensure secure user access controls and seamless network operations.",
+    "supportText": "Experienced in troubleshooting hardware, software, and network issues with strong knowledge of Windows, macOS, and Linux systems. Skilled in remote support, ticketing systems, and providing efficient technical solutions to end users.",
+    "locationHeadline": "☀️🌙 My workday spans sunrise to sunset across continents. Based in Syria, available worldwide.",
+    "locationDescription": "Your timezone is my workzone — offering seamless remote collaboration anywhere.",
+    "contactButton": "Contact Me"
+  },
+  "contact": {
+    "eyebrow": "Let's Work Together",
+    "title": "Turn your idea into something real.",
+    "description": "Tell me what you are planning, what success looks like, and where you need help. I'll review the details personally and follow up with thoughtful next steps.",
+    "discovery": "Project discovery",
+    "discoveryTitle": "Let's discuss the work, not just the brief.",
+    "discoveryText": "A short guided questionnaire helps me understand your goals, features, timeline, budget, and technical needs before we talk. There is no automatic price—your project is reviewed personally.",
+    "startBrief": "Start your project brief",
+    "duration": "Usually takes 3–5 minutes.",
+    "information": "Contact information",
+    "informationText": "Prefer a direct conversation? Reach me through any of these channels.",
+    "email": "Email",
+    "phone": "Phone / WhatsApp",
+    "location": "Location",
+    "worldwide": "Syria · Worldwide remote",
+    "availability": "Availability",
+    "weekdays": "Monday–Friday",
+    "replyTime": "Replies within 24 hours",
+    "connect": "Connect with me",
+    "copy": "Copy",
+    "copied": "Copied",
+    "social": {
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "whatsapp": "WhatsApp",
+      "telegram": "Telegram"
+    }
+  },
+  "wizard": {
+    "label": "Let's discuss your project",
+    "step": "Step {current} of {total}",
+    "back": "Back",
+    "continue": "Continue",
+    "close": "Close project wizard",
+    "send": "Send Project Brief",
+    "sending": "Sending…",
+    "review": "Ready to send?",
+    "successTitle": "Project brief received 🎉",
+    "successText": "Thanks for taking the time to tell me about your project. I'll review the requirements and get back to you with tailored next steps.",
+    "backToPortfolio": "Back to portfolio",
+    "stepTitles": {
+      "projectType": "What are you looking to build?",
+      "projectDetails": "Tell me about your project",
+      "features": "What should it be able to do?",
+      "pages": "How much content will it have?",
+      "languages": "Will it support multiple languages?",
+      "design": "How would you like it to look?",
+      "technical": "What are the technical needs?",
+      "timeline": "Timeline & Budget",
+      "contact": "Let’s talk about your project",
+      "review": "Ready to send?"
+    },
+    "stepLabels": {
+      "projectType": "Project type",
+      "projectDetails": "Project details",
+      "features": "Features",
+      "pages": "Pages & content",
+      "languages": "Languages",
+      "design": "Design",
+      "technical": "Technical needs",
+      "timeline": "Timeline & budget",
+      "contact": "Contact",
+      "review": "Review"
+    },
+    "fields": {
+      "goal": "What is the main goal?",
+      "audience": "Who is the target audience?",
+      "problem": "What problem should it solve?",
+      "websiteUrl": "Current website URL",
+      "otherFeatures": "Other features",
+      "pageRange": "Approximately how many pages?",
+      "expectedPages": "Which pages do you expect?",
+      "contentStatus": "Do you have written content?",
+      "languageCount": "How many languages?",
+      "languages": "Which languages?",
+      "translations": "Translations",
+      "design": "How would you like it to look?",
+      "references": "Websites you like",
+      "domain": "I have a domain",
+      "hosting": "I have hosting",
+      "technology": "Existing technology or platform",
+      "integrations": "Integrations",
+      "timeline": "When would you like it completed?",
+      "budget": "Approximate budget",
+      "name": "Full name",
+      "company": "Company",
+      "email": "Email",
+      "phone": "Phone / WhatsApp",
+      "notes": "Anything else?"
+    },
+    "placeholders": {
+      "goal": "Tell me what you want to achieve...",
+      "audience": "Who will use or visit it?",
+      "problem": "What should become easier or better?",
+      "websiteUrl": "https://example.com",
+      "otherFeatures": "Anything else you need?",
+      "pages": "Home, About, Services, Contact...",
+      "references": "Add one or more URLs, separated by commas",
+      "technology": "WordPress, Shopify, React, or not sure",
+      "integrations": "Payments, CRM, email marketing, shipping, AI...",
+      "name": "Your full name",
+      "company": "Optional",
+      "email": "you@example.com",
+      "phone": "+963994875398",
+      "notes": "Anything else I should know?"
+    },
+    "options": {
+      "yes": "Yes",
+      "no": "No",
+      "notSure": "Not sure",
+      "asap": "As soon as possible",
+      "twoToFourWeeks": "2–4 weeks",
+      "oneToTwoMonths": "1–2 months",
+      "twoToThreeMonths": "2–3 months",
+      "flexible": "Flexible",
+      "unknown": "I don't know",
+      "under500": "Under $500",
+      "500to1000": "$500–$1,000",
+      "1000to2500": "$1,000–$2,500",
+      "2500to5000": "$2,500–$5,000",
+      "5000to10000": "$5,000–$10,000",
+      "email": "Email",
+      "whatsapp": "WhatsApp",
+      "phone": "Phone",
+      "videoCall": "Video call"
+    },
+    "validation": {
+      "projectType": "Please choose the type of project you want to build.",
+      "goal": "Please tell me what you want the project to achieve.",
+      "feature": "Please choose at least one feature or describe a custom feature.",
+      "pages": "Please select an approximate page count.",
+      "languagePlan": "Please select the language plan.",
+      "language": "Please select at least one language.",
+      "design": "Please choose the design direction that best fits your project.",
+      "technology": "Please tell me whether you have an existing platform or technology preference.",
+      "timeline": "Please select a timeline.",
+      "budget": "Please select a budget range.",
+      "name": "Please enter your name so I know who I am speaking with.",
+      "contact": "Please provide an email address or phone number.",
+      "contactHint": "Provide a valid email address or phone number with country code. At least one is required.",
+      "email": "Please enter a valid email address.",
+      "phone": "Please enter a valid phone number with country code.",
+      "preferredContact": "Please choose how you prefer to be contacted.",
+      "sendError": "I could not send your project brief. Please try again or email me directly."
+    }
+  },
+  "projects": {
+    "items": {
+      "helioAi": {
+        "title": "Helio AI - AI-Powered, Multi-language Web Application",
+        "description": "A comprehensive AI platform offering content generation, image processing, and career assistance tools. Users can generate articles, simplify complex ideas, create AI images, remove backgrounds, review resumes, and transform content—all in one sleek interface."
+      },
+      "artStore": {
+        "title": "Art Store - Immersive Online Gallery & Art Store",
+        "description": "A full-stack art e-commerce platform that gives an artist a complete online presence to showcase and sell original artwork, prints, and custom commissions. Includes secure Stripe payments, personalized user accounts, automated email responses, and an admin dashboard for managing inventory and orders."
+      },
+      "tecTalk": {
+        "title": "TecTalk - Tech Community Platform",
+        "description": "A social platform for tech enthusiasts to discuss topics, share knowledge, and connect. Users can sign up via email, Google, or GitHub, create discussion topics, publish posts, and engage through comments—all with secure authentication and real-time interactions."
+      },
+      "shipco": {
+        "title": "Shipco - Logistics Services Platform",
+        "description": "A dynamic web application showcasing Shipco's logistics services, branch locations, and real-time pricing. Clients can explore the company network, find contact information, and access service details—all optimized for fast, mobile-friendly access with interactive maps."
+      }
+    },
+    "intro": "A selection of products, platforms, and digital experiences built from idea to launch.",
+    "builtWith": "Built with",
+    "viewLive": "View live site",
+    "adminPanel": "Admin panel",
+    "githubRepo": "GitHub repo"
+  },
+  "experience": {
+    "items": {
+      "freelanceWebDeveloper": {
+        "title": "Freelance Web Developer",
+        "company": "Independent Work",
+        "date": "May 2022 - Present",
+        "points": [
+          "Designed and deployed production-ready SaaS applications using React, Next.js, Node.js, PostgreSQL, and cloud services",
+          "Implemented authentication, authorization, subscription management, and recurring payment workflows.",
+          "Built scalable REST APIs and backend services supporting file processing, AI integrations, and user-generated content.",
+          "Improved application performance through caching strategies, lazy loading, and database query optimization.",
+          "Built CI/CD pipelines and containerized deployments using Docker and GitHub Actions.",
+          "Designed secure APIs following OWASP security best practices and conducted API security testing using Burp Suite and OWASP ZAP."
+        ]
+      },
+      "itAssistantManager": {
+        "title": "IT Assistant Manager",
+        "company": "Shipco Company",
+        "date": "July 2024 - December 2025",
+        "points": [
+          "Led a team of 6 IT support staff, delegating tasks and providing technical guidance",
+          "Oversaw maintenance of IT infrastructure including servers, networks, and workstations",
+          "Developed the company website from scratch to modernize its online presence",
+          "Implemented security best practices across all company systems"
+        ]
+      },
+      "itSupportEngineer": {
+        "title": "IT Support Engineer",
+        "company": "Shipco Company",
+        "date": "May 2016 - July 2024",
+        "points": [
+          "Provided technical support for 50+ users across hardware, software, and network systems",
+          "Configured and maintained servers, firewalls, and network devices",
+          "Monitored system performance and implemented efficiency improvements",
+          "Trained junior IT staff and end users on new technologies"
+        ]
+      },
+      "windowsNetworkAdministrator": {
+        "title": "Windows Network Administrator",
+        "company": "Shipco Company",
+        "date": "April 2013 - May 2016",
+        "points": [
+          "Managed Windows server environments and Active Directory infrastructure",
+          "Implemented backup and disaster recovery solutions",
+          "Resolved complex network connectivity issues",
+          "Maintained 100+ workstations across company locations"
+        ]
+      },
+      "freelanceGraphicDesigner": {
+        "title": "Freelance Graphic Designer",
+        "company": "Independent Work",
+        "date": "June 2018 - August 2020",
+        "points": [
+          "Designed logos and brand guidelines for 20+ clients with an average 8.1/10 rating",
+          "Created print and digital materials including business cards, brochures, and social media graphics",
+          "Produced large-scale advertisements such as highway billboards",
+          "Developed comprehensive visual identities for diverse industries"
+        ]
+      }
+    }
+  }
+}

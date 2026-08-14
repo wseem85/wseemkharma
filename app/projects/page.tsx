@@ -6,9 +6,13 @@ import { myProjects } from '../lib/placeholder-data';
 import { VideoScreen3D } from '../components/video-screen3d';
 import LogoCubesContainer from '../components/logo-cube-container';
 import { hexToRgba } from '../utils/helpers';
+import {useTranslations} from 'next-intl';
 
 const Projects = () => {
   const [notice, setNotice] = useState('');
+  const t = useTranslations('pages');
+  const projectT = useTranslations('projects.items');
+  const labelsT = useTranslations('projects');
 
   useEffect(() => {
     document.title = 'Selected Work | Wseem Kharma';
@@ -18,8 +22,8 @@ const Projects = () => {
     );
   }, []);
 
-  const handleGithubClick = (projectTitle: string, github: string) => {
-    if (projectTitle.startsWith('Art Store')) {
+  const handleGithubClick = (projectId: string, github: string) => {
+    if (projectId === 'artStore') {
       setNotice('The Art Store source code is private because the client did not approve sharing it.');
       window.setTimeout(() => setNotice(''), 5000);
       return;
@@ -47,12 +51,11 @@ const Projects = () => {
         transition={{ duration: 0.6 }}
       >
         <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-red-groundlight">
-          Selected work
+          {t('selectedWork')}
         </p>
-        <h1 className="head-text">Projects that do the work.</h1>
+        <h1 className="head-text">{t('workIntro')}</h1>
         <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-gray-400 sm:text-lg">
-          A selection of products, platforms, and digital experiences built from
-          idea to launch.
+          {labelsT('intro')}
         </p>
       </motion.header>
 
@@ -66,7 +69,7 @@ const Projects = () => {
 
             return (
           <motion.article
-            key={project.title}
+            key={project.id}
             className="group overflow-hidden rounded-3xl border border-white/10 bg-[#111214] shadow-xl shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-red-ground/40 hover:shadow-red-ground/10"
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -93,15 +96,15 @@ const Projects = () => {
 
             <div className="flex flex-col p-5 sm:p-7">
               <h2 className="text-xl font-bold leading-tight text-white sm:text-2xl">
-                {project.title}
+                {projectT(`${project.id}.title`)}
               </h2>
               <p className="mt-4 line-clamp-4 text-sm leading-relaxed text-gray-300 sm:text-base">
-                {project.desc}
+                {projectT(`${project.id}.description`)}
               </p>
 
               <div className="mt-6 border-t border-white/10 pt-5">
                 <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-gray-500">
-                  Built with
+                  {labelsT('builtWith')}
                 </p>
                 <LogoCubesContainer tags={project.tags} />
               </div>
@@ -113,7 +116,7 @@ const Projects = () => {
                   rel="noreferrer"
                   className="inline-flex min-h-11 flex-1 items-center justify-center rounded-lg bg-red-ground px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-red-groundlight hover:shadow-lg hover:shadow-red-ground/20 active:scale-95"
                 >
-                  View live site →
+                  {labelsT('viewLive')} →
                 </a>
                 {adminHref && (
                   <a
@@ -122,16 +125,16 @@ const Projects = () => {
                     rel="noreferrer"
                     className="inline-flex min-h-11 items-center justify-center rounded-lg border border-white/15 px-4 py-2.5 text-sm font-semibold text-gray-200 transition hover:border-red-ground/60 hover:text-white active:scale-95"
                   >
-                    Admin panel
+                    {labelsT('adminPanel')}
                   </a>
                 )}
                 <button
                   type="button"
-                  onClick={() => handleGithubClick(project.title, project.github)}
-                  disabled={!project.github && !project.title.startsWith('Art Store')}
+                  onClick={() => handleGithubClick(project.id, project.github)}
+                  disabled={!project.github && project.id !== 'artStore'}
                   className="inline-flex min-h-11 items-center justify-center rounded-lg border border-white/15 px-4 py-2.5 text-sm font-semibold text-gray-200 transition hover:border-red-ground/60 hover:text-white active:scale-95 disabled:cursor-not-allowed disabled:opacity-40"
                 >
-                  GitHub repo
+                  {labelsT('githubRepo')}
                 </button>
               </div>
             </div>

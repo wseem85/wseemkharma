@@ -1,7 +1,5 @@
 import { ubuntu } from '../app/lib/fonts';
 import './ui/global.css';
-import Navbar from './ui/navbar';
-import Footer from './ui/footer';
 import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Wseem Kharma',
@@ -30,13 +28,7 @@ export default function RootLayout({
           href="/favicon.ico?v=2" // Change version number when updating
         />
       </head>
-      <body className={`${ubuntu.className} antialiased`}>
-        <>
-          <Navbar />
-          {children}
-          <Footer />
-        </>
-      </body>
+      <body className={`${ubuntu.className} antialiased`}>{children}</body>
     </html>
   );
 }
