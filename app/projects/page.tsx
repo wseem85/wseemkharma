@@ -15,12 +15,12 @@ const Projects = () => {
   const labelsT = useTranslations('projects');
 
   useEffect(() => {
-    document.title = 'Selected Work | Wseem Kharma';
+    document.title = `${t('selectedWork')} | Wseem Kharma`;
     document.querySelector('meta[name="description"]')?.setAttribute(
       'content',
-      'Explore selected work by the developer.',
+      labelsT('intro'),
     );
-  }, []);
+  }, [labelsT, t]);
 
   const handleGithubClick = (projectId: string, github: string) => {
     if (projectId === 'artStore') {

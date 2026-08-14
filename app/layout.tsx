@@ -4,9 +4,33 @@ import { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import enMessages from '../messages/en.json';
 export const metadata: Metadata = {
-  title: 'Wseem Kharma',
-  description: 'A Portfolio Web App for Engineer Wseem Kharma.',
+  title: {
+    default: enMessages.metadata.title,
+    template: '%s | Wseem Kharma',
+  },
+  description: enMessages.metadata.description,
+  keywords: enMessages.metadata.keywords,
+  authors: [{ name: 'Wseem Kharma' }],
+  creator: 'Wseem Kharma',
+  publisher: 'Wseem Kharma',
   metadataBase: new URL('https://wseemkharma.vercel.app'),
+  openGraph: {
+    type: 'website',
+    siteName: 'Wseem Kharma',
+    title: enMessages.metadata.title,
+    description: enMessages.metadata.description,
+    images: ['/opengraph-image.png'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: enMessages.metadata.title,
+    description: enMessages.metadata.description,
+    images: ['/opengraph-image.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   other: {
     // Facebook App Links (to force external browser opening)
     'al:android:url': 'https://wseemkharma.vercel.app',
