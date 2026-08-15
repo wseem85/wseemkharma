@@ -102,7 +102,8 @@ const Hero = () => {
                 key={word}
                 className="mr-3 inline-block bg-gradient-to-r from-white via-gray-200 to-gray-500 bg-clip-text text-transparent sm:mr-5"
                 variants={{
-                  hidden: { opacity: 0, y: 35, filter: 'blur(8px)' },
+                  // Keep the heading paintable for LCP; animate position instead of hiding it.
+                  hidden: { opacity: 1, y: 24, filter: 'blur(0px)' },
                   show: {
                     opacity: 1,
                     y: 0,
@@ -164,7 +165,14 @@ const Hero = () => {
                 }
                 title={icon.name}
               >
-                <Image src={icon.src} alt={icon.name} width={24} height={24} />
+                <Image
+                  src={icon.src}
+                  alt={icon.name}
+                  width={24}
+                  height={24}
+                  loading="lazy"
+                  sizes="24px"
+                />
               </motion.div>
             ))}
           </div>

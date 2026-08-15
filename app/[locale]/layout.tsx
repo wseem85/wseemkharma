@@ -99,9 +99,55 @@ export default async function LocaleLayout({
   if (!routing.locales.includes(locale as 'en' | 'ar')) notFound();
   const messages = await getMessages();
   const currentLocale = await getLocale();
+  const metadataT = await getTranslations({
+    locale: currentLocale,
+    namespace: 'metadata',
+  });
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Person',
+        '@id': `${siteUrl}/#person`,
+        name: 'Wseem Kharma',
+        alternateName: ['Waseem Kharma', 'Wasim Kharma', 'وسيم خرما', 'وسيم'],
+        url: `${siteUrl}/${currentLocale}`,
+        image: `${siteUrl}/myavatar600.png`,
+        jobTitle: metadataT('jobTitle'),
+        description: metadataT('description'),
+        knowsAbout: [
+          'Full-stack web development',
+          'React',
+          'Next.js',
+          'Node.js',
+          'PostgreSQL',
+          'SaaS development',
+          'Web application security',
+        ],
+        sameAs: [
+          'https://github.com/wseem85',
+          'https://www.linkedin.com/in/wseem-kharma-b82373265',
+          'https://t.me/Eng_WSEEM_KHARMA',
+        ],
+      },
+      {
+        '@type': 'WebSite',
+        '@id': `${siteUrl}/#website`,
+        url: `${siteUrl}/${currentLocale}`,
+        name: 'Wseem Kharma',
+        description: metadataT('description'),
+        inLanguage: currentLocale,
+        publisher: {'@id': `${siteUrl}/#person`},
+      },
+    ],
+  };
 
   return (
     <NextIntlClientProvider messages={messages}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{__html: JSON.stringify(structuredData)}}
+      />
       <LocaleDocument locale={currentLocale} />
       <div
         lang={currentLocale}

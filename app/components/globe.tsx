@@ -8,7 +8,7 @@ const Globe = dynamic(() => import('react-globe.gl'), {
   ),
 });
 import dynamic from 'next/dynamic';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 interface ArcData {
   startLat: number;
   startLng: number;
@@ -18,6 +18,26 @@ interface ArcData {
 }
 const GlobeWithArcs = () => {
   const [arcsData, setArcsData] = useState<ArcData[]>([]);
+  const [isNearViewport, setIsNearViewport] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const element = containerRef.current;
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsNearViewport(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '300px' },
+    );
+
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     // Generate random arc data
@@ -40,26 +60,29 @@ const GlobeWithArcs = () => {
   }, []);
 
   return (
-    <Globe
-      width={326}
-      height={326}
-      backgroundColor="rgba(0,0,0,0)"
-      globeImageUrl="/globe/earth-night.jpg"
-      // bumpImageUrl="//unpkg.com/three-globe/example/img/earth-topology.jpg"
-      // Arc layer properties
-      arcsData={arcsData}
-      arcColor={'color'} // uses the color property
-      arcStroke={1} // line width
-      arcDashLength={() => Math.random()} // random dash pattern
-      arcDashGap={() => Math.random()} // random gap pattern
-      arcDashAnimateTime={() => Math.random() * 4000 + 500} // animation duration
-      arcCurveResolution={32} // smoothness of arcs
-      arcAltitudeAutoScale={0.3} // scaling factor for arc altitude
-      // Additional globe options
-      showAtmosphere={true}
-      atmosphereColor="rgba(63, 201, 255, 0.3)"
-      showGraticules={true}
-    />
+    <div ref={containerRef} className="flex h-[326px] w-[326px] items-center justify-center">
+      {isNearViewport ? (
+        <Globe
+          width={326}
+          height={326}
+          backgroundColor="rgba(0,0,0,0)"
+          globeImageUrl="/globe/earth-night.jpg"
+          arcsData={arcsData}
+          arcColor={'color'}
+          arcStroke={1}
+          arcDashLength={() => Math.random()}
+          arcDashGap={() => Math.random()}
+          arcDashAnimateTime={() => Math.random() * 4000 + 500}
+          arcCurveResolution={32}
+          arcAltitudeAutoScale={0.3}
+          showAtmosphere={true}
+          atmosphereColor="rgba(63, 201, 255, 0.3)"
+          showGraticules={true}
+        />
+      ) : (
+        <div className="h-12 w-12 animate-pulse rounded-full border border-blue-400/30" aria-hidden="true" />
+      )}
+    </div>
   );
 };
 
