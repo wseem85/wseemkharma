@@ -1,34 +1,40 @@
 {
   "metadata": {
-    "title": "Wseem Kharma | Full-Stack Web Engineer",
-    "description": "Portfolio of Wseem Kharma, a full-stack web engineer building secure, scalable, and production-ready web applications.",
-    "jobTitle": "Full-Stack Web Engineer",
+    "title": "Wseem Kharma | Full-Stack Software Engineer",
+    "description": "Portfolio of Wseem Kharma, a Syria-based full-stack software engineer who designs and builds secure, scalable, production-ready web applications with modern frontend and backend technologies.",
+    "jobTitle": "Full-Stack Software Engineer",
     "keywords": [
       "Wseem Kharma",
+      "Wseem Kharma LinkedIn",
+      "Wseem Kharma GitHub",
+      "full-stack software engineer",
+      "software engineer Syria",
       "full-stack web engineer",
-      "full-stack developer",
       "React developer",
       "Next.js developer",
       "Node.js developer",
       "web application development",
       "secure web applications",
       "SaaS development",
-      "freelance web developer",
+      "freelance software engineer",
+      "Syria software engineer",
       "Syria web developer"
     ]
   },
   "navigation": {
     "home": "Home",
+    "about": "About",
     "work": "Selected Work",
     "contact": "Let's Work Together",
+    "services": "Services",
     "switchTo": "العربية"
   },
   "footer": {
     "whatsapp": "WhatsApp",
     "linkedin": "LinkedIn",
-    "telegram": "Telegram",
+    "github": "GitHub",
     "copyright": "All rights reserved.",
-    "about": "Full-Stack Web Engineer building secure, reliable, and thoughtful digital experiences from idea to production.",
+    "about": "Full-Stack Software Engineer designing and building secure, reliable, production-ready web applications from idea to launch.",
     "quickLinks": "Quick links",
     "connect": "Connect",
     "getInTouch": "Get in touch",
@@ -36,11 +42,11 @@
     "phone": "+963 (994) 875398"
   },
   "hero": {
-    "role": "Full Stack Web Engineer",
+    "role": "Full-Stack Software Engineer",
     "design": "Design.",
     "build": "Build.",
     "ship": "Ship.",
-    "description": "From system architecture to the pixels people click — I build it, ship it, and make it work.",
+    "description": "I design and build production-ready web applications with modern frontend and backend technologies—from system architecture to the pixels people click.",
     "workTogether": "Let's work together",
     "seeWork": "See my work"
   },
@@ -51,13 +57,13 @@
     "browseTitle": "Tired of talk? Let's show you the work.",
     "browseDescription": "Actions speak louder than words.",
     "about": "About Me",
-    "engineer": "Full-Stack Engineer",
+    "engineer": "Full-Stack Software Engineer",
     "experience": "Work Experience",
-    "experienceIntro": "12+ years of building reliable systems, supporting teams, and turning complex technical problems into practical solutions."
+    "experienceIntro": "Syria-based full-stack software engineer with 12+ years of building reliable systems, supporting teams, and turning complex technical problems into practical solutions."
   },
   "aboutMe": {
     "name": "I am Wseem Kharma",
-    "overview": "Full-Stack Web Engineer focused on building production-grade web applications using React, Next.js, Node.js, PostgreSQL, and modern cloud tooling. I specialize in designing secure and scalable backend systems, authentication workflows, subscription-based platforms, and performant web applications with strong attention to architecture, reliability, and user experience.",
+    "overview": "I am a Syria-based Full-Stack Software Engineer who designs and builds production-ready web applications with modern frontend and backend technologies. I work with React, Next.js, Node.js, PostgreSQL, and cloud tooling to create secure, scalable systems, authentication workflows, subscription platforms, and performant user experiences.",
     "educationTitle": "Education",
     "education": "B.Sc. Computers & Automatic Control Engineering | Tishreen University | 2003 - 2008."
   },
@@ -125,9 +131,60 @@
     "social": {
       "linkedin": "LinkedIn",
       "github": "GitHub",
-      "whatsapp": "WhatsApp",
-      "telegram": "Telegram"
+      "whatsapp": "WhatsApp"
     }
+  },
+  "services": {
+    "eyebrow": "Services",
+    "title": "Practical digital services for ambitious ideas.",
+    "description": "Choose the kind of support you need. Every request is reviewed personally, and the same guided brief helps turn your goals into clear next steps.",
+    "request": "Request this service",
+    "sendMessage": "Send a message",
+    "website": {
+      "title": "Let’s build your website",
+      "description": "Production-ready websites and web applications—from architecture and interface design to secure deployment and ongoing improvement.",
+      "badge": "Web development"
+    },
+    "identity": {
+      "title": "Visual identity design",
+      "description": "A clear, memorable visual identity for companies and individuals, including direction for logos, colors, typography, and digital touchpoints.",
+      "badge": "Brand design"
+    },
+    "writing": {
+      "title": "Technical writing",
+      "description": "Clear technical articles and explainers that make complex software ideas useful, credible, and easier for your audience to understand.",
+      "badge": "Articles & explainers"
+    },
+    "advice": {
+      "title": "Free IT advice",
+      "description": "A practical conversation about what to learn, how to build your professional identity, which tools to choose, or what laptop and setup fits your goals.",
+      "badge": "Free guidance"
+    },
+    "readArticles": "Read my articles on LinkedIn",
+    "information": "Send a message",
+    "informationText": "Not sure which service fits? Send a short message and explain what you are trying to achieve. Include a valid email address so I can reply.",
+    "duration": "Usually takes 3–5 minutes, with no cost or commitment.",
+    "contactInfo": "Direct contact",
+    "location": "Syria · Worldwide remote",
+    "availability": "Replies within 24 hours",
+    "formTitle": "Send a request",
+    "formDescription": "Tell me briefly what you need and I’ll get back to you personally.",
+    "name": "Your name",
+    "email": "Your email",
+    "message": "How can I help?",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "you@example.com",
+    "messagePlaceholder": "Tell me about your needs...",
+    "send": "Send request",
+    "sending": "Sending…",
+    "closeForm": "Close form",
+    "requiredFields": "Name, email, and message are required.",
+    "invalidEmail": "Please enter a valid email address.",
+    "sendError": "Could not send your request. Please try again.",
+    "successTitle": "Request sent successfully",
+    "successText": "Thanks for reaching out. I’ll review your message and reply soon.",
+    "done": "Done",
+    "websiteDuration": "Usually takes 3–5 minutes, with no cost or commitment."
   },
   "wizard": {
     "label": "Let's discuss your project",
@@ -341,7 +398,7 @@
   "experience": {
     "items": {
       "freelanceWebDeveloper": {
-        "title": "Freelance Web Developer",
+        "title": "Freelance Full-Stack Software Engineer",
         "company": "Independent Work",
         "date": "May 2022 - Present",
         "points": [

@@ -13,9 +13,9 @@ const NavItems = ({ setIsOpen }: NavItemsProps) => {
   const pathname = usePathname();
   const t = useTranslations('navigation');
   const labels: Record<string, string> = {
-    Home: t('home'),
+    About: t('about'),
     'Selected Work': t('work'),
-    Contact: t('contact'),
+    Services: t('services'),
   };
 
   return (

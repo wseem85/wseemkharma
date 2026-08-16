@@ -6,7 +6,7 @@ import shipcoIcon from '@/public/assets/shipcoIcon.png';
 export const navLinks = [
   {
     id: 1,
-    name: 'Home',
+    name: 'About',
     href: '/',
   },
 
@@ -17,8 +17,8 @@ export const navLinks = [
   },
   {
     id: 3,
-    name: 'Contact',
-    href: '/contact',
+    name: 'Services',
+    href: '/services',
   },
 ];
 export const myProjects = [

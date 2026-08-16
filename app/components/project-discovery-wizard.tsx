@@ -142,10 +142,10 @@ const TextField = ({
   </label>
 );
 
-const ProjectDiscoveryWizard = ({ onClose }: { onClose: () => void }) => {
+const ProjectDiscoveryWizard = ({ onClose, initialService }: { onClose: () => void; initialService?: string }) => {
   const t = useTranslations('wizard');
   const [step, setStep] = useState(0);
-  const [data, setData] = useState<WizardData>({ features: [], pages: [], languages: [], references: [], integrations: [] });
+  const [data, setData] = useState<WizardData>({ features: [], pages: [], languages: [], references: [], integrations: [], ...(initialService ? { service: initialService } : {}) });
   const [error, setError] = useState('');
   const [invalidField, setInvalidField] = useState<string | null>(null);
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
@@ -287,6 +287,7 @@ const ProjectDiscoveryWizard = ({ onClose }: { onClose: () => void }) => {
       phone: t('fields.phone'),
       preferredContact: t('fields.preferredContact'),
       notes: t('fields.notes'),
+      service: 'Requested service',
     };
     const summaryValue = (key: string, item: WizardValue) => {
       const values = Array.isArray(item) ? item : [item];

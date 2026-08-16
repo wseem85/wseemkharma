@@ -196,7 +196,7 @@ const About = () => {
               <p className="grid-subtext text-sm sm:text-base">
                 {aboutT('locationDescription')}
               </p>
-              <Link href="/contact">
+              <Link href="/services">
                 <Button
                   name={aboutT('contactButton')}
                   isBeam

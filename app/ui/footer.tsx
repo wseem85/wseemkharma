@@ -8,7 +8,6 @@ import {Link, usePathname, useRouter} from '@/i18n/navigation';
 const Footer = () => {
   const [whatsappIcon, setWhatsappIcon] = useState('/whatsapp-white.png');
   const [linkedinIcon, setLinkedinIcon] = useState('/linkedin-white.png');
-  const [telegramIcon, setTelegramIcon] = useState('/telegram-white.png');
   const t = useTranslations('footer');
   const navigation = useTranslations('navigation');
   const locale = useLocale();
@@ -40,9 +39,9 @@ const Footer = () => {
             {t('quickLinks')}
           </h2>
           <div className="flex flex-col items-center gap-3 text-sm text-gray-400 md:items-start">
-            <Link href="/" className="transition hover:text-white">{navigation('home')}</Link>
+            <Link href="/" className="transition hover:text-white">{navigation('about')}</Link>
             <Link href="/projects" className="transition hover:text-white">{navigation('work')}</Link>
-            <Link href="/contact" className="transition hover:text-white">{navigation('contact')}</Link>
+            <Link href="/services" className="transition hover:text-white">{navigation('services')}</Link>
           </div>
         </nav>
 
@@ -89,9 +88,9 @@ const Footer = () => {
 
         {/* LinkedIn Link - Replace with your actual LinkedIn URL */}
         <a
-          href="https://www.linkedin.com/in/wseem-kharma-b82373265"
+          href="https://www.linkedin.com/in/wseemkharma/"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="me noopener noreferrer"
           className="flex items-center gap-2 transition-colors hover:text-blue-400"
           onMouseEnter={() => setLinkedinIcon('/linkedin-blue.png')}
           onMouseLeave={() => setLinkedinIcon('/linkedin-white.png')}
@@ -116,14 +115,11 @@ const Footer = () => {
           </motion.div>
         </a>
 
-        {/* Telegram Link - Replace USERNAME with your Telegram username */}
         <a
-          href="https://t.me/Eng_WSEEM_KHARMA"
+          href="https://github.com/wseem85"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="me noopener noreferrer"
           className="flex items-center gap-2 transition-colors hover:text-blue-400"
-          onMouseEnter={() => setTelegramIcon('/telegram-blue.png')}
-          onMouseLeave={() => setTelegramIcon('/telegram-white.png')}
         >
           <motion.div
             variants={itemVariants}
@@ -132,18 +128,11 @@ const Footer = () => {
             whileTap="tap"
             className="flex items-center gap-2"
           >
-            <img
-              src={telegramIcon}
-              alt="Telegram"
-              width={24}
-              height={24}
-              className=""
-            />
-            <span className="hover:text-blue-400 transition-colors">
-              {t('telegram')}
-            </span>
+            <img src="/github.svg" alt="GitHub" width={24} height={24} />
+            <span className="hover:text-blue-400 transition-colors">{t('github')}</span>
           </motion.div>
         </a>
+
           </div>
         </div>
       </footer>

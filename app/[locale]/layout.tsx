@@ -126,8 +126,7 @@ export default async function LocaleLayout({
         ],
         sameAs: [
           'https://github.com/wseem85',
-          'https://www.linkedin.com/in/wseem-kharma-b82373265',
-          'https://t.me/Eng_WSEEM_KHARMA',
+          'https://www.linkedin.com/in/wseemkharma/',
         ],
       },
       {

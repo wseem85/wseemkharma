@@ -10,6 +10,13 @@ interface ContactFormData {
   message: string;
 }
 
+interface ServiceMessageData {
+  service: string;
+  name: string;
+  email: string;
+  message: string;
+}
+
 type ProjectInquiryData = Record<string, unknown>;
 
 const escapeHtml = (input: unknown) =>
@@ -52,6 +59,7 @@ async function sendProjectInquiry(data: ProjectInquiryData) {
   const email = String(data.email ?? '').trim();
   const phone = String(data.phone ?? '').trim();
   const goal = String(data.goal ?? '').trim();
+  const service = String(data.service ?? 'website').trim();
   const websiteTrap = String(data.website ?? '').trim();
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const phoneRegex = /^\+[1-9]\d{7,14}$/;
@@ -77,9 +85,9 @@ async function sendProjectInquiry(data: ProjectInquiryData) {
   const { data: sent, error } = await resend.emails.send({
     from: 'Portfolio Inquiries <onboarding@resend.dev>',
     to: [receivingEmail],
-    subject: `New Project Inquiry — ${displayValue(data.projectType)} — ${name}`,
+    subject: `New Service Inquiry — ${service} — ${name}`,
     replyTo: email || undefined,
-    html: `<div style="font-family:Arial,sans-serif;max-width:700px;margin:auto"><h1>New Project Inquiry</h1><p><strong>Complexity:</strong> ${level} (${score})</p><pre style="white-space:pre-wrap;background:#f5f5f5;padding:16px;border-radius:8px">${brief}</pre></div>`,
+    html: `<div style="font-family:Arial,sans-serif;max-width:700px;margin:auto"><h1>New Service Inquiry</h1><p><strong>Requested service:</strong> ${escapeHtml(service)}</p><p><strong>Complexity:</strong> ${level} (${score})</p><pre style="white-space:pre-wrap;background:#f5f5f5;padding:16px;border-radius:8px">${brief}</pre></div>`,
   });
   if (error) {
     console.error('Project inquiry email error:', error);
@@ -99,11 +107,39 @@ async function sendProjectInquiry(data: ProjectInquiryData) {
   return NextResponse.json({ message: 'Project brief received.', id: sent?.id }, { status: 200 });
 }
 
+async function sendServiceMessage(data: ServiceMessageData) {
+  const name = String(data.name ?? '').trim();
+  const email = String(data.email ?? '').trim();
+  const message = String(data.message ?? '').trim();
+  const service = String(data.service ?? 'general').trim();
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!name || !email || !message) return NextResponse.json({ error: 'Name, email, and message are required.' }, { status: 400 });
+  if (!emailRegex.test(email)) return NextResponse.json({ error: 'Please provide a valid email address.' }, { status: 400 });
+
+  const receivingEmail = process.env.RECEIVING_EMAIL || process.env.NEXT_PUBLIC_RECEIVING_EMAIL || 'engwseem2@gmail.com';
+  const { data: sent, error } = await resend.emails.send({
+    from: 'Portfolio Services <onboarding@resend.dev>',
+    to: [receivingEmail],
+    replyTo: email,
+    subject: `New Service Request — ${service} — ${name}`,
+    html: `<div style="font-family:Arial,sans-serif;max-width:700px;margin:auto"><h1>New Service Request</h1><p><strong>Service:</strong> ${escapeHtml(service)}</p><p><strong>From:</strong> ${escapeHtml(name)} &lt;${escapeHtml(email)}&gt;</p><p><strong>Message:</strong></p><div style="white-space:pre-wrap;background:#f5f5f5;padding:16px;border-radius:8px">${escapeHtml(message)}</div></div>`,
+  });
+  if (error) {
+    console.error('Service request email error:', error);
+    return NextResponse.json({ error: 'Failed to send service request.' }, { status: 500 });
+  }
+  return NextResponse.json({ message: 'Service request received.', id: sent?.id }, { status: 200 });
+}
+
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
     if (body?.type === 'project-inquiry') {
       return sendProjectInquiry(body.data ?? {});
+    }
+    if (body?.type === 'service-message') {
+      return sendServiceMessage(body.data ?? {});
     }
     const { name, email, subject, message }: ContactFormData = body;
 
