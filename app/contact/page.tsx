@@ -1,1 +1,5 @@
-export { default } from '../services/page';
+import { redirect } from 'next/navigation';
+
+export default function ContactRedirect() {
+  redirect('/en/services');
+}
