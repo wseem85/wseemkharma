@@ -116,12 +116,17 @@ export default async function LocaleLayout({
         jobTitle: metadataT('jobTitle'),
         description: metadataT('description'),
         knowsAbout: [
-          'Full-stack web development',
+          'Full-stack Engineer',
+          'Web Development',
+          'Software Engineering',
           'React',
           'Next.js',
           'Node.js',
           'PostgreSQL',
           'SaaS development',
+          'Commerical web applications',
+          'Portofolio web applications',
+          'Personal web applications',
           'Web application security',
         ],
         sameAs: [
@@ -136,7 +141,7 @@ export default async function LocaleLayout({
         name: 'Wseem Kharma',
         description: metadataT('description'),
         inLanguage: currentLocale,
-        publisher: {'@id': `${siteUrl}/#person`},
+        publisher: { '@id': `${siteUrl}/#person` },
       },
     ],
   };
@@ -145,7 +150,7 @@ export default async function LocaleLayout({
     <NextIntlClientProvider messages={messages}>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{__html: JSON.stringify(structuredData)}}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
       <LocaleDocument locale={currentLocale} />
       <div
