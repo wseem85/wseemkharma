@@ -34,7 +34,7 @@ export const myProjects = [
     texture: '/textures/project/project5.mp4',
     brandcolor: '#366fff',
     tags: [
-      { id: 1, name: 'React.js', path: '/articles/react.svg' },
+      { id: 1, name: 'React.js', path: '/logos/react.svg' },
       { id: 2, name: 'JavaScript', path: '/logos/javascript.svg' },
       { id: 3, name: 'Express.js', path: '/logos/express.png' },
       { id: 4, name: 'PostgreSQL', path: '/logos/postgresql.svg' },
