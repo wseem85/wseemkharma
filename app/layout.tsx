@@ -2,6 +2,7 @@ import { ubuntu } from '../app/lib/fonts';
 import './ui/global.css';
 import { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
+import { Analytics } from '@vercel/analytics/react';
 import enMessages from '../messages/en.json';
 export const metadata: Metadata = {
   title: {
@@ -58,6 +59,7 @@ export default function RootLayout({
         <NextIntlClientProvider locale="en" messages={enMessages}>
           {children}
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   );
