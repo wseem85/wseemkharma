@@ -110,7 +110,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
         <div className="relative mb-10 aspect-[16/8] overflow-hidden rounded-2xl border border-white/10 bg-black/30">
           <Image
             src={article.image}
-            alt=""
+            alt={articleT('title')}
             fill
             sizes="(max-width: 896px) 100vw, 896px"
             className="object-cover"

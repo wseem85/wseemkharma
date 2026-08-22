@@ -20,13 +20,13 @@ export const metadata: Metadata = {
     siteName: 'Wseem Kharma',
     title: enMessages.metadata.title,
     description: enMessages.metadata.description,
-    images: ['/opengraph-image.png'],
+    images: ['/assets/herobg.png'],
   },
   twitter: {
     card: 'summary_large_image',
     title: enMessages.metadata.title,
     description: enMessages.metadata.description,
-    images: ['/opengraph-image.png'],
+    images: ['/assets/herobg.png'],
   },
   robots: {
     index: true,

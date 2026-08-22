@@ -57,9 +57,9 @@ export async function generateMetadata({
       description: t('description'),
       images: [
         {
-          url: '/opengraph-image.png',
-          width: 1200,
-          height: 630,
+          url: '/assets/herobg.png',
+          width: 2800,
+          height: 1600,
           alt: t('title'),
         },
       ],
@@ -68,7 +68,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: t('title'),
       description: t('description'),
-      images: ['/opengraph-image.png'],
+      images: ['/assets/herobg.png'],
     },
     robots: {
       index: true,

@@ -120,7 +120,7 @@ const AboutMe = () => {
       >
         <Image
           src="/myavatar600.png"
-          alt="avatar"
+          alt="Wseem Kharma"
           width={150}
           height={150}
           className="border border-gray-200 rounded-lg shadow-white-sm hover:shadow-white-lg transition-shadow duration-300"

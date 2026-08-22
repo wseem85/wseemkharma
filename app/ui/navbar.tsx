@@ -1,8 +1,8 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { navLinks } from '@/app/lib/placeholder-data';
-import {useLocale, useTranslations} from 'next-intl';
-import {Link, usePathname, useRouter} from '@/i18n/navigation';
+import { useLocale, useTranslations } from 'next-intl';
+import { Link, usePathname, useRouter } from '@/i18n/navigation';
 import Image from 'next/image';
 
 interface NavItemsProps {
@@ -22,7 +22,8 @@ const NavItems = ({ setIsOpen }: NavItemsProps) => {
   return (
     <ul className="nav-ul">
       {navLinks.map(({ id, name, href }) => {
-        const isActive = pathname === href || (href === '/' && pathname === '/');
+        const isActive =
+          pathname === href || (href === '/' && pathname === '/');
 
         return (
           <li key={id} className="nav-li">
@@ -70,20 +71,29 @@ const Navbar = () => {
           </button>
 
           <div className="order-2 flex items-center gap-3 sm:contents">
-          <Link
-            href="/"
-            className="text-white opacity-85 hover:opacity-100 transition-opacity font-bold text-lg hover:text-white transition-colors flex items-center sm:order-1"
-          >
-            <Image src="/logo.png" alt="logo" width={50} height={50} />
-          </Link>
-          <button
-            type="button"
-            onClick={() => router.replace(pathname, {locale: locale === 'ar' ? 'en' : 'ar'})}
-            className="rounded-md border border-white/15 px-3 py-2 text-xs font-semibold text-gray-300 transition hover:border-red-ground hover:text-white sm:order-3"
-            aria-label={`Switch language to ${t('switchTo')}`}
-          >
-            {t('switchTo')}
-          </button>
+            <Link
+              href="/"
+              className="text-white opacity-85 hover:opacity-100 transition-[opacity,color] font-bold text-lg hover:text-white flex items-center sm:order-1"
+            >
+              <Image
+                src="/logo.png"
+                alt="Wseem Kharma logo"
+                width={50}
+                height={50}
+              />
+            </Link>
+            <button
+              type="button"
+              onClick={() =>
+                router.replace(pathname, {
+                  locale: locale === 'ar' ? 'en' : 'ar',
+                })
+              }
+              className="rounded-md border border-white/15 px-3 py-2 text-xs font-semibold text-gray-300 transition hover:border-red-ground hover:text-white sm:order-3"
+              aria-label={`Switch language to ${t('switchTo')}`}
+            >
+              {t('switchTo')}
+            </button>
           </div>
           <nav className="order-3 hidden bg-black-backtwo sm:order-2 sm:flex">
             <NavItems setIsOpen={setIsOpen} />
