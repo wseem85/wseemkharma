@@ -126,6 +126,36 @@ body {
   }
 }
 
+.article-content > p {
+  margin-top: 1.5rem;
+  white-space: pre-line;
+}
+
+.article-content > p:first-child {
+  margin-top: 0;
+}
+
+.article-code {
+  margin: 2rem 0;
+  overflow-x: auto;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0.75rem;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 1rem 1.25rem;
+  color: #f3b7a9;
+  font-family:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+    'Courier New', monospace;
+  font-size: 0.9em;
+  line-height: 1.7;
+  white-space: pre;
+}
+
+.article-code code {
+  display: block;
+  min-width: max-content;
+}
+
 /* Enhanced animations and effects */
 
 .arrow-gradient {

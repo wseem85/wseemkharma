@@ -16,6 +16,7 @@ const NavItems = ({ setIsOpen }: NavItemsProps) => {
     About: t('about'),
     'Selected Work': t('work'),
     Services: t('services'),
+    Articles: t('articles'),
   };
 
   return (

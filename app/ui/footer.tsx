@@ -42,6 +42,7 @@ const Footer = () => {
             <Link href="/" className="transition hover:text-white">{navigation('about')}</Link>
             <Link href="/projects" className="transition hover:text-white">{navigation('work')}</Link>
             <Link href="/services" className="transition hover:text-white">{navigation('services')}</Link>
+            <Link href="/articles" className="transition hover:text-white">{navigation('articles')}</Link>
           </div>
         </nav>
 

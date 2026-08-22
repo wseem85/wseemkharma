@@ -1,7 +1,7 @@
 // This file contains placeholder data that you'll be replacing with real data in the Data Fetching chapter:
 // https://nextjs.org/learn/dashboard-app/fetching-data
-import freelancer from '@/public/assets/freelancer.png';
-import shipcoIcon from '@/public/assets/shipcoIcon.png';
+const freelancer = '/assets/freelancer.png';
+const shipcoIcon = '/assets/shipcoIcon.png';
 
 export const navLinks = [
   {
@@ -20,6 +20,11 @@ export const navLinks = [
     name: 'Services',
     href: '/services',
   },
+  {
+    id: 4,
+    name: 'Articles',
+    href: '/articles',
+  },
 ];
 export const myProjects = [
   {
@@ -29,7 +34,7 @@ export const myProjects = [
     texture: '/textures/project/project5.mp4',
     brandcolor: '#366fff',
     tags: [
-      { id: 1, name: 'React.js', path: '/logos/react.svg' },
+      { id: 1, name: 'React.js', path: '/articles/react.svg' },
       { id: 2, name: 'JavaScript', path: '/logos/javascript.svg' },
       { id: 3, name: 'Express.js', path: '/logos/express.png' },
       { id: 4, name: 'PostgreSQL', path: '/logos/postgresql.svg' },

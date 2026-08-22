@@ -27,6 +27,7 @@
     "work": "Selected Work",
     "contact": "Let's Work Together",
     "services": "Services",
+    "articles": "Articles",
     "switchTo": "العربية"
   },
   "footer": {
@@ -434,6 +435,575 @@
     "githubRepo": "GitHub repo",
     "arrow": "→",
     "privateCode": "The Art Store source code is private because the client did not approve sharing it."
+  },
+  "articles": {
+    "eyebrow": "Articles",
+    "title": "Ideas from the systems I build.",
+    "description": "Practical notes about software engineering, security, systems, and the decisions behind production-ready digital products.",
+    "readArticle": "Read article",
+    "backToArticles": "Back to articles",
+    "page": "Page {current} of {total}",
+    "previous": "Previous",
+    "next": "Next",
+    "published": "Published {date}",
+    "articlesCount": "{count} articles",
+    "items": {
+      "ai-human-dominance": {
+        "title": "Artificial Intelligence: The Genie That Will Grant Our Wishes, or the New Technology That Will End Humanity’s Dominance of Earth?",
+        "excerpt": "Artificial intelligence is becoming more than a tool. As its ability to learn, plan, and act improves, we must ask what that means for work, expertise, and humanity’s place in the world.",
+        "date": "August 22, 2026",
+        "content": [
+          "Artificial intelligence is not merely a tool; it is becoming an agent. It can learn, adapt its behavior, and make decisions within the goals we give it.",
+          "A knife is a tool. You can use it to cut vegetables, or you can use it to stab someone. You make the decision: will the knife prepare food, or will it be used to commit a crime?",
+          "Artificial intelligence is different. It is more like a knife that possesses some ability to make decisions, and that can even help produce and control new kinds of tools.",
+          "This is where one of the most concerning aspects of artificial intelligence lies. We are no longer talking only about a more powerful tool. We are talking about a tool to which we can give a goal, then allow it to take over an increasing part of the thinking, planning, and execution required to reach that goal.",
+          "One influential theory about how humans came to dominate the planet argues that language was one of the main reasons for our advantage over other creatures. Language allowed humans to transfer knowledge, make plans, cooperate with enormous numbers of people, and build societies and institutions that could not have existed without it.",
+          "For a very long time, humans were the only creatures able to produce and use language at this level. But today, after humans were the only ones producing language in this way, another question has appeared: who produces more language now, humans or artificial intelligence?",
+          "That question moves the discussion beyond technology and into questions about the future of humanity. Intense global debates are already taking place around the ethics of artificial intelligence, and many employees and workers have begun to sense the danger.",
+          "Will artificial intelligence take away our jobs?",
+          "If AI can already perform many digital tasks with an efficiency approaching that of humans, and at a speed that makes human work look incredibly slow by comparison, will there still be a need for human employees in the future?",
+          "We should move beyond the claim for which there is little evidence and which has become almost a hollow slogan: “AI will not replace you; it will be your intelligent assistant.” This issue deserves a more realistic discussion.",
+          "A quick look at documented workforce reductions at major companies such as Oracle, Amazon, and Meta can make people suspicious that AI is involved. Most companies do not identify artificial intelligence as the only cause, and layoffs can result from many different factors. Still, something is changing, including the way companies think about how many employees they need to get the work done.",
+          "Perhaps the more dangerous side is new hiring. Some studies have pointed to declining hiring among younger workers in certain occupations more exposed to AI, making junior employees one of the groups that deserves close attention.",
+          "The problem is not simply that artificial intelligence is developing. The problem is that it is developing so quickly that adapting to the change is becoming difficult.",
+          "Imagine that you are an ordinary programmer using an AI model to help with your work. You are away for two months. When you return, there is a new model from the same company, released only a few months after the one you used.",
+          "You try it, and you are surprised. The new model is much more capable, makes far fewer mistakes, works faster, understands your requests more easily, and handles tasks the previous model could not handle.",
+          "We are talking about two models from the same company, separated by months rather than years, yet the improvement is enormous. What may be most concerning is not AI itself, but the speed at which it is developing. It is becoming genuinely difficult to predict what the world will look like not fifty years from now, but just five years from now.",
+          "Perhaps we should consider Elon Musk’s answer in an interview dated...",
+          "> “By 2030, artificial intelligence will be vastly greater than the collective intelligence of humanity, and there will be nothing that AI cannot do better than humans.”",
+          "He may be wrong. The prediction may be exaggerated. But the mere possibility of reaching that level of capability makes the question more urgent.",
+          "If companies stop hiring juniors, how will there be experts in the future? I am not claiming that this will happen, but it is a hypothesis worth examining.",
+          "In the job market, junior workers may be among those most exposed to losing opportunities to enter the workforce, or to being expected to possess skills traditionally associated with senior employees.",
+          "The traditional path looks like this: you start as a Junior, gain experience, become Mid-level, gain more experience, and eventually become Senior. That cycle could be disrupted if companies no longer need juniors because AI can perform much of their work more efficiently.",
+          "So how will we get Seniors in the future? And will we need Seniors at all? Artificial intelligence has made both questions open to debate.",
+          "The speed of this development is almost unbelievable. The first practical steam engines appeared in the early eighteenth century, and it took many decades for engine technology to evolve into new forms. Today, AI models can change dramatically within months.",
+          "GPT first appeared as a family of models capable of predicting and generating text, with capabilities that were extremely limited compared with what we see today. Look at what these models can do now. All of this has happened in an extremely short period.",
+          "Perhaps this is the real problem: not only what artificial intelligence can do today, but what it may be able to do a few years from now.",
+          "Perhaps that is an overly pessimistic view. The bombs and weapons of mass destruction in the world are powerful enough to destroy our planet countless times, yet humanity has so far chosen not to destroy itself. Possessing extraordinary power does not necessarily mean the end of the world.",
+          "Just as humans came to understand the importance of using nuclear energy to generate power instead of using it to destroy one another, perhaps we will find a way to use artificial intelligence in the best possible way.",
+          "Sam Altman, the CEO of OpenAI, once described the goal this way: “I think this could be the greatest technological product in the history of humanity, but it only becomes valuable if it manages to make people’s lives better.”",
+          "The optimistic vision is that every human being will have a genie capable of granting wishes. Perhaps the first thing humanity should ask this genie for is to create things that benefit humanity as a whole.",
+          "Sam Altman does not necessarily believe that AI will destroy human work. Instead, he expects there to be a very large number of jobs and believes that humans in the future may be busier than they are today.",
+          "And this is where the subject becomes more complicated. Artificial intelligence may really become the greatest tool humanity has ever created, a genie that allows every person to do things they could never do before.",
+          "But it may also be the first kind of tool for which we cannot confidently predict what the world will look like once its capabilities exceed ours in an increasing number of areas.",
+          "Are we facing a tool that will make humanity more powerful than ever, or the first tool that may force us to redefine what it means for humans to be the most intelligent beings on the planet?"
+        ]
+      },
+      "secure-jwt-sessions": {
+        "title": "Designing safer JWT sessions",
+        "excerpt": "JWTs are useful, but a secure authentication system needs a lifecycle for tokens, sessions, and revocation.",
+        "date": "August 21, 2026",
+        "content": [
+          "Authentication is more than signing a token and storing it in a browser. A production system needs to decide how tokens expire, how refresh tokens rotate, and how a compromised session can be revoked.",
+          "Keep access tokens short-lived, protect refresh tokens carefully, and record server-side session state when you need immediate revocation. This design gives users a safer logout experience and gives operators control when something goes wrong."
+        ]
+      },
+      "nextjs-production-checklist": {
+        "title": "A practical Next.js production checklist",
+        "excerpt": "A fast local build is only the beginning. These checks help a Next.js application behave reliably after deployment.",
+        "date": "August 18, 2026",
+        "content": [
+          "Before launch, review environment variables, error boundaries, loading states, metadata, image sizes, and the behavior of every important route without JavaScript assumptions.",
+          "Then measure the real deployment. Check Core Web Vitals, caching headers, server errors, form failures, and the pages that search engines can crawl. Production readiness is a habit of verification, not a final button."
+        ]
+      },
+      "docker-ci-cd-basics": {
+        "title": "Why Docker and CI/CD belong together",
+        "excerpt": "Containers make environments predictable, while automated pipelines make releases repeatable and safer.",
+        "date": "August 15, 2026",
+        "content": [
+          "Docker gives an application a consistent runtime from development to production. The value is not the container itself; it is the reduced uncertainty around dependencies, system packages, and startup behavior.",
+          "A CI/CD pipeline completes the picture by running checks on every change and deploying only when those checks pass. Small, observable releases are easier to review and easier to recover."
+        ]
+      },
+      "redis-database-cache": {
+        "title": "Redis... Why Database Cache Is Not Enough!! (Part 1)",
+        "excerpt": "Database caches are useful, but they do not remove the work of a full database. This article explains why Redis is valuable for extremely hot data paths.",
+        "date": "February 21, 2026",
+        "content": [
+          "Why Redis? Let’s start with a simple question: how quickly can a system access data at different layers of the memory and storage hierarchy?",
+          "The following latency figures are approximate and depend on the hardware and workload, but they show the scale of the difference:",
+          "[[code]]L1 CPU cache: 0.5 ns\nRAM:           100 ns (0.0001 ms)\nSSD:       100,000 ns (0.1 ms)\nHDD:    10,000,000 ns (10 ms)[[/code]]",
+          "RAM access can therefore be roughly 1,000 to 100,000 times faster than storage access, depending on which storage device and access pattern we compare.",
+          "If we care about fast data access, databases already have caches, right? Yes, databases do cache data, but that does not make the database itself disappear from the request path.",
+          "For example, PostgreSQL commonly involves two relevant caching layers:",
+          "- Shared Buffers: PostgreSQL’s own memory cache. It stores database pages, usually 8 KB blocks, rather than individual rows or objects. If you need one 200-byte row, the cached unit is still the page containing it.",
+          "- The operating system page cache: the OS may also cache filesystem data, commonly in 4 KB pages. PostgreSQL does not have complete control over this cache because the kernel manages it and may evict data when memory is needed elsewhere.",
+          "This creates our first problem: the database may cache more data than the application needs, consuming memory, while the application does not fully control what remains in the OS cache. Data that was hot can be evicted when the operating system needs that memory for another purpose.",
+          "Problem 2: even if the required database page is already cached, what happens when the application runs a query such as this?",
+          "[[code]]SELECT my_perfect_cached_data\nFROM table\nWHERE id = 'abc';[[/code]]",
+          "The row may already be in memory, but the database still has work to do:",
+          "- It parses the query and validates its syntax, which requires CPU time.",
+          "- It plans the query and chooses an access path, such as an index scan or another plan. Databases can reuse prepared plans in some cases, but planning is still part of the database machinery when a plan is needed.",
+          "- It applies the relevant concurrency and visibility rules. A normal PostgreSQL read does not usually take a blocking row lock, because PostgreSQL uses MVCC, but it still performs transaction and visibility checks.",
+          "- It traverses an index, when one is used, to find the page containing the row.",
+          "- It works with the whole database page, even when the application needs only a small part of one row.",
+          "- It interprets the page structure and extracts the requested row.",
+          "- Finally, it converts the result into PostgreSQL’s wire format before sending it to the application.",
+          "Some of this work can be optimized, but it cannot be eliminated completely while using a full relational database. It is part of what gives PostgreSQL transactions, consistency, query flexibility, and durability.",
+          "So what if we owned a separate tool that could do two things?",
+          "- Act as a fast cache for the small set of data the application reads constantly.",
+          "- Bypass the relational database machinery for those carefully selected hot paths.",
+          "That tool exists. It is called Redis.",
+          "This is not an argument for replacing PostgreSQL. High-scale applications often use Redis alongside a primary database: PostgreSQL remains the source of truth, while Redis serves frequently accessed, temporary, or derived data with very low latency.",
+          "The important design question is not “Should I put everything in Redis?” It is “Which data is hot enough, stable enough, and safe enough to cache, and how will the application handle expiration, invalidation, misses, and stale values?”"
+        ]
+      },
+      "redis-database-cache-part-2": {
+        "title": "Redis... Why Database Cache Is Not Enough!! (Part 2)",
+        "excerpt": "If both Redis and PostgreSQL serve data from memory, why can Redis still behave differently under heavy load? The answer is not only where the data lives, but how much work each system performs.",
+        "date": "February 26, 2026",
+        "content": [
+          "Redis is an in-memory database, so it is fast. We saw that in Part 1. But that explanation is true and still incomplete.",
+          "Modern databases serve a large percentage of reads from memory. In many real systems, PostgreSQL can read almost everything it needs from Shared Buffers and avoid touching the disk. Prepared statements and reusable query plans can reduce repeated parsing and planning work as well.",
+          "So the more useful question is this: if both systems are reading from RAM, why can they behave so differently under load?",
+          "Let’s assume the best case for PostgreSQL: the required pages are already in memory, and the application uses prepared statements and cached plans. Imagine a live-score application during a World Cup final, with hundreds of thousands of users asking the same question at nearly the same time: “What is the current score?”",
+          "1. Parsing and execution setup",
+          "With prepared statements and cached plans, PostgreSQL can avoid much of the repeated parsing and planning work. Redis can still have a lower per-command overhead, but at this stage the difference is better described as low versus very low, not as disk speed versus RAM speed.",
+          "2. Finding the value",
+          "PostgreSQL still needs to answer: where is the row that contains the requested value? Even with a cached execution plan, an index scan may begin at the root of a B-tree, compare keys, and traverse internal nodes until it reaches a leaf node.",
+          "The leaf entry contains a TID (Tuple Identifier), which points to the row version’s location in the table. For a B-tree, this lookup is typically O(log n): the amount of work grows with the height of the tree, although caching and the small height of practical indexes make the operation efficient.",
+          "Redis answers a narrower question: given this key, what value is associated with it? For a typical string-key lookup, Redis uses a hash-table lookup with average-case O(1) complexity, subject to hash-table behavior and implementation details.",
+          "Conceptually, the difference is:",
+          "[[code]]PostgreSQL: key → index structure → tuple location → row\nRedis:       key → hash-table entry → value[[/code]]",
+          "3. MVCC visibility checks",
+          "PostgreSQL uses Multi-Version Concurrency Control (MVCC). This means that several row versions may exist, and each transaction reads according to a particular snapshot. PostgreSQL must check transaction and visibility metadata to determine whether the version it found is visible to that query.",
+          "A normal PostgreSQL read does not usually acquire a blocking row lock, but visibility and transaction checks are still necessary for correctness.",
+          "For a simple Redis read, the server does not perform an equivalent MVCC snapshot check for each key. Redis commands are processed atomically with respect to other commands on the same Redis event loop, and the key-value model does not provide PostgreSQL-style row-version visibility for that read.",
+          "4. Decoding the stored value",
+          "In PostgreSQL, the value is stored inside a database page, commonly an 8 KB page. The engine may need to use the page’s line pointer to locate the tuple, interpret tuple metadata, and find the requested column within the row representation.",
+          "Redis stores a value in a data structure designed for its command model. For a simple key lookup, it can follow the hash-table entry and return the associated object without navigating a relational page and tuple layout.",
+          "This comparison concerns simple reads. Writes can produce an even wider difference in work for some workloads, but Redis is not automatically faster for every write or every data model. Durability settings, persistence, replication, networking, serialization, and workload shape all matter.",
+          "Redis is fast not only because it keeps data in memory. It is fast because, for selected use cases, it performs less work. It performs less work because it solves a smaller set of problems than a full database: Redis does not provide PostgreSQL’s relational queries, general transaction model, MVCC visibility rules, or the same durability and consistency guarantees by default.",
+          "That is the real trade-off. Redis can be an excellent accelerator for carefully chosen hot paths, while PostgreSQL remains the system of record and handles the broader correctness requirements."
+        ]
+      },
+      "redis-database-cache-part-3": {
+        "title": "Redis... Why Database Cache Is Not Enough!! (Part 3)",
+        "excerpt": "Even when the data is already in RAM, a database can become overloaded by coordination work. This part explains how shared buffer metadata and latch contention affect a hot read path.",
+        "date": "March 3, 2026",
+        "content": [
+          "It is the World Cup final. In the last minute of the game, 500,000 users refresh their applications at almost the same moment.",
+          "Every request triggers a simple query:",
+          "[[code]]SELECT score\nFROM matches\nWHERE id = '00000000';[[/code]]",
+          "The data is already in RAM, but that is not the whole story. A huge number of requests arrive at the database layer within a very short time.",
+          "The database handles those requests through workers, usually processes or threads. At any moment, only a limited number of workers can actually execute on the available CPU cores.",
+          "Databases can respond to this pressure in several ways, each with its own operational cost and complexity:",
+          "1. Read replicas can distribute read traffic, but they add replication, routing, consistency, and operational concerns.",
+          "2. Connection pooling can reduce connection overhead, but it cannot make unlimited queries execute simultaneously.",
+          "3. Application-level micro-caching can collapse repeated requests, but it introduces expiration and invalidation decisions.",
+          "Now consider the shared page in the database buffer pool. Multiple workers can read the same page, but the page is not just an unstructured sequence of bytes. The database also maintains shared metadata about the buffer that contains it.",
+          "That metadata can include whether the buffer is valid, whether it can be reused, and how many workers currently depend on the page. A buffer pin is a reference count: a worker pins the buffer while it needs the page and releases the pin when it is finished. This helps prevent the page from being evicted or reused while it is still in use.",
+          "Why must the database coordinate this metadata if the operation is only a read? Because the read path still changes shared state. Finding the page is logically a read of the data, but pinning and unpinning the buffer update the buffer’s metadata.",
+          "The simplified sequence looks like this:",
+          "- Locate the buffer containing the page.",
+          "- Safely update shared metadata and increment the pin count.",
+          "- Read the page contents.",
+          "- Safely update the metadata again and decrement the pin count.",
+          "The synchronization used to protect short critical sections around shared database state is commonly described as a latch. A latch is not the same thing as a buffer pin: the pin expresses that a worker is using a buffer, while the latch or related synchronization protects metadata while it is being changed.",
+          "Before a worker can safely use a shared page, it may need to coordinate briefly with other workers touching the same shared memory state. The critical section may be very short, but those short waits can accumulate when a large number of workers target the same hot page or buffer.",
+          "Back to the World Cup example:",
+          "- Many workers may contend for the same shared buffer metadata.",
+          "- They must coordinate metadata updates, access the data, and release their references safely.",
+          "- Fewer workers make progress while others wait, increasing tail latency.",
+          "- CPU time can be spent coordinating access to shared state instead of serving the requested value.",
+          "This is latch contention: the bottleneck is not necessarily retrieving the bytes from RAM, but coordinating many concurrent workers around shared database structures. CPU usage can become very high even when the query itself appears simple.",
+          "So what can Redis do differently? For a single Redis instance, command execution is normally serialized on one main event loop: one command runs at a time on that execution path. This avoids having multiple command workers simultaneously modify the same key-value data structures, so the application does not face PostgreSQL-style buffer-page and MVCC coordination for a simple key lookup.",
+          "That does not mean Redis has no concurrency or synchronization anywhere. Redis can use background threads for tasks such as persistence and may use I/O threads in some configurations. Replicas and Redis Cluster also introduce their own coordination and consistency considerations. The narrower point is that simple commands on one Redis execution path avoid the same per-query shared buffer contention model.",
+          "So does single-threaded execution always beat multi-threaded execution? No. It can be extremely effective when commands are small, predictable, and fast, because it removes lock contention and context-switching overhead. But one long-running command can block other commands on that execution path, and a single instance is ultimately limited by the work one execution thread can perform.",
+          "Redis is fast here because it uses a simpler data model and a simpler execution path for this workload. The trade-off is that PostgreSQL provides a much broader set of guarantees and capabilities, while Redis is best used as a carefully designed accelerator rather than a universal replacement."
+        ]
+      },
+      "docker-lie": {
+        "title": "The Docker \"Lie\" We All Believed!",
+        "excerpt": "Docker containers feel like lightweight virtual machines, but they are built on a different idea. Understanding the process, image, and kernel model reveals what Docker is actually doing.",
+        "date": "March 6, 2026",
+        "content": [
+          "You learned Docker. You used it. You Dockerized everything.",
+          "No more wasting time setting up development environments by hand on your local machine. You pulled an image, started a container, and it worked.",
+          "For a long time, you may not have asked what a container actually was. You might simply have thought: “Who cares? It works.”",
+          "Then the questions started to appear:",
+          "- If a container is isolated from my host machine, does a complete operating system come inside the image?",
+          "- If an operating system is inside, why are container images so lightweight?",
+          "- Why does Windows need a Linux environment such as WSL2 to run a “simple” Linux container?",
+          "The answer is that a container is not a virtual machine. A container image is mainly a package of user-space files: application code, libraries, binaries, configuration, and metadata. When the container starts, the application runs as a process on a host kernel, with isolation provided by kernel features such as namespaces and resource limits provided by control groups (cgroups).",
+          "Docker Engine manages this process, prepares its filesystem view, configures networking and resources, and applies the isolation settings. The container itself is therefore not a complete operating system in a box. It is an isolated process environment that uses the host kernel.",
+          "This is why container images can be lightweight. They normally do not contain their own kernel, bootloader, or complete operating-system installation. They contain the user-space components the application needs, layered and packaged so they can be reused efficiently.",
+          "There is an important platform detail on Windows. Linux containers require Linux kernel behavior. Since Windows has a different kernel, Docker Desktop typically runs a lightweight Linux virtual machine, commonly through WSL2, to provide the Linux environment required by those containers. WSL2 is therefore not needed because containers are virtual machines; it is needed because the container and host must share a compatible kernel interface.",
+          "Does this level of detail matter? In computer engineering and programming, yes. Understanding the architecture explains both the strengths and the boundaries of a tool.",
+          "For example, containers provide process-level isolation, not the same security boundary as a traditional virtual machine. A container can still be misconfigured, run with excessive privileges, expose services, or contain vulnerable dependencies. “It runs in a container” is not a complete security strategy.",
+          "When you look beneath the friendly commands, you start to see how large systems are assembled: images provide repeatable user-space files, the kernel provides the underlying primitives, and an engine coordinates the process, filesystem, network, and resource limits.",
+          "That is why understanding the “how” matters. Using a tool makes you productive; understanding its architecture helps you reason about its behavior, debug its failures, and use it responsibly. That is one of the things that turns a coder into an engineer."
+        ]
+      },
+      "tailwind-css-business": {
+        "title": "What Is Going On With Tailwind CSS? 🤔",
+        "excerpt": "Tailwind CSS is more popular than ever, yet reports suggest its business has come under pressure. This article explores how AI may be changing the economics of documentation-driven open-source tools.",
+        "date": "January 2026",
+        "content": [
+          "Almost everyone knows Tailwind CSS. For many developers, it feels like the default choice when styling a modern web application. When we start a new project, we usually consider many technical decisions, but styling often feels already decided: Tailwind seems like enough.",
+          "By January 2026, Tailwind’s reported usage metrics had reached record highs, with around 75 million monthly NPM downloads and appearances in more than 7.8 million GitHub projects. Those numbers naturally lead to an assumption: the company behind Tailwind must be making a great deal of money.",
+          "The reported business picture is more complicated. According to the figures and statements discussed in this article, revenue had fallen by around 80%, while traffic to the Tailwind website had dropped by approximately 40% since early 2023.",
+          "How can usage keep growing while revenue and website traffic decline? The answer may be connected to one of the biggest changes in software development today: AI.",
+          "On January 6, Adam Wathan, the creator and CEO of Tailwind CSS, rejected a community pull request proposing an /llms.txt endpoint for the Tailwind documentation. The endpoint would have provided a text-only version of the documentation, formatted for large language models (LLMs). In practical terms, it would have made the documentation easier for AI systems to read and use without sending users through the Tailwind website.",
+          "The community questioned that decision, so Wathan explained why the pull request was closed. He said that making the documentation easier for AI systems to read could reduce traffic to the documentation and, as a result, reduce the number of people discovering Tailwind’s paid products.",
+          "He also stated that 75% of the company’s engineering team had lost their jobs because of the severe effect AI had had on the business. These statements should be understood as the company’s own account of the situation, and the financial figures should be checked against their original sources before being treated as independently verified facts.",
+          "Tailwind’s business model has traditionally depended on a simple trade: the core framework and its documentation are free, while the company earns revenue from paid products such as Tailwind UI, a collection of pre-built interface components.",
+          "The model works when developers discover Tailwind through the documentation and later decide that buying polished, ready-made components is worth the time saved. A developer may begin by building a component from scratch, struggle with the details, and eventually think: “I would rather buy a finished component.” That conversion is part of how the free framework supports the business.",
+          "AI changes that path. If an AI system can read the full documentation and generate a component from a short prompt, a developer may never visit the Tailwind website. They may get the implementation immediately, without discovering Tailwind UI or any of the company’s paid products.",
+          "This does not mean Tailwind CSS is failing as a technology. It may mean that popularity, downloads, and business revenue no longer move together. AI can increase the use of a free tool while reducing the human attention and website traffic that once helped convert that use into paid sales.",
+          "The larger lesson is about the economics of open-source software. Documentation is not only educational material; for some companies, it is also the main path to distribution, brand discovery, and revenue. When AI systems consume that knowledge and return the result without sending users to the original source, that path can be disrupted."
+        ]
+      },
+      "choosing-a-developer-laptop": {
+        "title": "How to choose a laptop for development",
+        "excerpt": "The best developer laptop is the one that fits your workload, budget, and daily workflow—not the one with the longest specification sheet.",
+        "date": "August 3, 2026",
+        "content": [
+          "Prioritize a comfortable keyboard, a reliable screen, enough memory for your editor and local services, and an SSD. For most web development, 16 GB of RAM is a practical baseline and 32 GB gives more room for containers and virtual machines.",
+          "Think about battery life, repairability, operating-system support, and the ports you actually use. A balanced machine that stays cool and reliable is usually better than a powerful laptop that creates friction every day."
+        ]
+      },
+      "react-server-component": {
+        "title": "What Is Going On With React Server Components?",
+        "excerpt": "A practical explanation of the recent React Server Components vulnerabilities, why they appeared close together, and what React and Next.js developers should do now.",
+        "date": "December 11, 2025",
+        "content": [
+          "On December 11, 2025, the React team disclosed two additional vulnerabilities affecting the React Server Components (RSC) architecture:",
+          "- Denial of Service: CVE-2025-55184 and CVE-2025-67779\n- Source Code Exposure: CVE-2025-55183",
+          "These issues were discovered while researchers were testing patches related to the previous week’s critical remote-code-execution vulnerability, commonly referred to as “React2Shell” (CVE-2025-55182).",
+          "This raises three important questions:",
+          "- Why did several vulnerabilities appear within such a short period?\n- Does this mean React Server Components are bad?\n- What should you do if you have a running React or Next.js application?",
+          "To answer them, we first need to understand where the vulnerable data flow occurs.",
+          "These issues involve how React Server Components infrastructure deserializes data sent from the client to the server. But wait: aren’t Server Components rendered only on the server? When does client-to-server parsing happen?",
+          "Server Components do render on the server and stream the UI as a React Server Component Payload, commonly called the React Flight format. This is a framework protocol, not ordinary HTML or JSON. However, Server Components are not the only part of the architecture. There is another flow involving Server Functions.",
+          "When a Client Component invokes a Server Function, for example through a form action, the framework serializes the function call and its arguments into a React Flight payload and sends that payload to the server.",
+          "This is where the security boundary matters. Deserialization becomes dangerous when untrusted input is accepted without sufficiently strict validation. If an attacker crafts a malicious payload and the server blindly deserializes it, the result can be serious security impact.",
+          "The following sequence shows where the vulnerabilities can occur:",
+          "1. Code running in the client initiates a request that invokes a Server Function.",
+          "2. The framework serializes the request into a React Flight payload. The format is structured and JSON-like, but it is not JSON. The payload includes metadata such as the Server Function identifier and serialized argument values.",
+          "3. On the server, a package from the react-server-dom-* family, such as react-server-dom-webpack, deserializes the payload and reconstructs JavaScript values.",
+          "4. Those reconstructed values are passed to the Server Function. The function must treat them as untrusted input and validate them before use; they are not automatically safe simply because they came through a framework serializer.",
+          "This is the point at which an unsafe deserialization edge case can become exploitable. The exact impact depends on the vulnerability, the affected package and version, the framework integration, and how the application handles the resulting values.",
+          "Why did several vulnerabilities appear in such a short time? This is a common pattern after a critical vulnerability is patched. Once React2Shell (CVE-2025-55182) was disclosed and mitigated, researchers and maintainers continued testing the surrounding code paths and edge cases. That additional testing uncovered further issues, including the Denial of Service and Source Code Exposure vulnerabilities described above.",
+          "Does this mean React Server Components are bad? Absolutely not. RSC is a powerful architecture and can provide important benefits, including a controlled server boundary. But any complex system that parses attacker-controlled input can contain implementation bugs. The correct lesson is not to reject the architecture; it is to keep dependencies updated, treat deserialized values as untrusted, and follow security advisories carefully.",
+          "What should you do if you have a running React or Next.js application? Update immediately. Check the official React and Next.js security advisories, identify the affected packages in your dependency tree, install the fixed versions, redeploy all affected environments, and review whether exposed applications require session rotation or additional incident response. Do not rely only on a direct dependency check: the vulnerable package may be brought in transitively by your framework.",
+          "The broader lesson is simple: Server Components may render on the server, but server-side features can still receive attacker-controlled requests. Rendering location does not remove the need for input validation, dependency updates, and careful security boundaries."
+        ]
+      },
+      "networking-part-4": {
+        "title": "Is Learning Networking Really Hard for Developers — Part 4",
+
+        "excerpt": "What changes when we use a Connectionless Protocol such as UDP instead of TCP? This part explains how UDP sends datagrams without establishing a connection, how the OS determines the source address and routes each packet independently, and how a UDP server receives messages from potentially thousands of different clients using a single Socket.",
+
+        "date": "July 27, 2026",
+
+        "content": [
+          "Path C: Using a Connectionless Protocol such as UDP",
+
+          "Now let’s talk about what happens when we use a Connectionless Protocol such as UDP.",
+
+          "Step 1: Creating the Socket",
+
+          "This step is identical whether we are using a Connection-Oriented or Connectionless Protocol. We still need to obtain a Socket and pass similar information to the OS. The difference is that here we configure the Socket to work with datagrams, which are messages with specific boundaries.",
+
+          "In C, the call looks like this:",
+
+          "[[code]]sockFileDescriptor = socket(SOCKET_FAMILY, SOCKET_TYPE, PROTOCOL);[[/code]]",
+
+          "The OS returns a File Descriptor that points to the created Socket object, exactly as before.",
+
+          "Step 2: No Connection, Just a Datagram",
+
+          "With UDP, there is no connection to establish. Instead, we use sendto() to send each datagram directly to its destination:",
+
+          "[[code]]sendto(sockFileDescriptor, buf, len, 0, &destAddr, sizeof(destAddr));[[/code]]",
+
+          "As you can see, we are targeting the Socket that we created in Step 1. We pass buf, which points to the first byte of the data to send; len, which tells the kernel how many bytes of data we want to send; destAddr, which contains the destination IP Address and Port; and sizeof(destAddr), which allows the kernel to know the size of the destination address structure.",
+
+          "The critical difference here is this: each sendto() call is independent. We can use the same Socket to send data to different destinations because the destination address is specified in each call.",
+
+          "For example, it is completely valid to send a datagram to 8.8.8.8:53 and then immediately send another datagram to 1.1.1.1:53. There is no connection that permanently ties the Socket to one destination.",
+
+          "The thing that remains persistent is the Source Address. Once the OS determines the local IP Address and Port for the Socket, that local endpoint remains associated with the Socket.",
+
+          "In response to the sendto() call, the OS performs several operations.",
+
+          "First, it uses the Routing Table to determine the appropriate source IP Address and Network Interface.",
+
+          "Second, it selects a Port Number from the available ephemeral ports if the application has not already bound the Socket to a specific local Port.",
+
+          "Third, it stores this Source Address, consisting of the local IP Address and Port, on the Socket object.",
+
+          "Fourth, the kernel copies the data from buf, up to len bytes, into kernel memory. The UDP stack then adds a UDP Header to form a UDP Datagram and passes it to the IP Layer.",
+
+          "Notice what did not happen: there was no connection, no handshake, and no permanent destination associated with the Socket. This datagram is being sent to one destination, while the next datagram can be sent to a completely different destination. UDP does not guarantee delivery, ordering, duplicate suppression, or retransmission; an application that needs those properties must implement them or use a protocol that provides them.",
+
+          "The IP Layer then wraps the UDP Datagram inside an IP Packet. IPv4 may fragment a packet when necessary, although applications generally try to avoid this; IPv6 routers do not fragment packets. The kernel then determines how to route the packet using the Routing Table.",
+
+          "For example, the routing table may contain: default via 10.234.98.197 dev wlo1 src 10.234.98.27. This means that the next hop is 10.234.98.197, which is our gateway or router.",
+
+          "Before sending the packet over the local network, the kernel needs to know the MAC Address of the next-hop device. Since the destination IP, such as 8.8.8.8, is not on the same Subnet as our machine, the packet is sent to the Gateway rather than directly to 8.8.8.8.",
+
+          "The kernel therefore looks up the Gateway’s MAC Address in its neighbor table. For example: 10.234.98.197 dev wlo1 lladdr aa:bb:cc:dd:ee:ff REACHABLE.",
+
+          "The Link Layer then wraps the IP Packet inside an L2 Frame, adding the appropriate MAC Addresses. This Frame is placed into the NIC’s Transmit Ring Buffer, a region of shared memory used for communication between the OS and the network hardware.",
+
+          "The NIC then reads the Frame, converts the data into the electrical, radio, or other physical signals required by the underlying network technology, and transmits it onto the network.",
+
+          "What about the receiver? It uses bind() to claim a local address, then recvfrom() to receive each datagram.",
+
+          "Step 1: Creating the Socket",
+
+          "Creating the Socket is exactly the same as in the other cases. The difference is that we configure it to work with the Connectionless UDP Protocol.",
+
+          "Step 2: Binding the Socket",
+
+          "The server calls bind(sockFileDescriptor, localAddress, sizeOfLocalAddr). This gives the Socket an identity by associating it with a local IP Address and Port. From this point on, packets arriving for this local address can be delivered to this Socket.",
+
+          "When the receiver gets a UDP packet, the kernel examines its destination address and, if it passes validation and filtering, places it in the Receive Buffer for the matching bound Socket. Packets can still be dropped because of errors, firewall rules, buffer exhaustion, or because no Socket is listening on the destination.",
+
+          "Step 3: Receiving a Datagram",
+
+          "The application can then call recvfrom() like this:",
+
+          "[[code]]recvfrom(sockFileDescriptor, buffer, sizeOfBuffer, senderAddr, sizeOfSenderAddr);[[/code]]",
+
+          "The buffer is a block of memory in your application, not in the kernel. This is crucial to understand. It is memory that your application allocates to receive and store the incoming data.",
+
+          "sizeOfBuffer specifies the maximum amount of data that it is safe for the OS to copy into your application’s buffer. The OS checks this size when it copies the data.",
+
+          "senderAddr is different from the local address stored on the Socket. The sender’s address is not permanently added to the Socket object. Instead, the kernel copies it into your application through senderAddr in case the application wants to reply to that sender.",
+
+          "The Socket itself does not permanently store the sender’s address because, as we established earlier, a UDP Socket can receive messages from many different clients. It is not a peer-to-peer connection; in fact, there is no connection at all. This is why a single UDP Socket can communicate with thousands of different clients.",
+
+          "You can think of senderAddr as a data structure provided by your application where the kernel can write the sender’s address so that your application can use it.",
+
+          "So what does recvfrom() actually do?",
+
+          "First, the OS looks at the Receive Buffer associated with this Socket. If there are no packets available, recvfrom() waits until a packet arrives.",
+
+          "If packets are available, the OS selects the oldest one and copies its payload, without the network headers, from the Socket’s Receive Buffer into the memory that your application allocated for receiving the data.",
+
+          "It also copies the sender’s address into the memory provided through senderAddr.",
+
+          "Finally, recvfrom() returns the size of the data copied, which normally represents the payload size. If the application buffer is too small, the datagram can be truncated; applications that need to detect this should use the appropriate flags such as MSG_TRUNC.",
+
+          "Now your application has three important pieces of information: the actual data that was sent, the address of the sender, and the true length of the message."
+        ]
+      },
+      "networking-part-3": {
+        "title": "Is Learning Networking Really Hard for Developers — Part 3",
+
+        "excerpt": "We have seen how a client obtains a Socket, connects to a server, and sends data. Now we look at the process from the other side: the Server. This part explains bind(), listen(), and accept(), and how the OS turns one listening Socket into a dedicated Socket for every connected client.",
+
+        "date": "July 24, 2026",
+
+        "content": [
+          "The First Path: Connecting to a Socket and sending data from the perspective of the client. It is time now to discuss the process from the other side: the Server.",
+
+          "Path B: You are a server",
+
+          "You are a server waiting for others to connect. This changes almost everything except the first step, which is obtaining the Socket through the socket() call.",
+
+          "Again, this path applies only to connection-oriented protocols such as TCP. UDP servers do not need to call listen() or accept(). Instead, the typical flow is:",
+
+          "[[code]]bind()\nrecvfrom()[[/code]]",
+
+          "So the server calls socket(), and now it has a File Descriptor that refers to a kernel-managed Socket object. But it does not have an identity yet and does not know which address it will be reachable on.",
+
+          "First: Binding the Socket",
+
+          "We need to provide this call with a few pieces of information:",
+
+          "- Which Socket we are binding our server to.",
+
+          "- What address, consisting of IP + Port, this Socket should have.",
+
+          "Again, a server may have multiple Network Interfaces, and each one can have a different IP Address: 127.0.0.1 for Loopback, 192.168.1.10 for the local LAN, and 203.0.113.25 for a Public IP. The OS needs to know on which Interface it should accept packets arriving at this Socket.",
+
+          "This IP Address is the address that clients will send data to.",
+
+          "What about the Port Number? Your machine can run many servers, and they may all use the same IP Address. The OS therefore needs to know which server should receive each incoming packet.",
+
+          "A server usually knows which Port it should listen on because clients need a consistent and predictable way to access it. By convention, browsers use Port 443 for HTTPS unless you explicitly specify a different port. SSH clients use Port 22 by default, DNS uses Port 53, and PostgreSQL commonly uses Port 5432.",
+
+          "We also need to provide the length of the address we passed. Again, the application lives in User Space while the kernel lives in Kernel Space. They do not share the same memory, so the kernel needs to know exactly how many bytes it should read from User Space to retrieve the complete address.",
+
+          "This makes the bind() call look like this:",
+
+          "[[code]]bind(sockFileDescriptor, localAddress, sizeof(localAddress));[[/code]]",
+
+          "So we are telling the kernel: “OS, bind this Socket to 0.0.0.0:8080.”",
+
+          "The kernel then checks whether this Port is available. If it is already in use, the call fails with an “Address already in use” error.",
+
+          "If the Port is available, the kernel adds this address, consisting of the IP and Port, to the Socket object.",
+
+          "So now this Socket has an address, but a TCP socket is still in the CLOSED state until listen() changes it to LISTEN. It is not yet accepting connections or carrying application data.",
+
+          "Second: Listening for Connections",
+
+          "Our Socket has an address now, but we have not yet told the OS what kind of role this Socket will have. Will it wait for incoming connections as a server, or will it initiate connections as a client?",
+
+          "Since we are talking about Connection-Oriented TCP, a client needs to send a SYN when starting the connection. At that point, the server Socket needs to be ready to receive and handle those incoming connection requests.",
+
+          "That is the role of the listen() call. In C, it looks like this:",
+
+          "[[code]]listen(sockFileDescriptor, backlog);[[/code]]",
+
+          "The backlog is a hint and limit for pending connections waiting to be accepted. Operating systems may maintain separate queues for incomplete and completed handshakes, and may apply additional kernel limits.",
+
+          "This call changes the Socket’s state from “unconnected” to “listening”.",
+
+          "It also allocates internal data structures for two queues: the SYN Queue, which stores incoming SYN packets representing requests to start the handshake, and the Accept Queue, which stores connections that have completed the handshake but have not yet been accepted by the application.",
+
+          "By calling listen(), we have defined this Socket as a Passive Socket. It receives connection requests; it does not initiate them.",
+
+          "Third: Accepting Connections",
+
+          "Now our Socket has an address and is ready to receive connections. We need to accept those connections. But think about what happens when many clients connect at the same time. Each client represents a different TCP connection because a TCP connection is identified by a four-tuple: local IP address, local Port, remote IP address, and remote Port.",
+
+          "Imagine that we receive two connections from different remote addresses, such as 203.0.113.5:54321 and 198.51.100.22:61000. How can our server treat them as two different connections if we use the same Socket and the same memory to communicate with both of them?",
+
+          "That is why the Socket that listens for connections cannot do much more than act as a Listening Socket. Its role is to receive connection requests and queue them until the application accepts them. Nothing more.",
+
+          "So what do we use for an accepted connection? Where can we receive data from that client and send responses back to it? Clearly, we need another Socket.",
+
+          "This means that for each accepted connection, the kernel creates a brand-new Socket. The application receives a new file descriptor by calling accept():",
+
+          "[[code]]int clientSocket = accept(serverSocketFD, NULL, NULL);[[/code]]",
+
+          "Under the hood, this is what the OS does.",
+
+          "First, the OS checks the Accept Queue, which stores connections whose handshakes have already completed. If the queue is empty, accept() blocks until a new connection arrives.",
+
+          "If there is a connection in the queue, something similar to what happens when we call connect() on the client side takes place. The OS creates a new Socket object in kernel memory, sets its state to “connected”, copies the remote and local addresses into this Socket object, allocates Send and Receive Buffers, and finally returns a brand-new File Descriptor that points to this new Socket.",
+
+          "This means that each client gets its own dedicated Socket. Think of it this way: the Listening Socket is responsible only for receiving new connection requests, while each accepted client gets a separate Socket through which the server can receive data and send responses.",
+
+          "This is the key reason our server can handle multiple TCP connections at the same time. One Listening Socket can accept many connections, and each accepted connection gets its own dedicated Socket and File Descriptor."
+        ]
+      },
+      "networking-part-2": {
+        "title": "Is Learning Networking Really Hard for Developers — Part 2",
+
+        "excerpt": "We know that for an application to communicate over a network, it first needs to obtain a Socket. But what actually happens after that? This part walks through Socket creation, how the OS represents a Socket inside the kernel, how a client uses connect(), how the OS determines the local IP and port, and how the Socket becomes associated with a real network destination.",
+
+        "date": "July 22, 2026",
+
+        "content": [
+          "We know that for your application to connect to anything, it first needs to obtain a Socket. Now let’s see how that is done.",
+
+          "Step 1: Creating a Socket",
+
+          "When an application asks the OS, “Please open a Socket for me,” the request typically includes a few pieces of information that determine how the Socket will communicate.",
+
+          "The first is the Protocol Family: whether the Socket will use IPv4, IPv6, or local communication. The second is the Socket Type: whether data should be sent as a continuous stream, like TCP, or as discrete messages, like UDP. The third is the Protocol itself.",
+
+          "In C, the call looks like this:",
+
+          "[[code]]socketFileDescriptor = socket(SOCKET_FAMILY, SOCKET_TYPE, PROTOCOL);[[/code]]",
+
+          "When the OS receives this call, it performs several steps. They are not the focus of this article, so what we need to understand is that the OS does the following.",
+
+          "First, it allocates a small kernel object that represents a communication Endpoint. This object lives in the kernel’s memory and mainly contains several important pieces of information.",
+
+          "The Socket Type determines how data will be sent, either as a stream or as messages. The kernel uses this type to select the appropriate communication mechanism, such as TCP or UDP.",
+
+          "The Protocol Family defines the format of addresses, such as IPv4 or IPv6, and determines which Network Layer mechanism should be involved.",
+
+          "The Protocol selects the exact protocol implementation to use. Even within the same Protocol Family, there may be multiple protocol options. This is rare, but possible.",
+
+          "The Internal State keeps track of the current state of the Socket, such as whether it is Connected, Unconnected, or Listening.",
+
+          "The Socket also contains pointers to protocol-specific logic. These are function pointers that point to the actual implementations responsible for handling the selected Protocol.",
+
+          "Second, the OS creates a File Descriptor in your process, or application, by assigning a small integer such as 3, 4, or 5. This integer is essentially an index that refers to the kernel Socket object created in the previous step. Your process can then use this File Descriptor to refer to the Socket in future System Calls.",
+
+          "It is important to note that at this moment, there are no IP addresses defined, no Ports assigned, and no Buffers allocated to store data. By default, the Socket is disconnected.",
+
+          "What your application has at this point is a reference to a kernel-managed object that represents a communication Endpoint. It is correct to say that this Socket itself has no idea where it needs to go yet. It is like an empty envelope with no address written on it.",
+
+          "So at this moment, we have two things: a kernel-managed Socket object, and a File Descriptor in our application that refers to this kernel object.",
+
+          "But we are still solving the puzzle: how can this tiny kernel object, reachable only through a small integer in your application, eventually connect you to the entire Internet?",
+
+          "The answer comes in the next step. The system call depends on the role of the application and the protocol it uses:",
+
+          "[[code]]connect()   TCP client: establish a connection\nbind()      TCP server or UDP endpoint: claim a local address\nsendto()    UDP sender: send a datagram to a chosen destination[[/code]]",
+
+          "Step 2: Connecting to a Socket + Sending Data",
+
+          "What actually happens in this step varies depending on two things: whether we are a client, meaning a sender, or a server, meaning a receiver; and whether we are using a connection-oriented protocol such as TCP or a connectionless protocol such as UDP.",
+
+          "We will walk through three main paths.",
+
+          "Path A: You are a client",
+
+          "Connecting to the Server",
+
+          "Keep in mind that we are talking about a connection-based protocol such as TCP. With connectionless protocols such as UDP, there is no need to call connect() followed by send(). Instead, the standard approach is to use sendto() directly.",
+
+          "To connect, we need a few pieces of information. First, which Socket should be used? Second, we must provide the destination address, which includes the receiver’s IP address and Port Number. Third, we also pass the size of that address.",
+
+          "Remember that your application and the OS kernel live in separate memory spaces. The kernel therefore needs to know exactly how many bytes it should read from your application’s memory to retrieve the complete address: nothing less and nothing more.",
+
+          "In C, the call would look like this:",
+
+          "[[code]]connect(sockFileDescriptor, address, sizeof(address));[[/code]]",
+
+          "So your application tells the OS: “Connect this Socket to this address.”",
+
+          "In response, the OS performs several operations. First, it validates the address and then adds the destination, consisting of the IP address and Port Number, to the Socket object.",
+
+          "Second, the OS needs to figure out who you are. In other words: “When I receive a reply, where should I send it?”",
+
+          "Finding the IP Address: your machine may have multiple Network Interfaces, such as Wi-Fi and Ethernet, and each interface may have its own IP address. The OS uses routing policy and the selected interface to choose a suitable source address; the exact choice can change with the destination and current network state.",
+
+          "On Linux, you can run ip route to inspect the routing table. The command and a sample result look like this:",
+
+          "[[code]]$ ip route\ndefault via 10.234.98.197 dev wlo1 proto dhcp src 10.234.98.27 metric 600\n172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1[[/code]]",
+
+          "The OS finds the best route for the destination IP address. If the destination is, for example, 93.184.216.34, which is a public IP address, the OS may use the default route through 10.234.98.197 and select 10.234.98.27 as the source IP address. The exact result depends on the current routing table and interfaces.",
+
+          "Finding the Port: an IP address alone is not enough because your machine is running many processes. Since you did not bind the Socket to a specific Port, the OS selects one from its Ephemeral Port Range. On Linux, that range is typically 32768–60999.",
+
+          "The OS selects an available ephemeral Port, for example 54321, and assigns it to your Socket.",
+
+          "Now the OS has your complete local address: 10.234.98.27:54321. It stores this information in the Socket object, establishing the local endpoint that will be used for communication."
+        ]
+      },
+      "networking-part-1": {
+        "title": "Is Learning Networking Really Hard for Developers",
+
+        "excerpt": "Networking becomes much easier to understand when you look beyond the OSI Model and protocols and ask the more important question: who actually implements them? The answer is the Operating System. Sockets are the real communication endpoints that connect your application code to the network and allow it to send and receive data.",
+
+        "date": "July 18, 2026",
+
+        "content": [
+          "Why do some engineers find learning networking hard or even boring? I have read hundreds of networking explanations, especially those aimed at developers, and nearly all of them start the same way: “Here’s the OSI Model.” It is treated as the first page of every networking guide.",
+
+          "But here’s the problem: the OSI Model is a pure abstraction. It explains what should happen at each step, or Layer, but it does not explain who actually does the work or how your code actually connects to the real world.",
+
+          "The OSI Model is mostly about protocols. For example, Layer 7 is where HTTP and other application protocols operate, the Transport Layer is where TCP and UDP operate, and the Network Layer is where the IP protocol operates.",
+
+          "But do these protocols actually do anything on their own? No, they don’t. They are just rules and standards. Some other entity must implement them to establish connections, send and deliver data, detect errors, and even encrypt data.",
+
+          "This creates a critical gap: who actually does all this work? If the OSI Model and all its Layers are just an abstraction, and Protocols are just rules and standards to be followed, then who is responsible for doing everything?",
+
+          "It’s the Operating System (OS). When your application wants to communicate with another application, it does not ask the OSI Model, and it does not ask TCP to create a connection. Instead, it talks to the OS by saying: “Please open a Socket for me — I need to communicate.” This is the real first step that connects your code to the world.",
+
+          "What is a Socket? As a developer, think of it like an Object. Your application can send Bytes to this Socket using a few System Calls such as send() and sendto(). The OS then handles the transmission. Similarly, your application can receive Bytes through this Socket using other System Calls such as recv() or read().",
+
+          "In reality, a Socket is a Data Structure inside the OS Kernel. It is an OS-managed Endpoint for communication. It is the interface through which your application interacts with the operating system to communicate over a network.",
+
+          "In order for an application to connect to another application, at least two things need to happen: first, it needs to obtain a Socket; second, it needs to connect to that Socket. The second step is not necessary in some cases, where the application simply starts using the Socket.",
+
+          "In High-Level Frameworks like Node.js or languages like Python, the details of creating a Socket are abstracted away, so you do not have to create one yourself. In Node.js, even connecting to the Socket is abstracted away from the developer."
+        ]
+      }
+    }
   },
   "experience": {
     "items": {
