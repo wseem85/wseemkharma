@@ -105,13 +105,13 @@ const About = () => {
                   key={key}
                   className="rounded-lg border border-black-300 bg-black-200/50 p-3"
                 >
-                  <p className="mb-2 text-sm font-semibold text-red-groundlight">
+                  <p className="mb-2 text-sm font-semibold text-teal-groundlight">
                     {aboutT(`techCategories.${key}`)}
                   </p>
                   <ul className="space-y-1 text-sm text-gray-300">
                     {technologies.map((technology) => (
                       <li key={technology} className="flex items-center gap-2">
-                        <span className="h-1.5 w-1.5 rounded-full bg-red-ground" />
+                        <span className="h-1.5 w-1.5 rounded-full bg-teal-ground" />
                         {aboutT(`technologies.${technology}`)}
                       </li>
                     ))}
@@ -166,11 +166,11 @@ const About = () => {
             </p>
 
             <div className="space-y-4">
-              <BarsSeperator color="bg-red-ground" />
+              <BarsSeperator color="bg-teal-ground" />
               <p className="grid-subtext text-sm sm:text-base leading-relaxed">
                 {aboutT('windowsServerText')}
               </p>
-              <BarsSeperator color="bg-red-ground" />
+              <BarsSeperator color="bg-teal-ground" />
               <p className="grid-subtext text-sm sm:text-base leading-relaxed">
                 {aboutT('supportText')}
               </p>
@@ -201,12 +201,12 @@ const About = () => {
                   name={aboutT('contactButton')}
                   isBeam
                   containerClass="px-5 py-2.5 sm:px-6 sm:py-3 inine-block mt-6
-                  bg-gradient-to-r from-red-ground to-red-groundlight
+                  bg-gradient-to-r from-teal-ground to-teal-groundlight
                   text-white font-medium
                   rounded-lg
                   transition-all duration-300
-                  hover:from-red-groundlight hover:to-red-ground
-                  hover:shadow-lg hover:shadow-red-ground/30
+                  hover:from-teal-groundlight hover:to-teal-ground
+                  hover:shadow-lg hover:shadow-teal-ground/30
                   active:scale-[0.98]
                   inline-flex items-center gap-2
                   w-full sm:w-auto justify-center sm:justify-start"

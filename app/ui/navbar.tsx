@@ -89,7 +89,7 @@ const Navbar = () => {
                   locale: locale === 'ar' ? 'en' : 'ar',
                 })
               }
-              className="rounded-md border border-white/15 px-3 py-2 text-xs font-semibold text-gray-300 transition hover:border-red-ground hover:text-white sm:order-3"
+              className="rounded-md border border-white/15 px-3 py-2 text-xs font-semibold text-gray-300 transition hover:border-teal-ground hover:text-white sm:order-3"
               aria-label={`Switch language to ${t('switchTo')}`}
             >
               {t('switchTo')}

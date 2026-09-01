@@ -1,8 +1,8 @@
 'use client';
 import { motion } from 'framer-motion';
 import Button from '../components/button';
-import {useTranslations} from 'next-intl';
-import {Link} from '@/i18n/navigation';
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 
 const BrowseProjects = () => {
   const t = useTranslations('navigation');
@@ -29,12 +29,12 @@ const BrowseProjects = () => {
             isBeam
             name={t('work')}
             containerClass="px-5 py-2.5 sm:px-6 sm:py-3
-                  bg-gradient-to-r from-red-ground to-red-groundlight
+                  bg-gradient-to-r from-teal-ground to-teal-groundlight
                   text-white font-medium
                   rounded-lg
                   transition-all duration-300
-                  hover:from-red-groundlight hover:to-red-ground
-                  hover:shadow-lg hover:shadow-red-ground/30
+                  hover:from-teal-groundlight hover:to-teal-ground
+                  hover:shadow-lg hover:shadow-teal-ground/30
                   active:scale-[0.98]
                   inline-flex items-center gap-2
                   w-full sm:w-auto justify-center sm:justify-start"

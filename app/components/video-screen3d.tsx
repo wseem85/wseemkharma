@@ -25,7 +25,10 @@ const VideoScreen3D = ({ defaultVideo }: { defaultVideo: string }) => {
       if (video) {
         video.pause();
       }
-      document.removeEventListener('portfolio-video-play', handleOtherVideoPlaying);
+      document.removeEventListener(
+        'portfolio-video-play',
+        handleOtherVideoPlaying,
+      );
     };
   }, [defaultVideo]);
 
@@ -34,7 +37,9 @@ const VideoScreen3D = ({ defaultVideo }: { defaultVideo: string }) => {
     if (!video) return;
 
     if (video.paused) {
-      document.dispatchEvent(new CustomEvent('portfolio-video-play', { detail: defaultVideo }));
+      document.dispatchEvent(
+        new CustomEvent('portfolio-video-play', { detail: defaultVideo }),
+      );
       try {
         await video.play();
         setIsPlaying(true);
@@ -62,11 +67,16 @@ const VideoScreen3D = ({ defaultVideo }: { defaultVideo: string }) => {
       <button
         type="button"
         onClick={togglePlayback}
-        aria-label={isPlaying ? 'Pause project preview' : 'Play project preview'}
-        className="absolute left-1/2 top-1/2 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 bg-black/60 text-white shadow-xl backdrop-blur transition hover:scale-110 hover:border-red-ground hover:bg-red-ground/80"
+        aria-label={
+          isPlaying ? 'Pause project preview' : 'Play project preview'
+        }
+        className="absolute left-1/2 top-1/2 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 bg-black/60 text-white shadow-xl backdrop-blur transition hover:scale-110 hover:border-teal-ground hover:bg-teal-ground/80"
       >
         {isPlaying ? (
-          <span className="flex gap-1"><span className="h-5 w-1.5 rounded-sm bg-white" /><span className="h-5 w-1.5 rounded-sm bg-white" /></span>
+          <span className="flex gap-1">
+            <span className="h-5 w-1.5 rounded-sm bg-white" />
+            <span className="h-5 w-1.5 rounded-sm bg-white" />
+          </span>
         ) : (
           <span className="ml-1 h-0 w-0 border-y-[9px] border-l-[14px] border-y-transparent border-l-white" />
         )}

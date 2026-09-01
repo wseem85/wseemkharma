@@ -6,8 +6,8 @@ import { useState } from 'react';
 import { createPortal } from 'react-dom';
 import { orbitron } from '../lib/fonts';
 import ProjectDiscoveryWizard from '../components/project-discovery-wizard';
-import {useLocale, useTranslations} from 'next-intl';
-import {Link} from '@/i18n/navigation';
+import { useLocale, useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 
 const heroIcons = [
   { src: '/logos/react.svg', name: 'React' },
@@ -44,7 +44,7 @@ const Hero = () => {
           className="absolute -left-1/4 top-[-20%] h-[520px] w-[520px] rounded-full blur-3xl"
           style={{
             background:
-              'radial-gradient(circle, rgba(220, 38, 38, 0.28) 0%, rgba(220, 38, 38, 0.08) 35%, transparent 72%)',
+              'radial-gradient(circle, rgba(0, 128, 128, 0.38) 0%, rgba(0, 128, 128, 0.14) 35%, transparent 72%)',
           }}
           animate={{
             x: ['0%', '115%', '0%'],
@@ -72,9 +72,9 @@ const Hero = () => {
       <div className="relative z-10 mx-auto flex w-full max-w-7xl items-center px-6 py-20 sm:px-10 lg:px-16">
         <div className="flex max-w-4xl flex-col items-start gap-6 sm:gap-8">
           <div className="flex items-center gap-3" aria-hidden="true">
-            <span className="h-[2px] w-12 bg-red-ground sm:w-20" />
-            <span className="h-[2px] w-5 bg-red-ground/60 sm:w-8" />
-            <span className="h-[2px] w-2 bg-red-ground/40" />
+            <span className="h-[2px] w-12 bg-teal-ground sm:w-20" />
+            <span className="h-[2px] w-5 bg-teal-ground/60 sm:w-8" />
+            <span className="h-[2px] w-2 bg-teal-ground/40" />
           </div>
 
           <p
@@ -117,13 +117,15 @@ const Hero = () => {
             ))}
           </motion.h1>
 
-          <p className="max-w-2xl text-base leading-relaxed text-gray-300 sm:text-xl">{t('description')}</p>
+          <p className="max-w-2xl text-base leading-relaxed text-gray-300 sm:text-xl">
+            {t('description')}
+          </p>
 
           <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:gap-4">
             <button
               type="button"
               onClick={() => setIsWizardOpen(true)}
-              className="inline-flex min-h-12 items-center justify-center rounded-md bg-red-ground px-7 py-3 font-semibold tracking-wide text-white transition-transform duration-200 hover:scale-105 hover:bg-red-groundlight active:scale-95"
+              className="inline-flex min-h-12 items-center justify-center rounded-md bg-teal-ground px-7 py-3 font-semibold tracking-wide text-white transition-transform duration-200 hover:scale-105 hover:bg-teal-groundlight active:scale-95"
             >
               {t('workTogether')}
             </button>

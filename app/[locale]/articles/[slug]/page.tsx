@@ -96,7 +96,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           {articlesT('backToArticles')}
         </Link>
         <header className="mb-8 text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-red-groundlight">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-teal-groundlight">
             {articlesT('eyebrow')}
           </p>
           <h1 className="head-text">{articleT('title')}</h1>

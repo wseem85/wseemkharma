@@ -6,7 +6,7 @@ import { myProjects } from '../lib/placeholder-data';
 import { VideoScreen3D } from '../components/video-screen3d';
 import LogoCubesContainer from '../components/logo-cube-container';
 import { hexToRgba } from '../utils/helpers';
-import {useTranslations} from 'next-intl';
+import { useTranslations } from 'next-intl';
 
 const Projects = () => {
   const [notice, setNotice] = useState('');
@@ -16,10 +16,9 @@ const Projects = () => {
 
   useEffect(() => {
     document.title = `${t('selectedWork')} | Wseem Kharma`;
-    document.querySelector('meta[name="description"]')?.setAttribute(
-      'content',
-      labelsT('intro'),
-    );
+    document
+      .querySelector('meta[name="description"]')
+      ?.setAttribute('content', labelsT('intro'));
   }, [labelsT, t]);
 
   const handleGithubClick = (projectId: string, github: string) => {
@@ -39,7 +38,7 @@ const Projects = () => {
           aria-live="polite"
           initial={{ opacity: 0, y: -12 }}
           animate={{ opacity: 1, y: 0 }}
-          className="fixed left-3 right-3 top-20 z-50 mx-auto w-auto max-w-lg rounded-xl border border-red-ground/40 bg-[#252526] px-4 py-3 text-center text-xs leading-relaxed break-words text-gray-200 shadow-2xl shadow-black/40 sm:top-24 sm:px-5 sm:py-4 sm:text-sm"
+          className="fixed left-3 right-3 top-20 z-50 mx-auto w-auto max-w-lg rounded-xl border border-teal-ground/40 bg-[#252526] px-4 py-3 text-center text-xs leading-relaxed break-words text-gray-200 shadow-2xl shadow-black/40 sm:top-24 sm:px-5 sm:py-4 sm:text-sm"
         >
           {notice}
         </motion.div>
@@ -51,7 +50,7 @@ const Projects = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-red-groundlight">
+        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-teal-groundlight">
           {t('selectedWork')}
         </p>
         <h1 className="head-text">{t('workIntro')}</h1>
@@ -61,7 +60,7 @@ const Projects = () => {
       </motion.header>
 
       <div className="grid gap-7 lg:grid-cols-2">
-        {myProjects.map((project, index) => (
+        {myProjects.map((project, index) =>
           (() => {
             const adminHref =
               'hrefAdmin' in project && typeof project.hrefAdmin === 'string'
@@ -69,82 +68,86 @@ const Projects = () => {
                 : undefined;
 
             return (
-          <motion.article
-            key={project.id}
-            className="group overflow-hidden rounded-3xl border border-white/10 bg-[#111214] shadow-xl shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-red-ground/40 hover:shadow-red-ground/10"
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.12 }}
-            transition={{ duration: 0.55, delay: index * 0.08 }}
-            style={{
-              background: `linear-gradient(145deg, ${hexToRgba(project.brandcolor, 0.18)}, #111214 42%, #0b0c0e)`,
-            }}
-          >
-            <div className="relative overflow-hidden border-b border-white/10 px-3 pt-3 sm:px-5 sm:pt-5">
-              <div
-                className="pointer-events-none absolute inset-0 opacity-70"
+              <motion.article
+                key={project.id}
+                className="group overflow-hidden rounded-3xl border border-white/10 bg-[#111214] shadow-xl shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-teal-ground/40 hover:shadow-teal-ground/10"
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.12 }}
+                transition={{ duration: 0.55, delay: index * 0.08 }}
                 style={{
-                  background: `radial-gradient(circle at 50% 35%, ${hexToRgba(project.brandcolor, 0.3)}, transparent 58%)`,
+                  background: `linear-gradient(145deg, ${hexToRgba(project.brandcolor, 0.18)}, #111214 42%, #0b0c0e)`,
                 }}
-              />
-              <div className="absolute left-6 top-7 z-10 rounded-full border border-white/15 bg-black/30 px-3 py-1 text-[10px] uppercase tracking-wider text-gray-300 backdrop-blur">
-                {String(index + 1).padStart(2, '0')} / {String(myProjects.length).padStart(2, '0')}
-              </div>
-              <div className="relative flex min-h-[270px] items-center justify-center sm:min-h-[320px]">
-                <VideoScreen3D defaultVideo={project.texture} />
-              </div>
-            </div>
-
-            <div className="flex flex-col p-5 sm:p-7">
-              <h2 className="text-xl font-bold leading-tight text-white sm:text-2xl">
-                {projectT(`${project.id}.title`)}
-              </h2>
-              <p className="mt-4 line-clamp-4 text-sm leading-relaxed text-gray-300 sm:text-base">
-                {projectT(`${project.id}.description`)}
-              </p>
-
-              <div className="mt-6 flex min-w-0 items-center gap-3 border-t border-white/10 pt-5 sm:gap-5">
-                <p className="shrink-0 text-[10px] font-semibold uppercase tracking-[0.2em] text-gray-500">
-                  {labelsT('builtWith')}
-                </p>
-                <div className="min-w-0 flex-1">
-                  <LogoCubesContainer tags={project.tags} />
+              >
+                <div className="relative overflow-hidden border-b border-white/10 px-3 pt-3 sm:px-5 sm:pt-5">
+                  <div
+                    className="pointer-events-none absolute inset-0 opacity-70"
+                    style={{
+                      background: `radial-gradient(circle at 50% 35%, ${hexToRgba(project.brandcolor, 0.3)}, transparent 58%)`,
+                    }}
+                  />
+                  <div className="absolute left-6 top-7 z-10 rounded-full border border-white/15 bg-black/30 px-3 py-1 text-[10px] uppercase tracking-wider text-gray-300 backdrop-blur">
+                    {String(index + 1).padStart(2, '0')} /{' '}
+                    {String(myProjects.length).padStart(2, '0')}
+                  </div>
+                  <div className="relative flex min-h-[270px] items-center justify-center sm:min-h-[320px]">
+                    <VideoScreen3D defaultVideo={project.texture} />
+                  </div>
                 </div>
-              </div>
 
-              <div className="mt-7 flex flex-col gap-2 sm:flex-row">
-                <a
-                  href={project.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex min-h-11 flex-1 items-center justify-center gap-2 rounded-lg bg-red-ground px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-red-groundlight hover:shadow-lg hover:shadow-red-ground/20 active:scale-95"
-                >
-                  {labelsT('viewLive')} <span aria-hidden="true">{labelsT('arrow')}</span>
-                </a>
-                {adminHref && (
-                  <a
-                    href={adminHref}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex min-h-11 items-center justify-center rounded-lg border border-white/15 px-4 py-2.5 text-sm font-semibold text-gray-200 transition hover:border-red-ground/60 hover:text-white active:scale-95"
-                  >
-                    {labelsT('adminPanel')}
-                  </a>
-                )}
-                <button
-                  type="button"
-                  onClick={() => handleGithubClick(project.id, project.github)}
-                  disabled={!project.github && project.id !== 'artStore'}
-                  className="inline-flex min-h-11 items-center justify-center rounded-lg border border-white/15 px-4 py-2.5 text-sm font-semibold text-gray-200 transition hover:border-red-ground/60 hover:text-white active:scale-95 disabled:cursor-not-allowed disabled:opacity-40"
-                >
-                  {labelsT('githubRepo')}
-                </button>
-              </div>
-            </div>
-          </motion.article>
+                <div className="flex flex-col p-5 sm:p-7">
+                  <h2 className="text-xl font-bold leading-tight text-white sm:text-2xl">
+                    {projectT(`${project.id}.title`)}
+                  </h2>
+                  <p className="mt-4 line-clamp-4 text-sm leading-relaxed text-gray-300 sm:text-base">
+                    {projectT(`${project.id}.description`)}
+                  </p>
+
+                  <div className="mt-6 flex min-w-0 items-center gap-3 border-t border-white/10 pt-5 sm:gap-5">
+                    <p className="shrink-0 text-[10px] font-semibold uppercase tracking-[0.2em] text-gray-500">
+                      {labelsT('builtWith')}
+                    </p>
+                    <div className="min-w-0 flex-1">
+                      <LogoCubesContainer tags={project.tags} />
+                    </div>
+                  </div>
+
+                  <div className="mt-7 flex flex-col gap-2 sm:flex-row">
+                    <a
+                      href={project.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex min-h-11 flex-1 items-center justify-center gap-2 rounded-lg bg-teal-ground px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-teal-groundlight hover:shadow-lg hover:shadow-teal-ground/20 active:scale-95"
+                    >
+                      {labelsT('viewLive')}{' '}
+                      <span aria-hidden="true">{labelsT('arrow')}</span>
+                    </a>
+                    {adminHref && (
+                      <a
+                        href={adminHref}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex min-h-11 items-center justify-center rounded-lg border border-white/15 px-4 py-2.5 text-sm font-semibold text-gray-200 transition hover:border-teal-ground/60 hover:text-white active:scale-95"
+                      >
+                        {labelsT('adminPanel')}
+                      </a>
+                    )}
+                    <button
+                      type="button"
+                      onClick={() =>
+                        handleGithubClick(project.id, project.github)
+                      }
+                      disabled={!project.github && project.id !== 'artStore'}
+                      className="inline-flex min-h-11 items-center justify-center rounded-lg border border-white/15 px-4 py-2.5 text-sm font-semibold text-gray-200 transition hover:border-teal-ground/60 hover:text-white active:scale-95 disabled:cursor-not-allowed disabled:opacity-40"
+                    >
+                      {labelsT('githubRepo')}
+                    </button>
+                  </div>
+                </div>
+              </motion.article>
             );
-          })()
-        ))}
+          })(),
+        )}
       </div>
     </section>
   );

@@ -33,8 +33,12 @@ const displayValue = (input: unknown) =>
 const projectScore = (data: ProjectInquiryData) => {
   let score = 1;
   const type = String(data.projectType ?? '');
-  const features = Array.isArray(data.features) ? data.features.map(String) : [];
-  const languages = Array.isArray(data.languages) ? data.languages.map(String) : [];
+  const features = Array.isArray(data.features)
+    ? data.features.map(String)
+    : [];
+  const languages = Array.isArray(data.languages)
+    ? data.languages.map(String)
+    : [];
   if (type === 'E-commerce') score += 3;
   if (type === 'SaaS / Web Application') score += 5;
   if (features.some((item) => /login|account/i.test(item))) score += 2;
@@ -52,7 +56,13 @@ const projectScore = (data: ProjectInquiryData) => {
 };
 
 const complexityLevel = (score: number) =>
-  score <= 5 ? 'Small' : score <= 10 ? 'Medium' : score <= 18 ? 'Complex' : 'Advanced';
+  score <= 5
+    ? 'Small'
+    : score <= 10
+      ? 'Medium'
+      : score <= 18
+        ? 'Complex'
+        : 'Advanced';
 
 async function sendProjectInquiry(data: ProjectInquiryData) {
   const name = String(data.name ?? '').trim();
@@ -64,24 +74,57 @@ async function sendProjectInquiry(data: ProjectInquiryData) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const phoneRegex = /^\+[1-9]\d{7,14}$/;
 
-  if (websiteTrap) return NextResponse.json({ error: 'Unable to submit inquiry.' }, { status: 400 });
-  if (!name || !goal) return NextResponse.json({ error: 'Name and project goal are required.' }, { status: 400 });
-  if (!email && !phone) return NextResponse.json({ error: 'A valid email or phone number is required.' }, { status: 400 });
-  if (email && !emailRegex.test(email)) return NextResponse.json({ error: 'Please provide a valid email address.' }, { status: 400 });
-  if (phone && !phoneRegex.test(phone.replace(/[\s().-]/g, ''))) return NextResponse.json({ error: 'Please provide a valid phone number with country code.' }, { status: 400 });
+  if (websiteTrap)
+    return NextResponse.json(
+      { error: 'Unable to submit inquiry.' },
+      { status: 400 },
+    );
+  if (!name || !goal)
+    return NextResponse.json(
+      { error: 'Name and project goal are required.' },
+      { status: 400 },
+    );
+  if (!email && !phone)
+    return NextResponse.json(
+      { error: 'A valid email or phone number is required.' },
+      { status: 400 },
+    );
+  if (email && !emailRegex.test(email))
+    return NextResponse.json(
+      { error: 'Please provide a valid email address.' },
+      { status: 400 },
+    );
+  if (phone && !phoneRegex.test(phone.replace(/[\s().-]/g, '')))
+    return NextResponse.json(
+      { error: 'Please provide a valid phone number with country code.' },
+      { status: 400 },
+    );
   if (data.websiteUrl) {
     try {
       const websiteUrl = new URL(String(data.websiteUrl));
-      if (!['http:', 'https:'].includes(websiteUrl.protocol)) throw new Error('Invalid protocol');
+      if (!['http:', 'https:'].includes(websiteUrl.protocol))
+        throw new Error('Invalid protocol');
     } catch {
-      return NextResponse.json({ error: 'Please provide a valid website URL.' }, { status: 400 });
+      return NextResponse.json(
+        { error: 'Please provide a valid website URL.' },
+        { status: 400 },
+      );
     }
   }
 
   const score = projectScore(data);
   const level = complexityLevel(score);
-  const receivingEmail = process.env.RECEIVING_EMAIL || process.env.NEXT_PUBLIC_RECEIVING_EMAIL || 'engwseem2@gmail.com';
-  const brief = escapeHtml(JSON.stringify({ ...data, complexityScore: score, complexityLevel: level }, null, 2));
+  const receivingEmail =
+    process.env.RECEIVING_EMAIL ||
+    process.env.NEXT_PUBLIC_RECEIVING_EMAIL ||
+    'engwseem2@gmail.com';
+  const brief = escapeHtml(
+    JSON.stringify(
+      { ...data, complexityScore: score, complexityLevel: level },
+      null,
+      2,
+    ),
+  );
   const { data: sent, error } = await resend.emails.send({
     from: 'Portfolio Inquiries <onboarding@resend.dev>',
     to: [receivingEmail],
@@ -91,7 +134,10 @@ async function sendProjectInquiry(data: ProjectInquiryData) {
   });
   if (error) {
     console.error('Project inquiry email error:', error);
-    return NextResponse.json({ error: 'Failed to send project brief.' }, { status: 500 });
+    return NextResponse.json(
+      { error: 'Failed to send project brief.' },
+      { status: 500 },
+    );
   }
 
   if (email) {
@@ -101,10 +147,14 @@ async function sendProjectInquiry(data: ProjectInquiryData) {
       subject: 'Project brief received — Wseem Kharma',
       html: '<p>Thanks for sharing your project brief. I will review the requirements and get back to you with tailored next steps.</p>',
     });
-    if (confirmation.error) console.error('Client confirmation email error:', confirmation.error);
+    if (confirmation.error)
+      console.error('Client confirmation email error:', confirmation.error);
   }
 
-  return NextResponse.json({ message: 'Project brief received.', id: sent?.id }, { status: 200 });
+  return NextResponse.json(
+    { message: 'Project brief received.', id: sent?.id },
+    { status: 200 },
+  );
 }
 
 async function sendServiceMessage(data: ServiceMessageData) {
@@ -114,10 +164,21 @@ async function sendServiceMessage(data: ServiceMessageData) {
   const service = String(data.service ?? 'general').trim();
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  if (!name || !email || !message) return NextResponse.json({ error: 'Name, email, and message are required.' }, { status: 400 });
-  if (!emailRegex.test(email)) return NextResponse.json({ error: 'Please provide a valid email address.' }, { status: 400 });
+  if (!name || !email || !message)
+    return NextResponse.json(
+      { error: 'Name, email, and message are required.' },
+      { status: 400 },
+    );
+  if (!emailRegex.test(email))
+    return NextResponse.json(
+      { error: 'Please provide a valid email address.' },
+      { status: 400 },
+    );
 
-  const receivingEmail = process.env.RECEIVING_EMAIL || process.env.NEXT_PUBLIC_RECEIVING_EMAIL || 'engwseem2@gmail.com';
+  const receivingEmail =
+    process.env.RECEIVING_EMAIL ||
+    process.env.NEXT_PUBLIC_RECEIVING_EMAIL ||
+    'engwseem2@gmail.com';
   const { data: sent, error } = await resend.emails.send({
     from: 'Portfolio Services <onboarding@resend.dev>',
     to: [receivingEmail],
@@ -127,9 +188,15 @@ async function sendServiceMessage(data: ServiceMessageData) {
   });
   if (error) {
     console.error('Service request email error:', error);
-    return NextResponse.json({ error: 'Failed to send service request.' }, { status: 500 });
+    return NextResponse.json(
+      { error: 'Failed to send service request.' },
+      { status: 500 },
+    );
   }
-  return NextResponse.json({ message: 'Service request received.', id: sent?.id }, { status: 200 });
+  return NextResponse.json(
+    { message: 'Service request received.', id: sent?.id },
+    { status: 200 },
+  );
 }
 
 export async function POST(request: NextRequest) {
@@ -147,7 +214,7 @@ export async function POST(request: NextRequest) {
     if (!name || !email || !subject || !message) {
       return NextResponse.json(
         { error: 'All fields are required' },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -156,7 +223,7 @@ export async function POST(request: NextRequest) {
     if (!emailRegex.test(email)) {
       return NextResponse.json(
         { error: 'Invalid email format' },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -168,7 +235,7 @@ export async function POST(request: NextRequest) {
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f9f9f9;">
           <div style="background-color: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-            <h1 style="color: #96001e; margin-bottom: 20px; border-bottom: 2px solid #96001e; padding-bottom: 10px;">
+            <h1 style="color: #008080; margin-bottom: 20px; border-bottom: 2px solid #008080; padding-bottom: 10px;">
               New Contact Form Submission
             </h1>
             
@@ -208,7 +275,7 @@ export async function POST(request: NextRequest) {
       console.error('Resend error:', error);
       return NextResponse.json(
         { error: 'Failed to send email. Please try again.' },
-        { status: 500 }
+        { status: 500 },
       );
     }
 
@@ -217,13 +284,13 @@ export async function POST(request: NextRequest) {
         message: 'Email sent successfully!',
         id: data?.id,
       },
-      { status: 200 }
+      { status: 200 },
     );
   } catch (error) {
     console.error('API error:', error);
     return NextResponse.json(
       { error: 'Internal server error. Please try again later.' },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

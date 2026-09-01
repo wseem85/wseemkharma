@@ -39,9 +39,9 @@ const config: Config = {
           600: '#AFB0B6',
           500: '#62646C',
         },
-        red: {
-          ground: '#96001e',
-          groundlight: '#c50027',
+        teal: {
+          ground: '#008080',
+          groundlight: '#00a8a8',
         },
       },
       backgroundImage: {

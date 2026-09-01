@@ -52,7 +52,8 @@ export default function RootLayout({
       <head>
         <link
           rel="icon"
-          href="/favicon.ico?v=2" // Change version number when updating
+          href="/favicon.ico?t=20260901" // Timestamp cache buster
+          type="image/x-icon"
         />
       </head>
       <body className={`${ubuntu.className} antialiased`}>

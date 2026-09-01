@@ -44,7 +44,7 @@ export default async function ArticlesPage({
   return (
     <main className="relative top-[100px] mx-auto my-12 max-w-7xl px-4 pb-16 sm:my-16 sm:px-6 lg:my-20 lg:px-8">
       <header className="mx-auto mb-10 max-w-3xl text-center sm:mb-14">
-        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-red-groundlight">
+        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-teal-groundlight">
           {t('eyebrow')}
         </p>
         <h1 className="head-text">{t('title')}</h1>
@@ -62,7 +62,7 @@ export default async function ArticlesPage({
         {visibleArticles.map((article, index) => (
           <article
             key={article.id}
-            className="group flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#151617] shadow-xl shadow-black/20 transition duration-300 hover:-translate-y-1 hover:border-red-ground/40"
+            className="group flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#151617] shadow-xl shadow-black/20 transition duration-300 hover:-translate-y-1 hover:border-teal-ground/40"
           >
             <Link
               href={`/articles/${article.id}`}
@@ -80,7 +80,7 @@ export default async function ArticlesPage({
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
             </Link>
             <div className="flex flex-1 flex-col p-5 sm:p-6">
-              <p className="text-xs font-semibold uppercase tracking-wider text-red-groundlight">
+              <p className="text-xs font-semibold uppercase tracking-wider text-teal-groundlight">
                 {t('items.' + article.id + '.date')}
               </p>
               <h2 className="mt-3 text-xl font-bold leading-tight text-white sm:text-2xl">
@@ -91,7 +91,7 @@ export default async function ArticlesPage({
               </p>
               <Link
                 href={`/articles/${article.id}`}
-                className="mt-6 inline-flex w-fit items-center gap-3 rounded-lg bg-red-ground px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-red-groundlight"
+                className="mt-6 inline-flex w-fit items-center gap-3 rounded-lg bg-teal-ground px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-teal-groundlight"
               >
                 {t('readArticle')} <span aria-hidden="true">→</span>
               </Link>
@@ -111,7 +111,7 @@ export default async function ArticlesPage({
                 pathname: '/articles',
                 query: { page: String(page - 1) },
               }}
-              className="rounded-lg border border-white/10 px-4 py-2 text-sm text-gray-300 transition hover:border-red-ground/50 hover:text-white"
+              className="rounded-lg border border-white/10 px-4 py-2 text-sm text-gray-300 transition hover:border-teal-ground/50 hover:text-white"
             >
               {t('previous')}
             </Link>
@@ -121,7 +121,7 @@ export default async function ArticlesPage({
             </span>
           )}
           <span
-            className="rounded-lg bg-red-ground px-4 py-2 text-sm font-semibold text-white"
+            className="rounded-lg bg-teal-ground px-4 py-2 text-sm font-semibold text-white"
             aria-current="page"
           >
             {page}
@@ -132,7 +132,7 @@ export default async function ArticlesPage({
                 pathname: '/articles',
                 query: { page: String(page + 1) },
               }}
-              className="rounded-lg border border-white/10 px-4 py-2 text-sm text-gray-300 transition hover:border-red-ground/50 hover:text-white"
+              className="rounded-lg border border-white/10 px-4 py-2 text-sm text-gray-300 transition hover:border-teal-ground/50 hover:text-white"
             >
               {t('next')}
             </Link>

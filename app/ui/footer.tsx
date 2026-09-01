@@ -164,7 +164,7 @@ const Footer = () => {
           onClick={() =>
             router.replace(pathname, { locale: locale === 'ar' ? 'en' : 'ar' })
           }
-          className="text-red-groundlight transition hover:text-white"
+          className="text-teal-groundlight transition hover:text-white"
         >
           {navigation('switchTo')}
         </button>
